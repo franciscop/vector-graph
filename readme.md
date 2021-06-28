@@ -1,6 +1,6 @@
 # Plane Graph
 
-Generate beautiful euclidian graphics with plain HTML:
+Generate beautiful euclidian graphics with HTML:
 
 <table>
   <tr>
