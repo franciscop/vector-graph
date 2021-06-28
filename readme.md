@@ -6,12 +6,12 @@ Render simple euclidian plane graphics in SVG:
   <tr>
     <td>
       <img width="300px" src="./examples/simple.svg" />
-    </td>
-    <td>
       <img width="300px" src="./examples/scale.svg" />
     </td>
     <td>
-      <img width="300px" src="./examples/complete.svg" />
+    </td>
+    <td>
+      <img width="600px" src="./examples/complete.svg" />
     </td>
   </tr>
 </table>
