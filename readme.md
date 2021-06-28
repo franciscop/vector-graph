@@ -11,7 +11,7 @@ Generate beautiful euclidian graphics with HTML:
       <img width="200px" src="./examples/scale.svg" />
     </td>
     <td>
-      <img width="300px" src="./examples/complete.svg" />
+      <img width="200px" src="./examples/complete.svg" />
     </td>
   </tr>
 </table>
