@@ -14,6 +14,12 @@ Generate beautiful euclidian graphs with HTML:
       <img width="300px" src="./examples/complete.svg" />
     </td>
   </tr>
+    <tr>
+      <th>Three building blocks</th>
+      </th>
+      <th>Scaled and with coords.</th>
+      <th>Many options together</th>
+    </tr>
 </table>
 
 ```html
