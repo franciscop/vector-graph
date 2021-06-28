@@ -18,7 +18,7 @@ render.simple(`
 `);
 
 render.scale(`
-  <plane-graph width="200" height="200" x="4" y="4" grid="1" units>
+  <plane-graph width="200" height="200" x="3.9" y="3.9" units>
     <vector label="v" to="3,3.2" axis />
   </plane-graph>
 `);
