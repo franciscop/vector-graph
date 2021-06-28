@@ -18,6 +18,37 @@ const parseOptions = attrs =>
     };
   }, {});
 
+const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
+  const { xScale, yScale, colors } = opts;
+  if (!color) color = colors.dark;
+  let units = "";
+  for (let i = from; i < to; i += size) {
+    if (axis === "x") {
+      const x = from + i;
+      units += drawLine(
+        { from: [x, 0], to: [x, -5 / yScale], width: 1.5, color },
+        opts
+      );
+      units += drawLabel(
+        { text: i, x, y: -12 / yScale, color, size: "tiny" },
+        opts
+      );
+    } else {
+      const y = from + i;
+      units += drawLine(
+        { from: [0, y], to: [-5 / xScale, y], width: 1.5, color },
+        opts
+      );
+      units += drawLabel(
+        { text: i, x: -12 / yScale, y, color, size: "tiny" },
+        opts
+      );
+    }
+  }
+
+  return units;
+};
+
 const drawGrid = ({ size, color, fill }, opts) => {
   const { width, height, xScale, yScale } = opts;
 
@@ -51,14 +82,27 @@ const drawGrid = ({ size, color, fill }, opts) => {
 
 let globalId = 0;
 
-const drawText = ({ x, y, color, small, large, text, ...props }, opts) => {
-  const { height, xScale, yScale, colors, ...rest } = opts;
-  const charSize = small ? 6 : large ? 12 : 10;
-  const width = ("" + text.length) * charSize + 10;
-  const xm = xScale * (x - rest.x[0]);
+const sizes = { tiny: 8, small: 8, normal: 10, large: 12 };
+const fontSizes = { tiny: 12, small: 12, normal: 16, large: 20 };
+const strokeSizes = { tiny: 0, small: 1, normal: 1.75, large: 2 };
+
+// Draws a text tag somewhere in the page, given in user coordinates
+// <text text="hello world" x="2" y="3"></text>
+const drawText = ({ text, x, y, color, size, width }, opts) => {
+  const { height, xScale, yScale, colors, pad, ...rest } = opts;
+
+  // Defaults, preferred inline since some are more complex
+  if (!text) text = "";
+  if (!size) size = "normal";
+  if (!width) width = ("m" + text).length * sizes[size];
+  if (!color) color = colors.black;
+
+  // Calculate where to draw it. There's a bound on the left since we don't
+  // want labels to be cut off on the left side
+  const xm = Math.max(-pad + 1 + width / 2, xScale * (x - rest.x[0]));
   const ym = height - yScale * (y - rest.y[0]) + 1;
-  color = color || colors.black;
-  const font = `normal ${small ? 12 : large ? 20 : 16}px sans-serif`;
+
+  const font = `normal ${fontSizes[size]}px sans-serif`;
   const style = `dominant-baseline: middle; text-anchor: middle; font: ${font}`;
   return `
     <text x="${xm}" y="${ym}" width="${width}" fill="${color}" style="${style}">
@@ -67,48 +111,61 @@ const drawText = ({ x, y, color, small, large, text, ...props }, opts) => {
   `;
 };
 
-const drawLabel = ({ x, y, color, small, large, text, ...props }, opts) => {
-  const { width, height, xScale, yScale, colors, ...rest } = opts;
-  const size = small ? 8 : large ? 12 : 10;
-  const textWidth = props.width || ("m" + text).length * size;
-  const xm = xScale * (x - rest.x[0]);
-  const ym = yScale * (y - rest.y[0]);
-  color = color || colors.black;
-  const strokeWidth = small ? 1 : large ? 2 : 1.75;
+// Draws a Label (text withing a box) in the given in user coordinates
+// <label text="hello world" x="2" y="3"></label>
+const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
+  const { xScale, yScale, colors, pad } = opts;
+
+  // Defaults, preferred inline since some are more complex
+  if (!text) text = "";
+  if (!size) size = "normal";
+  if (!width) width = ("m" + text).length * sizes[size];
+  if (!height) height = sizes[size] * 2.1;
+  if (!color) color = colors.black;
+
+  // Calculate where to draw it. There's a bound on the left since we don't
+  // want labels to be cut off on the left side
+  const xm = Math.max(-pad + 1, xScale * (x - opts.x[0]) - width / 2);
+  const ym = opts.height - yScale * (y - opts.y[0]) - height / 2;
+
   return `
     <rect
-      x="${xm - textWidth / 2}"
-      y="${height - ym - size}"
-      width="${textWidth}"
-      height="${size * 2 + "px"}"
+      x="${xm}"
+      y="${ym}"
+      width="${width}"
+      height="${height}"
       fill="${colors.light}"
       stroke="${color}"
-      stroke-width="${strokeWidth}"
+      stroke-width="${strokeSizes[size]}"
       rx="5"
     />
-    ${drawText({ text, x, y, color, small, large }, opts)}
+    ${drawText({ text, x, y, color, size, width }, opts)}
   `;
 };
 
-const drawLine = ({ from = [0, 0], to, color, dashed }, opts) => {
-  const { black, height, x, y, xScale, yScale, colors } = opts;
+const drawLine = ({ to, from, color, width, dashed }, opts) => {
+  const { height, x, y, xScale, yScale, colors } = opts;
+
+  if (!from) from = [0, 0];
   if (!color) color = colors.black;
+  if (!width) width = 1;
+  if (dashed) dashed = "5,3";
 
   const x1 = xScale * (from[0] - x[0]);
-  const y1 = yScale * (from[1] - y[0]);
+  const y1 = height - yScale * (from[1] - y[0]);
 
   const x2 = (to[0] - x[0]) * xScale;
-  const y2 = (to[1] - y[0]) * yScale;
+  const y2 = height - (to[1] - y[0]) * yScale;
 
   return `
     <line
       x1="${x1}"
-      y1="${height - y1}"
+      y1="${y1}"
       x2="${x2}"
-      y2="${height - y2}"
+      y2="${y2}"
       stroke="${color}"
-      stroke-width="1"
-      stroke-dasharray="${dashed ? "5,3" : null}"
+      stroke-width="${width}"
+      stroke-dasharray="${dashed}"
     />
   `;
 };
@@ -147,12 +204,12 @@ const drawVector = (
   let axisText = "";
   if (axis) {
     const dashed = true;
-    const small = true;
+    const size = "small";
     axisText = [
       drawLine({ from: [to[0], 0], to, dashed, color }, opts),
       drawLine({ from: [0, to[1]], to, dashed, color }, opts),
-      drawLabel({ text: to[0], x: to[0], y: 0, color, small }, opts),
-      drawLabel({ text: to[1], x: 0, y: to[1], color, small }, opts)
+      drawLabel({ text: to[0], x: to[0], y: -12 / yScale, color, size }, opts),
+      drawLabel({ text: to[1], x: -12 / xScale, y: to[1], color, size }, opts)
     ].join("");
   }
 
@@ -201,29 +258,14 @@ const defaultOptions = {
   labels: ["x", "y"],
   grid: 1,
   dark: detectDarkmode(),
-  pad: 20
+  pad: 24
 };
-
-if (typeof HTMLElement !== "undefined") {
-  class SimpleGraph extends HTMLElement {
-    constructor() {
-      // Always call super first in constructor
-      super();
-
-      this.attachShadow({ mode: "open" });
-
-      this.shadowRoot.innerHTML = graph(this.outerHTML);
-    }
-  }
-
-  customElements.define("plane-graph", SimpleGraph);
-}
 
 export default function graph(html) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
-  let { width, height, x, y, labels, grid, dark, pad } = {
+  let { width, height, x, y, labels, grid, dark, units, pad } = {
     ...defaultOptions,
     ...parseOptions(doc.querySelector("plane-graph").attributes)
   };
@@ -248,14 +290,32 @@ export default function graph(html) {
   svg.setAttribute("height", height);
   svg.setAttribute(
     "viewBox",
-    `${-pad} ${-pad} ${width + 2 * pad} ${height + 2 * pad}`
+    `${-pad} ${-pad * 0.6} ${width + 1.6 * pad} ${height + 1.6 * pad}`
   );
   svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  svg.style.background = colors.light;
+  svg.style.borderRadius = "8px";
 
   const elements = [
     { type: "grid", color: colors.gray, fill: colors.light, size: grid },
-    { type: "vector", label: labels?.[0], color: colors.dark, to: [x[1], 0] },
-    { type: "vector", label: labels?.[1], color: colors.dark, to: [0, y[1]] }
+    { type: "vector", color: colors.dark, to: [x[1], 0] },
+    { type: "vector", color: colors.dark, to: [0, y[1]] },
+    {
+      type: "text",
+      text: labels?.[0],
+      color: colors.dark,
+      x: x[1],
+      y: -10 / yScale
+    },
+    {
+      type: "text",
+      text: labels?.[1],
+      color: colors.dark,
+      x: -10 / xScale,
+      y: y[1]
+    },
+    { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
+    { type: "units", size: grid, from: y[0], to: y[1], axis: "y" }
   ];
   elements.push(
     ...[...doc.querySelector("plane-graph").children].map(item => {
@@ -266,12 +326,17 @@ export default function graph(html) {
   );
 
   // RENDER EACH OF THE CHILDREN
-  const options = { width, height, x, y, xScale, yScale, colors };
+  const options = { width, height, x, y, xScale, yScale, colors, pad };
 
   elements.forEach(({ type, ...attrs }) => {
+    // Special classes
+    if (units && type === "units") {
+      svg.innerHTML += drawUnits(attrs, options);
+    }
     if (type === "grid") {
       svg.innerHTML += drawGrid(attrs, options);
     }
+
     if (type === "vector") {
       svg.innerHTML += drawVector(attrs, options);
     }
@@ -284,4 +349,21 @@ export default function graph(html) {
   });
 
   return svg.outerHTML;
+}
+
+// Initialize the module. This attaches the whole graph() function to the
+// custom element `<plane-graph>`, so that in the browser the constructore()
+// will be called. This allows for <script> to be anywhere in the page; if it's
+// before the <plane-graph> component, it's defined and called later
+if (typeof HTMLElement !== "undefined") {
+  class PlaneGraph extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.innerHTML = graph(this.outerHTML);
+    }
+  }
+
+  // Attach the <PlaneGraph> class to all elements called <plane-graph>
+  customElements.define("plane-graph", PlaneGraph);
 }

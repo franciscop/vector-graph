@@ -33,3 +33,24 @@ Generate beautiful euclidian graphs with HTML:
   <label text="c = a + b" x="1" y="3" width="100" large></label>
 </plane-graph>
 ```
+
+## Getting started
+
+To use this library as usual you'll need three things. First, import it from a CDN; put this line anywhere in your HTML:
+
+```
+<script src="https://cdn.jsdelivr.net/npm/plane-graph"></script>
+```
+
+Now let's draw a graph anywhere within your HTML:
+
+```html
+<plane-graph width="200" height="200" grid>
+  <vector label="u" to="8,4"></vector>
+  <vector label="v" to="4,8"></vector>
+</plane-graph>
+```
+
+Finally, if this is going to be included in a commercial or for-profit project make sure to buy a license:
+
+\$9 BUY A LICENSE
