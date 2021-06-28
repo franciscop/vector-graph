@@ -5,11 +5,13 @@ Render simple euclidian plane graphics in SVG:
 <table>
   <tr>
     <td>
-      <img width="200px" src="./examples/simple.svg" />
-      <img width="200px" src="./examples/scale.svg" />
+      <img width="300px" src="./examples/simple.svg" />
     </td>
     <td>
-      <img width="400px" src="./examples/complete.svg" />
+      <img width="300px" src="./examples/scale.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/complete.svg" />
     </td>
   </tr>
 </table>
