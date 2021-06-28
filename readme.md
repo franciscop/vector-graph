@@ -28,8 +28,8 @@ Generate beautiful euclidian graphs with HTML:
 </plane-graph>
 
 <plane-graph width="200" height="200" x="4.9" y="4.9" units>
-  <vector label="a" color="red" from="0,0" to="3,4"></vector>
-  <vector label="b" color="blue" from="3,4" to="4,2"></vector>
+  <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
+  <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
   <vector label="c" from="0,0" to="4,2"></vector>
 </plane-graph>
 ```

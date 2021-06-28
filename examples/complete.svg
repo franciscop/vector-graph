@@ -145,6 +145,26 @@
   
   
     
+    <line x1="122.44897959183673" y1="200" x2="122.44897959183673" y2="36.734693877551024" stroke="red" stroke-width="1" stroke-dasharray="5,3"></line>
+    
+  
+    <line x1="0" y1="36.734693877551024" x2="122.44897959183673" y2="36.734693877551024" stroke="red" stroke-width="1" stroke-dasharray="5,3"></line>
+    
+  
+    <rect x="114.44897959183673" y="203.6" width="16" height="16.8" fill="#fff" stroke="red" stroke-width="1" rx="5"></rect>
+    
+    <text x="122.44897959183673" y="213" width="16" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      3
+    </text>
+  
+  
+    <rect x="-20" y="28.334693877551025" width="16" height="16.8" fill="#fff" stroke="red" stroke-width="1" rx="5"></rect>
+    
+    <text x="-11.999999999999998" y="37.734693877551024" width="16" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      4
+    </text>
+  
+  
   
     <defs>
       <marker id="arrowhead-9" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
@@ -164,6 +184,26 @@
   
   
     
+    <line x1="163.26530612244898" y1="200" x2="163.26530612244898" y2="118.36734693877551" stroke="blue" stroke-width="1" stroke-dasharray="5,3"></line>
+    
+  
+    <line x1="0" y1="118.36734693877551" x2="163.26530612244898" y2="118.36734693877551" stroke="blue" stroke-width="1" stroke-dasharray="5,3"></line>
+    
+  
+    <rect x="155.26530612244898" y="203.6" width="16" height="16.8" fill="#fff" stroke="blue" stroke-width="1" rx="5"></rect>
+    
+    <text x="163.26530612244898" y="213" width="16" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      4
+    </text>
+  
+  
+    <rect x="-20" y="109.9673469387755" width="16" height="16.8" fill="#fff" stroke="blue" stroke-width="1" rx="5"></rect>
+    
+    <text x="-11.999999999999998" y="119.36734693877551" width="16" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      2
+    </text>
+  
+  
   
     <defs>
       <marker id="arrowhead-10" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
