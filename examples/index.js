@@ -12,9 +12,9 @@ const render = new Proxy({}, { get });
 
 render.simple(`
   <plane-graph width="200" height="200">
-    <vector label="vector" to="4,8"></vector>
-    <line label="line" from="0,0" to="8,4"></line>
     <point label="point" x="7" y="7"></point>
+    <line label="line" from="0,0" to="4,8"></line>
+    <vector label="vector" to="8,4"></vector>
   </plane-graph>
 `);
 
