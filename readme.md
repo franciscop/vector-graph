@@ -9,8 +9,6 @@ Render simple euclidian plane graphics in SVG:
       <img width="300px" src="./examples/scale.svg" />
     </td>
     <td>
-    </td>
-    <td>
       <img width="600px" src="./examples/complete.svg" />
     </td>
   </tr>
