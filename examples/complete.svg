@@ -1,12 +1,12 @@
-<svg width="400" height="400" viewBox="-24 -14.399999999999999 438.4 438.4" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
+<svg width="200" height="200" viewBox="-24 -14.399999999999999 238.4 238.4" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-400-400-81.63265306122449-81.63265306122449" width="81.63265306122449" height="81.63265306122449" patternUnits="userSpaceOnUse">
-        <path d="M 0 0 L 0 81.63265306122449 81.63265306122449 81.63265306122449 81.63265306122449 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
+      <pattern id="grid-1-#ccc-#fff-200-200-40.816326530612244-40.816326530612244" width="40.816326530612244" height="40.816326530612244" patternUnits="userSpaceOnUse">
+        <path d="M 0 0 L 0 40.816326530612244 40.816326530612244 40.816326530612244 40.816326530612244 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
-    <rect width="400" height="400" fill="url(#grid-1-#ccc-#fff-400-400-81.63265306122449-81.63265306122449)" style="
+    <rect width="200" height="200" fill="url(#grid-1-#ccc-#fff-200-200-40.816326530612244-40.816326530612244)" style="
     transform: scaleY(-1);
-    transform-origin: 0 200px;
+    transform-origin: 0 100px;
   "></rect>
   
     <defs>
@@ -17,7 +17,7 @@
         <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
       </marker>
     </defs>
-    <line x1="0" y1="400" x2="380" y2="400" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-6)" marker-end="url(#arrowhead-6)"></line>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-6)" marker-end="url(#arrowhead-6)"></line>
     
     
   
@@ -29,11 +29,11 @@
         <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
       </marker>
     </defs>
-    <line x1="0" y1="400" x2="2.326828918379971e-14" y2="20" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-7)" marker-end="url(#arrowhead-7)"></line>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-7)" marker-end="url(#arrowhead-7)"></line>
     
     
   
-    <text x="400" y="411" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+    <text x="200" y="211" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       x
     </text>
   
@@ -41,183 +41,129 @@
       y
     </text>
   
-    <line x1="0" y1="400" x2="0" y2="405" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="0" y1="200" x2="0" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-4" y="403.6" width="8" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="0" y="413" width="8" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      
-    </text>
-  
-  
-    <line x1="81.63265306122449" y1="400" x2="81.63265306122449" y2="405" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="40.816326530612244" y1="200" x2="40.816326530612244" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="73.63265306122449" y="403.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="32.816326530612244" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="81.63265306122449" y="413" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="40.816326530612244" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       1
     </text>
   
   
-    <line x1="163.26530612244898" y1="400" x2="163.26530612244898" y2="405" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="81.63265306122449" y1="200" x2="81.63265306122449" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="155.26530612244898" y="403.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="73.63265306122449" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="163.26530612244898" y="413" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="81.63265306122449" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       2
     </text>
   
   
-    <line x1="244.89795918367346" y1="400" x2="244.89795918367346" y2="405" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="122.44897959183673" y1="200" x2="122.44897959183673" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="236.89795918367346" y="403.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="114.44897959183673" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="244.89795918367346" y="413" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="122.44897959183673" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       3
     </text>
   
   
-    <line x1="326.53061224489795" y1="400" x2="326.53061224489795" y2="405" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="163.26530612244898" y1="200" x2="163.26530612244898" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="318.53061224489795" y="403.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="155.26530612244898" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="326.53061224489795" y="413" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="163.26530612244898" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       4
     </text>
   
   
-    <line x1="0" y1="400" x2="-5" y2="400" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="0" y1="200" x2="-5" y2="200" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-15.999999999999998" y="391.6" width="8" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="401" width="8" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      
-    </text>
-  
-  
-    <line x1="0" y1="318.36734693877554" x2="-5" y2="318.36734693877554" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="0" y1="159.18367346938777" x2="-5" y2="159.18367346938777" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-20" y="309.96734693877556" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-20" y="150.78367346938776" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="-11.999999999999998" y="319.36734693877554" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="-11.999999999999998" y="160.18367346938777" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       1
     </text>
   
   
-    <line x1="0" y1="236.73469387755102" x2="-5" y2="236.73469387755102" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="0" y1="118.36734693877551" x2="-5" y2="118.36734693877551" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-20" y="228.33469387755102" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-20" y="109.9673469387755" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="-11.999999999999998" y="237.73469387755102" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="-11.999999999999998" y="119.36734693877551" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       2
     </text>
   
   
-    <line x1="0" y1="155.10204081632654" x2="-5" y2="155.10204081632654" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="0" y1="77.55102040816327" x2="-5" y2="77.55102040816327" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-20" y="146.70204081632653" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-20" y="69.15102040816326" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="-11.999999999999998" y="156.10204081632654" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="-11.999999999999998" y="78.55102040816327" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       3
     </text>
   
   
-    <line x1="0" y1="73.46938775510205" x2="-5" y2="73.46938775510205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+    <line x1="0" y1="36.734693877551024" x2="-5" y2="36.734693877551024" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-20" y="65.06938775510204" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-20" y="28.334693877551025" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
-    <text x="-11.999999999999998" y="74.46938775510205" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="-11.999999999999998" y="37.734693877551024" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       4
     </text>
   
   
     <defs>
       <marker id="arrowhead-8" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
-        <polygon points="0 0, 10 2.5, 0 5" fill="blue"></polygon>
-      </marker>
-      <marker id="arrowbutt-8" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
-        <circle cx="2" cy="2" r="0.5" fill="blue"></circle>
-      </marker>
-    </defs>
-    <line x1="244.89795918367346" y1="73.46938775510205" x2="317.5863403348988" y2="218.8461500575527" stroke="blue" stroke-width="2" marker-start="url(#arrowbutt-8)" marker-end="url(#arrowhead-8)"></line>
-    
-    <rect x="275.7142857142857" y="144.60204081632654" width="20" height="21" fill="#fff" stroke="blue" stroke-width="1.75" rx="5"></rect>
-    
-    <text x="285.7142857142857" y="156.10204081632654" width="20" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      b
-    </text>
-  
-  
-    
-    <line x1="326.53061224489795" y1="400" x2="326.53061224489795" y2="236.73469387755102" stroke="blue" stroke-width="1" stroke-dasharray="5,3"></line>
-    
-  
-    <line x1="0" y1="236.73469387755102" x2="326.53061224489795" y2="236.73469387755102" stroke="blue" stroke-width="1" stroke-dasharray="5,3"></line>
-    
-  
-    <rect x="318.53061224489795" y="403.6" width="16" height="16.8" fill="#fff" stroke="blue" stroke-width="1" rx="5"></rect>
-    
-    <text x="326.53061224489795" y="413" width="16" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      4
-    </text>
-  
-  
-    <rect x="-20" y="228.33469387755102" width="16" height="16.8" fill="#fff" stroke="blue" stroke-width="1" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="237.73469387755102" width="16" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      2
-    </text>
-  
-  
-  
-    <defs>
-      <marker id="arrowhead-9" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="red"></polygon>
       </marker>
-      <marker id="arrowbutt-9" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+      <marker id="arrowbutt-8" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
         <circle cx="2" cy="2" r="0.5" fill="red"></circle>
       </marker>
     </defs>
-    <line x1="0" y1="400" x2="232.89795918367352" y2="89.46938775510205" stroke="red" stroke-width="2" marker-start="url(#arrowbutt-9)" marker-end="url(#arrowhead-9)"></line>
+    <line x1="0" y1="200" x2="110.44897959183676" y2="52.734693877551024" stroke="red" stroke-width="2" marker-start="url(#arrowbutt-8)" marker-end="url(#arrowhead-8)"></line>
     
-    <rect x="112.44897959183673" y="226.23469387755102" width="20" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
+    <rect x="51.224489795918366" y="107.86734693877551" width="20" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
     
-    <text x="122.44897959183673" y="237.73469387755102" width="20" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+    <text x="61.224489795918366" y="119.36734693877551" width="20" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       a
     </text>
   
   
     
-    <line x1="244.89795918367346" y1="400" x2="244.89795918367346" y2="73.46938775510205" stroke="red" stroke-width="1" stroke-dasharray="5,3"></line>
-    
   
-    <line x1="0" y1="73.46938775510205" x2="244.89795918367346" y2="73.46938775510205" stroke="red" stroke-width="1" stroke-dasharray="5,3"></line>
+    <defs>
+      <marker id="arrowhead-9" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="blue"></polygon>
+      </marker>
+      <marker id="arrowbutt-9" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="blue"></circle>
+      </marker>
+    </defs>
+    <line x1="122.44897959183673" y1="36.734693877551024" x2="154.32103421244983" y2="100.4788031187772" stroke="blue" stroke-width="2" marker-start="url(#arrowbutt-9)" marker-end="url(#arrowhead-9)"></line>
     
-  
-    <rect x="236.89795918367346" y="403.6" width="16" height="16.8" fill="#fff" stroke="red" stroke-width="1" rx="5"></rect>
+    <rect x="132.85714285714286" y="67.05102040816327" width="20" height="21" fill="#fff" stroke="blue" stroke-width="1.75" rx="5"></rect>
     
-    <text x="244.89795918367346" y="413" width="16" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      3
+    <text x="142.85714285714286" y="78.55102040816327" width="20" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      b
     </text>
   
   
-    <rect x="-20" y="65.06938775510204" width="16" height="16.8" fill="#fff" stroke="red" stroke-width="1" rx="5"></rect>
     
-    <text x="-11.999999999999998" y="74.46938775510205" width="16" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      4
-    </text>
-  
-  
   
     <defs>
       <marker id="arrowhead-10" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
@@ -227,21 +173,14 @@
         <circle cx="2" cy="2" r="0.5" fill="#000"></circle>
       </marker>
     </defs>
-    <line x1="0" y1="400" x2="308.64206842489966" y2="245.67896578755017" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-10)" marker-end="url(#arrowhead-10)"></line>
+    <line x1="0" y1="200" x2="145.37676230245066" y2="127.31161884877467" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-10)" marker-end="url(#arrowhead-10)"></line>
     
-    <rect x="153.26530612244898" y="307.86734693877554" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="71.63265306122449" y="148.68367346938777" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
-    <text x="163.26530612244898" y="319.36734693877554" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+    <text x="81.63265306122449" y="160.18367346938777" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       c
     </text>
   
   
     
-  
-    <rect x="31.632653061224488" y="142.50204081632654" width="100" height="25.200000000000003" fill="#fff" stroke="#000" stroke-width="2" rx="5"></rect>
-    
-    <text x="81.63265306122449" y="156.10204081632654" width="100" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 20px sans-serif">
-      c = a + b
-    </text>
-  
   </svg>

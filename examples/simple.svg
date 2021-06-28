@@ -70,7 +70,7 @@
   
   
   
-    <circle cx="140" cy="60" r="4" fill="undefined"></circle>
+    <circle cx="140" cy="60" r="4" fill="#000"></circle>
     
     <rect x="110" y="29.5" width="60" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     

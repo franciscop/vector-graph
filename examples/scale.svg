@@ -44,13 +44,6 @@
     <line x1="0" y1="200" x2="0" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-4" y="203.6" width="8" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="0" y="213" width="8" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      
-    </text>
-  
-  
     <line x1="51.282051282051285" y1="200" x2="51.282051282051285" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
@@ -83,13 +76,6 @@
   
     <line x1="0" y1="200" x2="-5" y2="200" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
-  
-    <rect x="-16" y="191.6" width="8" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-12" y="201" width="8" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      
-    </text>
-  
   
     <line x1="0" y1="148.71794871794873" x2="-5" y2="148.71794871794873" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     

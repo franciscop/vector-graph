@@ -18,20 +18,19 @@ Generate beautiful euclidian graphs with HTML:
 
 ```html
 <plane-graph width="200" height="200">
-  <vector label="vector" to="4,8"></vector>
-  <line label="line" from="0,0" to="8,4"></line>
   <point label="point" x="7" y="7"></point>
+  <line label="line" from="0,0" to="4,8"></line>
+  <vector label="vector" to="8,4"></vector>
 </plane-graph>
 
 <plane-graph width="200" height="200" x="3.9" y="3.9" units>
   <vector label="v" to="3,3.2" axis></vector>
 </plane-graph>
 
-<plane-graph width="400" height="400" x="4.9" y="4.9" units>
-  <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
-  <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
+<plane-graph width="200" height="200" x="4.9" y="4.9" units>
+  <vector label="a" color="red" from="0,0" to="3,4"></vector>
+  <vector label="b" color="blue" from="3,4" to="4,2"></vector>
   <vector label="c" from="0,0" to="4,2"></vector>
-  <label text="c = a + b" x="1" y="3" size="large"></label>
 </plane-graph>
 ```
 

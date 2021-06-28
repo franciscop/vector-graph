@@ -92,7 +92,7 @@ const drawText = ({ text, x, y, color, size, width }, opts) => {
   const { height, xScale, yScale, colors, pad, ...rest } = opts;
 
   // Defaults, preferred inline since some are more complex
-  if (!text) text = "";
+  if (!text) return "";
   if (!size) size = "normal";
   if (!width) width = ("m" + text).length * sizes[size];
   if (!color) color = colors.black;
@@ -117,7 +117,7 @@ const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
   const { xScale, yScale, colors, pad } = opts;
 
   // Defaults, preferred inline since some are more complex
-  if (!text) text = "";
+  if (!text) return "";
   if (!size) size = "normal";
   if (!width) width = ("m" + text).length * sizes[size];
   if (!height) height = sizes[size] * 2.1;
@@ -146,10 +146,7 @@ const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
 const drawPoint = ({ x, y, label, color, width, dashed }, opts) => {
   const { height, xScale, yScale, colors } = opts;
 
-  let labelText = "";
-  if (label) {
-    labelText = drawLabel({ text: label, color, x, y: y + 20 / yScale }, opts);
-  }
+  if (!color) color = colors.black;
 
   return `
     <circle
@@ -158,7 +155,7 @@ const drawPoint = ({ x, y, label, color, width, dashed }, opts) => {
       r="4"
       fill="${color}"
     />
-    ${labelText}
+    ${drawLabel({ text: label, color, x, y: y + 20 / yScale }, opts)}
   `;
 };
 
@@ -176,12 +173,8 @@ const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
   const x2 = (to[0] - x[0]) * xScale;
   const y2 = height - (to[1] - y[0]) * yScale;
 
-  let labelText = "";
-  if (label) {
-    const x = (to[0] + from[0]) / 2;
-    const y = (to[1] + from[1]) / 2;
-    labelText = drawLabel({ text: label, color, x, y }, opts);
-  }
+  const labelX = (to[0] + from[0]) / 2;
+  const labelY = (to[1] + from[1]) / 2;
 
   return `
     <line
@@ -193,8 +186,22 @@ const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
       stroke-width="${width}"
       stroke-dasharray="${dashed}"
     />
-    ${labelText}
+    ${drawLabel({ text: label, color, x: labelX, y: labelY }, opts)}
   `;
+};
+
+// Draws a set of two lines going from the point "to" to the origin axis
+const drawCoordinates = ({ x, y, color }, opts) => {
+  const { xScale, yScale } = opts;
+  const width = 1;
+  const dashed = true;
+  const size = "small";
+  return [
+    drawLine({ from: [x, 0], to: [x, y], width, dashed, color }, opts),
+    drawLine({ from: [0, y], to: [x, y], width, dashed, color }, opts),
+    drawLabel({ text: x, x, y: -12 / yScale, color, size }, opts),
+    drawLabel({ text: y, x: -12 / xScale, y, color, size }, opts)
+  ].join("");
 };
 
 const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
@@ -218,25 +225,8 @@ const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
   const x2 = x1 + new_mag * Math.cos(angle);
   const y2 = y1 + new_mag * Math.sin(angle);
 
-  let labelText = "";
-  if (label) {
-    const x = (to[0] + from[0]) / 2;
-    const y = (to[1] + from[1]) / 2;
-    labelText = drawLabel({ text: label, color, x, y }, opts);
-  }
-
-  let axisText = "";
-  if (axis) {
-    const width = 1;
-    const dashed = true;
-    const size = "small";
-    axisText = [
-      drawLine({ from: [to[0], 0], to, width, dashed, color }, opts),
-      drawLine({ from: [0, to[1]], to, width, dashed, color }, opts),
-      drawLabel({ text: to[0], x: to[0], y: -12 / yScale, color, size }, opts),
-      drawLabel({ text: to[1], x: -12 / xScale, y: to[1], color, size }, opts)
-    ].join("");
-  }
+  const labelX = (to[0] + from[0]) / 2;
+  const labelY = (to[1] + from[1]) / 2;
 
   return `
     <defs>
@@ -270,8 +260,8 @@ const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
       marker-start="url(#arrowbutt-${id})"
       marker-end="url(#arrowhead-${id})"
     />
-    ${labelText}
-    ${axisText}
+    ${drawLabel({ text: label, color, x: labelX, y: labelY }, opts)}
+    ${axis ? drawCoordinates({ x: to[0], y: to[1], color }, opts) : ""}
   `;
 };
 
