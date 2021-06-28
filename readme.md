@@ -1,6 +1,6 @@
 # Plane Graph
 
-Render simple euclidian plane graphics in SVG:
+Generate beautiful euclidian graphics with plain HTML:
 
 <table>
   <tr>
