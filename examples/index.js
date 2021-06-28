@@ -18,8 +18,8 @@ render.simple(`
 `);
 
 render.scale(`
-  <plane-graph width="200" height="200" x="390" y="390" grid="100" units>
-    <vector label="v" to="300,320" axis />
+  <plane-graph width="200" height="200" x="4" y="4" grid="1" units>
+    <vector label="v" to="3,3.2" axis />
   </plane-graph>
 `);
 
