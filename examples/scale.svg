@@ -41,6 +41,78 @@
       y
     </text>
   
+    <line x1="0" y1="200" x2="0" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="-4" y="203.6" width="8" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="0" y="213" width="8" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      
+    </text>
+  
+  
+    <line x1="51.28205128205128" y1="200" x2="51.28205128205128" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="35.28205128205128" y="203.6" width="32" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="51.28205128205128" y="213" width="32" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      100
+    </text>
+  
+  
+    <line x1="102.56410256410255" y1="200" x2="102.56410256410255" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="86.56410256410255" y="203.6" width="32" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="102.56410256410255" y="213" width="32" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      200
+    </text>
+  
+  
+    <line x1="153.84615384615384" y1="200" x2="153.84615384615384" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="137.84615384615384" y="203.6" width="32" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="153.84615384615384" y="213" width="32" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      300
+    </text>
+  
+  
+    <line x1="0" y1="200" x2="-5" y2="200" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="-16" y="191.6" width="8" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="-12" y="201" width="8" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      
+    </text>
+  
+  
+    <line x1="0" y1="148.71794871794873" x2="-5" y2="148.71794871794873" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="-23" y="140.31794871794872" width="32" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="-7" y="149.71794871794873" width="32" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      100
+    </text>
+  
+  
+    <line x1="0" y1="97.43589743589745" x2="-5" y2="97.43589743589745" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="-23" y="89.03589743589744" width="32" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="-7" y="98.43589743589745" width="32" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      200
+    </text>
+  
+  
+    <line x1="0" y1="46.15384615384616" x2="-5" y2="46.15384615384616" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
+  
+    <rect x="-23" y="37.75384615384616" width="32" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    
+    <text x="-7" y="47.15384615384616" width="32" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      300
+    </text>
+  
+  
     <defs>
       <marker id="arrowhead-6" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
