@@ -1,0 +1,86 @@
+<svg width="200" height="200" viewBox="-20 -20 240 240" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid-100-#ccc-#fff-200-200-0.5128205128205128-0.5128205128205128" width="51.28205128205128" height="51.28205128205128" patternUnits="userSpaceOnUse">
+        <path d="M 0 0 L 0 51.28205128205128 51.28205128205128 51.28205128205128 51.28205128205128 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#grid-100-#ccc-#fff-200-200-0.5128205128205128-0.5128205128205128)" style="
+    transform: scaleY(-1);
+    transform-origin: 0 100px;
+  "></rect>
+  
+    <defs>
+      <marker id="arrowhead-4" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+      <marker id="arrowbutt-4" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="179.99999999999997" y2="200" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-4)" marker-end="url(#arrowhead-4)"></line>
+    
+    <rect x="89.99999999999999" y="190" width="20" height="20px" fill="#fff" stroke="#aaa" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="99.99999999999999" y="201" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+  
+    
+  
+    <defs>
+      <marker id="arrowhead-5" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+      <marker id="arrowbutt-5" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="1.1021821192326178e-14" y2="20.00000000000003" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-5)" marker-end="url(#arrowhead-5)"></line>
+    
+    <rect x="-10" y="90.00000000000001" width="20" height="20px" fill="#fff" stroke="#aaa" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="0" y="101.00000000000001" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+  
+    
+  
+    <defs>
+      <marker id="arrowhead-6" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
+      </marker>
+      <marker id="arrowbutt-6" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#000"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="140.16733126852725" y2="50.48817998023759" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-6)" marker-end="url(#arrowhead-6)"></line>
+    
+    <rect x="61.92307692307692" y="107.94871794871796" width="30" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="76.92307692307692" y="118.94871794871796" width="30" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      v⃗
+    </text>
+  
+  
+    
+    <line x1="153.84615384615384" y1="200" x2="153.84615384615384" y2="35.89743589743591" stroke="#000" stroke-width="1" stroke-dasharray="5,3"></line>
+  
+    <line x1="0" y1="35.89743589743591" x2="153.84615384615384" y2="35.89743589743591" stroke="#000" stroke-width="1" stroke-dasharray="5,3"></line>
+  
+    <rect x="137.84615384615384" y="192" width="32" height="16px" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    
+    <text x="153.84615384615384" y="201" width="NaN" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      300
+    </text>
+  
+  
+    <rect x="-16" y="27.897435897435912" width="32" height="16px" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    
+    <text x="0" y="36.89743589743591" width="NaN" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      320
+    </text>
+  
+  
+  </svg>

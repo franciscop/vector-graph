@@ -1,0 +1,142 @@
+<svg width="200" height="200" viewBox="-20 -20 240 240" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid-1-#666-#000-200-200-40.816326530612244-40.816326530612244" width="40.816326530612244" height="40.816326530612244" patternUnits="userSpaceOnUse">
+        <path d="M 0 0 L 0 40.816326530612244 40.816326530612244 40.816326530612244 40.816326530612244 0 0 0" fill="#000" stroke="#666" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#grid-1-#666-#000-200-200-40.816326530612244-40.816326530612244)" style="
+    transform: scaleY(-1);
+    transform-origin: 0 100px;
+  "></rect>
+  
+    <defs>
+      <marker id="arrowhead-30" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+      <marker id="arrowbutt-30" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-30)" marker-end="url(#arrowhead-30)"></line>
+    
+    <rect x="90" y="190" width="20" height="20px" fill="#000" stroke="#aaa" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="100" y="201" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+  
+    
+  
+    <defs>
+      <marker id="arrowhead-31" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+      <marker id="arrowbutt-31" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-31)" marker-end="url(#arrowhead-31)"></line>
+    
+    <rect x="-10" y="90" width="20" height="20px" fill="#000" stroke="#aaa" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="0" y="101" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+  
+    
+  
+    <defs>
+      <marker id="arrowhead-32" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#88f"></polygon>
+      </marker>
+      <marker id="arrowbutt-32" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#88f"></circle>
+      </marker>
+    </defs>
+    <line x1="122.44897959183673" y1="36.734693877551024" x2="154.32103421244983" y2="100.4788031187772" stroke="#88f" stroke-width="2" marker-start="url(#arrowbutt-32)" marker-end="url(#arrowhead-32)"></line>
+    
+    <rect x="127.85714285714286" y="67.55102040816327" width="30" height="20px" fill="#000" stroke="#88f" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="142.85714285714286" y="78.55102040816327" width="30" fill="#88f" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      b⃗
+    </text>
+  
+  
+    
+    <line x1="163.26530612244898" y1="200" x2="163.26530612244898" y2="118.36734693877551" stroke="#88f" stroke-width="1" stroke-dasharray="5,3"></line>
+  
+    <line x1="0" y1="118.36734693877551" x2="163.26530612244898" y2="118.36734693877551" stroke="#88f" stroke-width="1" stroke-dasharray="5,3"></line>
+  
+    <rect x="155.26530612244898" y="192" width="16" height="16px" fill="#000" stroke="#88f" stroke-width="1" rx="5"></rect>
+    
+    <text x="163.26530612244898" y="201" width="NaN" fill="#88f" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      4
+    </text>
+  
+  
+    <rect x="-8" y="110.36734693877551" width="16" height="16px" fill="#000" stroke="#88f" stroke-width="1" rx="5"></rect>
+    
+    <text x="0" y="119.36734693877551" width="NaN" fill="#88f" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      2
+    </text>
+  
+  
+  
+    <defs>
+      <marker id="arrowhead-33" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#f88"></polygon>
+      </marker>
+      <marker id="arrowbutt-33" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#f88"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="110.44897959183676" y2="52.734693877551024" stroke="#f88" stroke-width="2" marker-start="url(#arrowbutt-33)" marker-end="url(#arrowhead-33)"></line>
+    
+    <rect x="46.224489795918366" y="108.36734693877551" width="30" height="20px" fill="#000" stroke="#f88" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="61.224489795918366" y="119.36734693877551" width="30" fill="#f88" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      a⃗
+    </text>
+  
+  
+    
+    <line x1="122.44897959183673" y1="200" x2="122.44897959183673" y2="36.734693877551024" stroke="#f88" stroke-width="1" stroke-dasharray="5,3"></line>
+  
+    <line x1="0" y1="36.734693877551024" x2="122.44897959183673" y2="36.734693877551024" stroke="#f88" stroke-width="1" stroke-dasharray="5,3"></line>
+  
+    <rect x="114.44897959183673" y="192" width="16" height="16px" fill="#000" stroke="#f88" stroke-width="1" rx="5"></rect>
+    
+    <text x="122.44897959183673" y="201" width="NaN" fill="#f88" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      3
+    </text>
+  
+  
+    <rect x="-8" y="28.734693877551024" width="16" height="16px" fill="#000" stroke="#f88" stroke-width="1" rx="5"></rect>
+    
+    <text x="0" y="37.734693877551024" width="NaN" fill="#f88" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      4
+    </text>
+  
+  
+  
+    <defs>
+      <marker id="arrowhead-34" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#fff"></polygon>
+      </marker>
+      <marker id="arrowbutt-34" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+        <circle cx="2" cy="2" r="0.5" fill="#fff"></circle>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="145.37676230245066" y2="127.31161884877467" stroke="#fff" stroke-width="2" marker-start="url(#arrowbutt-34)" marker-end="url(#arrowhead-34)"></line>
+    
+    <rect x="66.63265306122449" y="149.18367346938777" width="30" height="20px" fill="#000" stroke="#fff" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="81.63265306122449" y="160.18367346938777" width="30" fill="#fff" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      c⃗
+    </text>
+  
+  
+    
+  </svg>
