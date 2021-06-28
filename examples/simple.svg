@@ -49,33 +49,34 @@
         <circle cx="2" cy="2" r="0.5" fill="#000"></circle>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="142.11145618000168" y2="128.94427190999915" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-2)" marker-end="url(#arrowhead-2)"></line>
+    <line x1="0" y1="200" x2="71.05572809000085" y2="57.88854381999832" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-2)" marker-end="url(#arrowhead-2)"></line>
     
-    <rect x="70" y="149.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="5" y="109.5" width="70" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
-    <text x="80" y="161" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      u
+    <text x="40" y="121" width="70" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      vector
     </text>
   
   
     
   
-    <defs>
-      <marker id="arrowhead-3" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
-        <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
-      </marker>
-      <marker id="arrowbutt-3" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
-        <circle cx="2" cy="2" r="0.5" fill="#000"></circle>
-      </marker>
-    </defs>
-    <line x1="0" y1="200" x2="71.05572809000085" y2="57.88854381999832" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-3)" marker-end="url(#arrowhead-3)"></line>
+    <line x1="0" y1="200" x2="160" y2="120" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
-    <rect x="30" y="109.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="55" y="149.5" width="50" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
-    <text x="40" y="121" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      v
+    <text x="80" y="161" width="50" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      line
     </text>
   
   
+  
+    <circle cx="140" cy="60" r="4" fill="undefined"></circle>
     
+    <rect x="110" y="29.5" width="60" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="140" y="41" width="60" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      point
+    </text>
+  
+  
   </svg>

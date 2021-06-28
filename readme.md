@@ -17,20 +17,21 @@ Generate beautiful euclidian graphs with HTML:
 </table>
 
 ```html
-<plane-graph width="200" height="200" grid>
-  <vector label="u" to="8,4"></vector>
-  <vector label="v" to="4,8"></vector>
+<plane-graph width="200" height="200">
+  <vector label="vector" to="4,8"></vector>
+  <line label="line" from="0,0" to="8,4"></line>
+  <point label="point" x="7" y="7"></point>
 </plane-graph>
 
-<plane-graph width="200" height="200" x="390" y="390" grid="100">
-  <vector label="v" to="300,320" axis />
+<plane-graph width="200" height="200" x="3.9" y="3.9" units>
+  <vector label="v" to="3,3.2" axis></vector>
 </plane-graph>
 
-<plane-graph width="400" height="400" x="4.9" y="4.9">
+<plane-graph width="400" height="400" x="4.9" y="4.9" units>
   <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
   <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
   <vector label="c" from="0,0" to="4,2"></vector>
-  <label text="c = a + b" x="1" y="3" width="100" large></label>
+  <label text="c = a + b" x="1" y="3" size="large"></label>
 </plane-graph>
 ```
 
@@ -54,3 +55,19 @@ Now let's draw a graph anywhere within your HTML:
 Finally, if this is going to be included in a commercial or for-profit project make sure to buy a license:
 
 \$9 BUY A LICENSE
+
+## Documentation
+
+### <plane-graph>
+
+### <vector>
+
+### <line>
+
+### <point>
+
+### <label>
+
+### <text>
+
+## Examples

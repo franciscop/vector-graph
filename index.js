@@ -143,12 +143,31 @@ const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
   `;
 };
 
-const drawLine = ({ to, from, color, width, dashed }, opts) => {
+const drawPoint = ({ x, y, label, color, width, dashed }, opts) => {
+  const { height, xScale, yScale, colors } = opts;
+
+  let labelText = "";
+  if (label) {
+    labelText = drawLabel({ text: label, color, x, y: y + 20 / yScale }, opts);
+  }
+
+  return `
+    <circle
+      cx=${x * xScale}
+      cy=${height - y * yScale}
+      r="4"
+      fill="${color}"
+    />
+    ${labelText}
+  `;
+};
+
+const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
   const { height, x, y, xScale, yScale, colors } = opts;
 
   if (!from) from = [0, 0];
   if (!color) color = colors.black;
-  if (!width) width = 1;
+  if (!width) width = 1.75;
   if (dashed) dashed = "5,3";
 
   const x1 = xScale * (from[0] - x[0]);
@@ -156,6 +175,13 @@ const drawLine = ({ to, from, color, width, dashed }, opts) => {
 
   const x2 = (to[0] - x[0]) * xScale;
   const y2 = height - (to[1] - y[0]) * yScale;
+
+  let labelText = "";
+  if (label) {
+    const x = (to[0] + from[0]) / 2;
+    const y = (to[1] + from[1]) / 2;
+    labelText = drawLabel({ text: label, color, x, y }, opts);
+  }
 
   return `
     <line
@@ -167,16 +193,16 @@ const drawLine = ({ to, from, color, width, dashed }, opts) => {
       stroke-width="${width}"
       stroke-dasharray="${dashed}"
     />
+    ${labelText}
   `;
 };
 
-const drawVector = (
-  { from = [0, 0], to, cap, label, axis, ...props },
-  opts
-) => {
+const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
   const { height, x, y, xScale, yScale, colors } = opts;
 
   const id = globalId++;
+  if (!from) from = [0, 0];
+  if (!color) color = colors.black;
 
   const x1 = xScale * (from[0] - x[0]);
   const y1 = yScale * (from[1] - y[0]);
@@ -192,8 +218,6 @@ const drawVector = (
   const x2 = x1 + new_mag * Math.cos(angle);
   const y2 = y1 + new_mag * Math.sin(angle);
 
-  const color = props.color || colors.black;
-
   let labelText = "";
   if (label) {
     const x = (to[0] + from[0]) / 2;
@@ -203,11 +227,12 @@ const drawVector = (
 
   let axisText = "";
   if (axis) {
+    const width = 1;
     const dashed = true;
     const size = "small";
     axisText = [
-      drawLine({ from: [to[0], 0], to, dashed, color }, opts),
-      drawLine({ from: [0, to[1]], to, dashed, color }, opts),
+      drawLine({ from: [to[0], 0], to, width, dashed, color }, opts),
+      drawLine({ from: [0, to[1]], to, width, dashed, color }, opts),
       drawLabel({ text: to[0], x: to[0], y: -12 / yScale, color, size }, opts),
       drawLabel({ text: to[1], x: -12 / xScale, y: to[1], color, size }, opts)
     ].join("");
@@ -339,6 +364,12 @@ export default function graph(html) {
 
     if (type === "vector") {
       svg.innerHTML += drawVector(attrs, options);
+    }
+    if (type === "line") {
+      svg.innerHTML += drawLine(attrs, options);
+    }
+    if (type === "point") {
+      svg.innerHTML += drawPoint(attrs, options);
     }
     if (type === "label") {
       svg.innerHTML += drawLabel(attrs, options);

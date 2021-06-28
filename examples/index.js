@@ -11,15 +11,16 @@ const get = (orig, key) => src => write(`./examples/${key}.svg`, graph(src));
 const render = new Proxy({}, { get });
 
 render.simple(`
-  <plane-graph width="200" height="200" grid>
-    <vector label="u" to="8,4"></vector>
-    <vector label="v" to="4,8"></vector>
+  <plane-graph width="200" height="200">
+    <vector label="vector" to="4,8"></vector>
+    <line label="line" from="0,0" to="8,4"></line>
+    <point label="point" x="7" y="7"></point>
   </plane-graph>
 `);
 
 render.scale(`
   <plane-graph width="200" height="200" x="3.9" y="3.9" units>
-    <vector label="v" to="3,3.2" axis />
+    <vector label="v" to="3,3.2" axis></vector>
   </plane-graph>
 `);
 
