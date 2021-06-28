@@ -2,6 +2,20 @@
 
 Render simple euclidian plane graphics in SVG:
 
+<table>
+  <tr>
+    <td>
+      <img width="300px" src="./examples/simple.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/scale.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/complete.svg" />
+    </td>
+  </tr>
+</table>
+
 ```html
 <plane-graph width="200" height="200" grid>
   <vector label="u" to="8,4"></vector>
@@ -19,17 +33,3 @@ Render simple euclidian plane graphics in SVG:
   <label text="c = a + b" x="1" y="3" width="100" large></label>
 </plane-graph>
 ```
-
-<table>
-  <tr>
-    <td>
-      <img width="300px" src="./examples/simple.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/scale.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/complete.svg" />
-    </td>
-  </tr>
-</table>
