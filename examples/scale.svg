@@ -57,10 +57,10 @@
     </defs>
     <line x1="0" y1="200" x2="140.16733126852725" y2="50.48817998023759" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-6)" marker-end="url(#arrowhead-6)"></line>
     
-    <rect x="61.92307692307692" y="107.94871794871796" width="30" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="66.92307692307692" y="107.94871794871796" width="20" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
-    <text x="76.92307692307692" y="118.94871794871796" width="30" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      v⃗
+    <text x="76.92307692307692" y="118.94871794871796" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      v
     </text>
   
   

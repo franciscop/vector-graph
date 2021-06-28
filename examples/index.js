@@ -12,23 +12,23 @@ const render = new Proxy({}, { get });
 
 render.simple(`
   <plane-graph width="200" height="200" grid>
-    <vector label="u⃗" to="8,4"></vector>
-    <vector label="v⃗" to="4,8"></vector>
+    <vector label="u" to="8,4"></vector>
+    <vector label="v" to="4,8"></vector>
   </plane-graph>
 `);
 
 render.scale(`
   <plane-graph width="200" height="200" x="390" y="390" grid="100">
-    <vector label="v⃗" to="300,320" axis />
+    <vector label="v" to="300,320" axis />
   </plane-graph>
 `);
 
 render.complete(`
   <plane-graph width="400" height="400" x="4.9" y="4.9">
-    <vector label="b⃗" color="blue" from="3,4" to="4,2" axis></vector>
-    <vector label="a⃗" color="red" from="0,0" to="3,4" axis></vector>
-    <vector label="c⃗" from="0,0" to="4,2"></vector>
-    <label text="c⃗ = a⃗ + b⃗" x="1" y="3" width="100" large></label>
+    <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
+    <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
+    <vector label="c" from="0,0" to="4,2"></vector>
+    <label text="c = a + b" x="1" y="3" width="100" large></label>
   </plane-graph>
 `);
 
@@ -56,15 +56,15 @@ render.full(`
 
 render.dark(`
   <plane-graph width="200" height="200" dark>
-    <vector label="u⃗" to="8,4"></vector>
-    <vector label="v⃗" to="4,8"></vector>
+    <vector label="u" to="8,4"></vector>
+    <vector label="v" to="4,8"></vector>
   </plane-graph>
 `);
 
 render.darkcolor(`
   <plane-graph width="200" height="200" x="4.9" y="4.9" dark>
-    <vector label="b⃗" color="#88f" from="3,4" to="4,2" axis></vector>
-    <vector label="a⃗" color="#f88" from="0,0" to="3,4" axis></vector>
-    <vector label="c⃗" from="0,0" to="4,2"></vector>
+    <vector label="b" color="#88f" from="3,4" to="4,2" axis></vector>
+    <vector label="a" color="#f88" from="0,0" to="3,4" axis></vector>
+    <vector label="c" from="0,0" to="4,2"></vector>
   </plane-graph>
 `);

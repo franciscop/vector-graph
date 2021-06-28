@@ -57,10 +57,10 @@
     </defs>
     <line x1="0" y1="200" x2="142.11145618000168" y2="128.94427190999915" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-2)" marker-end="url(#arrowhead-2)"></line>
     
-    <rect x="65" y="150" width="30" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="70" y="150" width="20" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
-    <text x="80" y="161" width="30" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      u⃗
+    <text x="80" y="161" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      u
     </text>
   
   
@@ -76,10 +76,10 @@
     </defs>
     <line x1="0" y1="200" x2="71.05572809000085" y2="57.88854381999832" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-3)" marker-end="url(#arrowhead-3)"></line>
     
-    <rect x="25" y="110" width="30" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="30" y="110" width="20" height="20px" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
-    <text x="40" y="121" width="30" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      v⃗
+    <text x="40" y="121" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      v
     </text>
   
   

@@ -57,10 +57,10 @@
     </defs>
     <line x1="122.44897959183673" y1="36.734693877551024" x2="154.32103421244983" y2="100.4788031187772" stroke="#88f" stroke-width="2" marker-start="url(#arrowbutt-32)" marker-end="url(#arrowhead-32)"></line>
     
-    <rect x="127.85714285714286" y="67.55102040816327" width="30" height="20px" fill="#000" stroke="#88f" stroke-width="1.75" rx="5"></rect>
+    <rect x="132.85714285714286" y="67.55102040816327" width="20" height="20px" fill="#000" stroke="#88f" stroke-width="1.75" rx="5"></rect>
     
-    <text x="142.85714285714286" y="78.55102040816327" width="30" fill="#88f" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      b⃗
+    <text x="142.85714285714286" y="78.55102040816327" width="20" fill="#88f" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      b
     </text>
   
   
@@ -94,10 +94,10 @@
     </defs>
     <line x1="0" y1="200" x2="110.44897959183676" y2="52.734693877551024" stroke="#f88" stroke-width="2" marker-start="url(#arrowbutt-33)" marker-end="url(#arrowhead-33)"></line>
     
-    <rect x="46.224489795918366" y="108.36734693877551" width="30" height="20px" fill="#000" stroke="#f88" stroke-width="1.75" rx="5"></rect>
+    <rect x="51.224489795918366" y="108.36734693877551" width="20" height="20px" fill="#000" stroke="#f88" stroke-width="1.75" rx="5"></rect>
     
-    <text x="61.224489795918366" y="119.36734693877551" width="30" fill="#f88" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      a⃗
+    <text x="61.224489795918366" y="119.36734693877551" width="20" fill="#f88" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      a
     </text>
   
   
@@ -131,10 +131,10 @@
     </defs>
     <line x1="0" y1="200" x2="145.37676230245066" y2="127.31161884877467" stroke="#fff" stroke-width="2" marker-start="url(#arrowbutt-34)" marker-end="url(#arrowhead-34)"></line>
     
-    <rect x="66.63265306122449" y="149.18367346938777" width="30" height="20px" fill="#000" stroke="#fff" stroke-width="1.75" rx="5"></rect>
+    <rect x="71.63265306122449" y="149.18367346938777" width="20" height="20px" fill="#000" stroke="#fff" stroke-width="1.75" rx="5"></rect>
     
-    <text x="81.63265306122449" y="160.18367346938777" width="30" fill="#fff" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      c⃗
+    <text x="81.63265306122449" y="160.18367346938777" width="20" fill="#fff" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      c
     </text>
   
   
