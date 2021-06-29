@@ -99,9 +99,36 @@ Finally, if this is going to be included in a commercial or for-profit project m
 
 ### \<vector>
 
+| attribute | default   | description                                       |
+| --------- | --------- | ------------------------------------------------- |
+| `to`      | 🚫        | The point where the vector ends with an arrow     |
+| `from`    | `"0,0"`   | The point where the vector starts                 |
+| `label`   | 🚫        | Text to draw on the middle of the line            |
+| `color`   | `"black"` | The color of the line, it can be a name or hexa   |
+| `axis`    | `"false"` | Draw the horizontal and vertical coordinate lines |
+
 ### \<label>
 
+| attribute | default    | description                                          |
+| --------- | ---------- | ---------------------------------------------------- |
+| `text`    | 🚫         | The content that goes inside the label               |
+| `x`       | 🚫         | The horizontal coordinate where to draw the label    |
+| `y`       | 🚫         | The vertical coordinate where to draw the label      |
+| `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
+| `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
+| `width`   | auto       | The width of the label, leave it empty               |
+| `height`  | auto       | The height of the label, leave it empty              |
+
 ### \<text>
+
+| attribute | default    | description                                          |
+| --------- | ---------- | ---------------------------------------------------- |
+| `text`    | 🚫         | The content that goes inside the label               |
+| `x`       | 🚫         | The horizontal coordinate where to draw the label    |
+| `y`       | 🚫         | The vertical coordinate where to draw the label      |
+| `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
+| `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
+| `width`   | auto       | The width of the label, leave it empty               |
 
 ## Examples
 

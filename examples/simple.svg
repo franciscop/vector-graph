@@ -10,26 +10,20 @@
   "></rect>
   
     <defs>
-      <marker id="arrowhead-0" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-0" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
       </marker>
-      <marker id="arrowbutt-0" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
-        <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
-      </marker>
     </defs>
-    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-0)" marker-end="url(#arrowhead-0)"></line>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-0)"></line>
     
     
   
     <defs>
-      <marker id="arrowhead-1" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-1" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
       </marker>
-      <marker id="arrowbutt-1" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
-        <circle cx="2" cy="2" r="0.5" fill="#aaa"></circle>
-      </marker>
     </defs>
-    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-start="url(#arrowbutt-1)" marker-end="url(#arrowhead-1)"></line>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-1)"></line>
     
     
   
@@ -63,14 +57,11 @@
   
   
     <defs>
-      <marker id="arrowhead-2" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-2" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
       </marker>
-      <marker id="arrowbutt-2" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
-        <circle cx="2" cy="2" r="0.5" fill="#000"></circle>
-      </marker>
     </defs>
-    <line x1="0" y1="200" x2="142.11145618000168" y2="128.94427190999915" stroke="#000" stroke-width="2" marker-start="url(#arrowbutt-2)" marker-end="url(#arrowhead-2)"></line>
+    <line x1="0" y1="200" x2="142.11145618000168" y2="128.94427190999915" stroke="#000" stroke-width="2" marker-end="url(#h-2)"></line>
     
     <rect x="45" y="149.5" width="70" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     

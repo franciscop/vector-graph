@@ -203,7 +203,7 @@ const drawCoordinates = ({ x, y, color }, opts) => {
   ].join("");
 };
 
-const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
+const drawVector = ({ from, to, label, axis, color }, opts) => {
   const { height, x, y, xScale, yScale, colors } = opts;
 
   const id = globalId++;
@@ -211,7 +211,7 @@ const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
   if (!color) color = colors.black;
 
   const x1 = xScale * (from[0] - x[0]);
-  const y1 = yScale * (from[1] - y[0]);
+  const y1 = height - yScale * (from[1] - y[0]);
 
   const arrSize = 10;
 
@@ -222,7 +222,7 @@ const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
   const new_mag = mag - 2 * arrSize;
 
   const x2 = x1 + new_mag * Math.cos(angle);
-  const y2 = y1 + new_mag * Math.sin(angle);
+  const y2 = y1 - new_mag * Math.sin(angle);
 
   const labelX = (to[0] + from[0]) / 2;
   const labelY = (to[1] + from[1]) / 2;
@@ -230,7 +230,7 @@ const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
   return `
     <defs>
       <marker
-        id="arrowhead-${id}"
+        id="h-${id}"
         markerWidth="10"
         markerHeight="5"
         refY="2.5"
@@ -238,26 +238,15 @@ const drawVector = ({ from, to, cap, label, axis, color, ...props }, opts) => {
       >
         <polygon points="0 0, 10 2.5, 0 5" fill="${color}" />
       </marker>
-      <marker
-        id="arrowbutt-${id}"
-        markerWidth="4"
-        markerHeight="4"
-        refX="2"
-        refY="2"
-        orient="auto"
-      >
-        <circle cx="2" cy="2" r="${cap ? 2 : 0.5}" fill="${color}" />
-      </marker>
     </defs>
     <line
       x1="${x1}"
-      y1="${height - y1}"
+      y1="${y1}"
       x2="${x2}"
-      y2="${height - y2}"
+      y2="${y2}"
       stroke="${color}"
       stroke-width="2"
-      marker-start="url(#arrowbutt-${id})"
-      marker-end="url(#arrowhead-${id})"
+      marker-end="url(#h-${id})"
     />
     ${drawLabel({ text: label, color, x: labelX, y: labelY }, opts)}
     ${axis ? drawCoordinates({ x: to[0], y: to[1], color }, opts) : ""}
