@@ -143,19 +143,18 @@ const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
   `;
 };
 
-const drawPoint = ({ x, y, label, color, width, dashed }, opts) => {
+const drawPoint = ({ x, y, label, color, axis }, opts) => {
   const { height, xScale, yScale, colors } = opts;
 
   if (!color) color = colors.black;
 
+  const cx = x * xScale;
+  const cy = height - y * yScale;
+
   return `
-    <circle
-      cx=${x * xScale}
-      cy=${height - y * yScale}
-      r="4"
-      fill="${color}"
-    />
+    <circle cx=${cx} cy=${cy} r="4" fill="${color}" />
     ${drawLabel({ text: label, color, x, y: y + 20 / yScale }, opts)}
+    ${axis ? drawCoordinates({ x, y, color }, opts) : ""}
   `;
 };
 
@@ -280,7 +279,7 @@ export default function graph(html) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
-  let { width, height, x, y, labels, grid, dark, units, pad } = {
+  let { width, height, x, y, labels, units, grid, dark, pad } = {
     ...defaultOptions,
     ...parseOptions(doc.querySelector("plane-graph").attributes)
   };
