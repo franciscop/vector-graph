@@ -1,4 +1,4 @@
-# Plane Graph
+# Vector Graph
 
 Generate beautiful euclidean graphs with HTML:
 
