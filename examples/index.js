@@ -11,29 +11,29 @@ const get = (orig, key) => src => write(`./examples/${key}.svg`, graph(src));
 const render = new Proxy({}, { get });
 
 render.simple(`
-  <plane-graph width="200" height="200">
+  <vector-graph width="200" height="200">
     <point label="point" x="7" y="7"></point>
     <line label="line" from="0,0" to="4,8"></line>
     <vector label="vector" to="8,4"></vector>
-  </plane-graph>
+  </vector-graph>
 `);
 
 render.scale(`
-  <plane-graph width="200" height="200" x="3.9" y="3.9" units>
+  <vector-graph width="200" height="200" x="3.9" y="3.9" units>
     <vector label="v" to="3,3.2" axis></vector>
-  </plane-graph>
+  </vector-graph>
 `);
 
 render.complete(`
-  <plane-graph width="200" height="200" x="4.9" y="4.9" units>
+  <vector-graph width="200" height="200" x="4.9" y="4.9" units>
     <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
     <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
     <vector label="c" from="0,0" to="4,2"></vector>
-  </plane-graph>
+  </vector-graph>
 `);
 
 render.full(`
-  <plane-graph width="400" height="400" x="-5,5" y="-5,5">
+  <vector-graph width="400" height="400" x="-5,5" y="-5,5">
     <text text="Electric Field" x="-2.7" y="2.4" color="red"></text>
     <label text="Right Hand Rule" x="2.5" y="-4"></label>
 
@@ -51,20 +51,20 @@ render.full(`
     <vector color="red" from="1.5,3" to="-1.5,3"></vector>
     <vector color="red" from="3,-1.5" to="3,1.5"></vector>
     <vector color="red" from="-3,1.5" to="-3,-1.5"></vector>
-  </plane-graph>
+  </vector-graph>
 `);
 
 render.dark(`
-  <plane-graph width="200" height="200" dark>
+  <vector-graph width="200" height="200" dark>
     <vector label="u" to="8,4"></vector>
     <vector label="v" to="4,8"></vector>
-  </plane-graph>
+  </vector-graph>
 `);
 
 render.darkcolor(`
-  <plane-graph width="200" height="200" x="4.9" y="4.9" dark>
+  <vector-graph width="200" height="200" x="4.9" y="4.9" dark>
     <vector label="b" color="#88f" from="3,4" to="4,2" axis></vector>
     <vector label="a" color="#f88" from="0,0" to="3,4" axis></vector>
     <vector label="c" from="0,0" to="4,2"></vector>
-  </plane-graph>
+  </vector-graph>
 `);

@@ -22,21 +22,21 @@ Generate beautiful euclidean graphs with HTML:
 </table>
 
 ```html
-<plane-graph width="200" height="200">
+<vector-graph width="200" height="200">
   <point label="point" x="7" y="7"></point>
   <line label="line" from="0,0" to="4,8"></line>
   <vector label="vector" to="8,4"></vector>
-</plane-graph>
+</vector-graph>
 
-<plane-graph width="200" height="200" x="3.9" y="3.9" units>
+<vector-graph width="200" height="200" x="3.9" y="3.9" units>
   <vector label="v" to="3,3.2" axis></vector>
-</plane-graph>
+</vector-graph>
 
-<plane-graph width="200" height="200" x="4.9" y="4.9" units>
+<vector-graph width="200" height="200" x="4.9" y="4.9" units>
   <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
   <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
   <vector label="c" from="0,0" to="4,2"></vector>
-</plane-graph>
+</vector-graph>
 ```
 
 ## Getting started
@@ -44,25 +44,25 @@ Generate beautiful euclidean graphs with HTML:
 To use this library as usual you'll need three things. First, import it from a CDN; put this line anywhere in your HTML:
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/plane-graph"></script>
+<script src="https://cdn.jsdelivr.net/npm/vector-graph"></script>
 ```
 
 Now let's draw a graph anywhere within your HTML:
 
 ```html
-<plane-graph width="200" height="200" grid>
+<vector-graph width="200" height="200" grid>
   <vector label="u" to="8,4"></vector>
   <vector label="v" to="4,8"></vector>
-</plane-graph>
+</vector-graph>
 ```
 
-Finally, please take a minute to understand the license of plane-graph. We are double-licensed, with the open source license being GNU AGPL and a commercial license available:
+Finally, please take a minute to understand the license of vector-graph. We are double-licensed, with the open source license being GNU AGPL and a commercial license available:
 
 \$9 BUY A LICENSE | READ ABOUT AGPL
 
 ## Documentation
 
-### \<plane-graph>
+### \<vector-graph>
 
 | attribute | default      | description                                                |
 | --------- | ------------ | ---------------------------------------------------------- |
@@ -137,7 +137,7 @@ Finally, please take a minute to understand the license of plane-graph. We are d
 ### Javascript
 
 ```
-npm i plane-graph
+npm i vector-graph
 ```
 
 ### React
@@ -150,7 +150,7 @@ You can run this on the Node.js side to generate static SVGs as well. To do so, 
 
 ```js
 import { JSDOM } from "jsdom";
-import graph from "plane-graph";
+import graph from "vector-graph";
 
 // Make some of these variable accessible from anywhere
 const dom = new JSDOM();
@@ -160,11 +160,11 @@ global.DOMParser = window.DOMParser;
 
 // Render the HTML to SVG
 const svg = graph(`
-  <plane-graph width="200" height="200">
+  <vector-graph width="200" height="200">
     <point label="point" x="7" y="7"></point>
     <line label="line" from="0,0" to="4,8"></line>
     <vector label="vector" to="8,4"></vector>
-  </plane-graph>
+  </vector-graph>
 `);
 
 console.log(svg);

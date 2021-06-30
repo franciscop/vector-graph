@@ -270,7 +270,7 @@ export default function graph(html) {
 
   let { width, height, x, y, labels, units, grid, dark, pad } = {
     ...defaultOptions,
-    ...parseOptions(doc.querySelector("plane-graph").attributes)
+    ...parseOptions(doc.querySelector("vector-graph").attributes)
   };
   if (typeof x === "number") x = [0, x];
   if (typeof y === "number") y = [0, y];
@@ -321,7 +321,7 @@ export default function graph(html) {
     { type: "units", size: grid, from: y[0], to: y[1], axis: "y" }
   ];
   elements.push(
-    ...[...doc.querySelector("plane-graph").children].map(item => {
+    ...[...doc.querySelector("vector-graph").children].map(item => {
       const type = item.nodeName.toLowerCase();
       const attrs = parseOptions(item.attributes);
       return { type, ...attrs };
@@ -361,9 +361,9 @@ export default function graph(html) {
 }
 
 // Initialize the module. This attaches the whole graph() function to the
-// custom element `<plane-graph>`, so that in the browser the constructore()
+// custom element `<vector-graph>`, so that in the browser the constructore()
 // will be called. This allows for <script> to be anywhere in the page; if it's
-// before the <plane-graph> component, it's defined and called later
+// before the <vector-graph> component, it's defined and called later
 if (typeof HTMLElement !== "undefined") {
   class PlaneGraph extends HTMLElement {
     constructor() {
@@ -373,6 +373,6 @@ if (typeof HTMLElement !== "undefined") {
     }
   }
 
-  // Attach the <PlaneGraph> class to all elements called <plane-graph>
-  customElements.define("plane-graph", PlaneGraph);
+  // Attach the <PlaneGraph> class to all elements called <vector-graph>
+  customElements.define("vector-graph", PlaneGraph);
 }
