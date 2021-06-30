@@ -56,25 +56,25 @@ Now let's draw a graph anywhere within your HTML:
 </plane-graph>
 ```
 
-Finally, if this is going to be included in a commercial or for-profit project make sure to buy a license:
+Finally, please take a minute to understand the license of plane-graph. We are double-licensed, with the open source license being GNU AGPL and a commercial license available:
 
-\$9 BUY A LICENSE
+\$9 BUY A LICENSE | READ ABOUT AGPL
 
 ## Documentation
 
 ### \<plane-graph>
 
-| attribute | default      | description                                                    |
-| --------- | ------------ | -------------------------------------------------------------- |
-| `width`   | `"600"`      | The width of the containing SVG element (pixels)               |
-| `height`  | `"400"`      | The height of the containing SVG element (pixels)              |
-| `x`       | `"0,10"`     | The x-coordinates of the graph to fit into the SVG             |
-| `y`       | `"0,10"`     | The y-coordinates of the graph to fit into the SVG             |
-| `labels`  | `['x', 'y']` | [BUG] Text to display alongside both axis (x,y)                |
-| `units`   | `"false"`    | Show the numbers on each of the axis                           |
-| `grid`    | `"1"`        | The size of the grid, or `false` to hide it                    |
-| `dark`    | _mediaquery_ | Use dark theme (true), light theme (false) or auto (undefined) |
-| `pad`     | `"24"`       | The space around the content to avoid SVG clipping             |
+| attribute | default      | description                                                |
+| --------- | ------------ | ---------------------------------------------------------- |
+| `width`   | `"600"`      | The width of the containing SVG element (pixels)           |
+| `height`  | `"400"`      | The height of the containing SVG element (pixels)          |
+| `x`       | `"0,10"`     | The x-coordinates of the graph to fit into the SVG         |
+| `y`       | `"0,10"`     | The y-coordinates of the graph to fit into the SVG         |
+| `labels`  | `['x', 'y']` | [BUG] Text to display alongside both axis (x,y)            |
+| `units`   | `"false"`    | Show the numbers on each of the axis                       |
+| `grid`    | `"1"`        | The size of the grid, or `false` to hide it                |
+| `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undefined) |
+| `pad`     | `"24"`       | The space around the content to avoid SVG clipping         |
 
 ### \<point>
 
