@@ -61,9 +61,15 @@ Now let's draw a graph anywhere within your HTML:
 </vector-graph>
 ```
 
-Finally, please take a minute to understand the license of vector-graph. We are double-licensed, with the open source license being GNU AGPL and a commercial license available:
+Finally, please take a minute to understand the license of vector-graph. We are dual-licensed, GNU AGPL free license and a commercial license available:
 
-\$9 BUY A LICENSE | READ ABOUT AGPL
+<button>\$9 BUY A LICENSE</button> <button>AGPL LICENSE</button>
+
+###
+
+### License
+
+This library is dual-licensed
 
 ## Documentation
 
