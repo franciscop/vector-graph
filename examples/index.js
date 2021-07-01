@@ -21,6 +21,8 @@ render.simple(`
 render.scale(`
   <vector-graph width="200" height="200" x="3.9" y="3.9" units>
     <vector label="v" to="3,3.2" axis></vector>
+    <angle label="α" from="90" to="46.8" radius="1.5"></angle>
+    <angle label="β" to="46.8" radius="1.3"></angle>
   </vector-graph>
 `);
 
@@ -34,6 +36,8 @@ render.complete(`
 
 render.full(`
   <vector-graph width="400" height="400" x="-5,5" y="-5,5">
+    <point x="0" y="0"></point>
+
     <text text="Electric Field" x="-2.7" y="2.4" color="red"></text>
     <label text="Right Hand Rule" x="2.5" y="-4"></label>
 

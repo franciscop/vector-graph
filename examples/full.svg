@@ -27,13 +27,17 @@
     
     
   
-    <text x="400" y="211" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+    <text x="400" y="189" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       x
     </text>
   
-    <text x="190" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+    <text x="212" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       y
     </text>
+  
+    <circle cx="200" cy="200" r="4" fill="#000"></circle>
+    
+    
   
     <text x="92" y="105" width="150" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       Electric Field

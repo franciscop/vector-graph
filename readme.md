@@ -26,10 +26,13 @@ Generate beautiful euclidean graphs with HTML:
   <point label="point" x="7" y="7"></point>
   <line label="line" from="0,0" to="4,8"></line>
   <vector label="vector" to="8,4"></vector>
+  <circle label="circle" x="5" y="5" radius="1"></circle>
 </vector-graph>
 
 <vector-graph width="200" height="200" x="3.9" y="3.9" units>
   <vector label="v" to="3,3.2" axis></vector>
+  <angle label="α" from="90" to="46.8" radius="1.5"></angle>
+  <angle label="β" to="46.8" radius="1.3"></angle>
 </vector-graph>
 
 <vector-graph width="200" height="200" x="4.9" y="4.9" units>
@@ -97,6 +100,8 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 | `width`   | `"1.75"`  | The stroke width of the line to draw             |
 | `dashed`  | `"false"` | Show as dashes (true) or as a solid line (false) |
 
+### \<circle>
+
 ### \<vector>
 
 | attribute | default   | description                                       |
@@ -106,6 +111,19 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 | `label`   | 🚫        | Text to draw on the middle of the line            |
 | `color`   | `"black"` | The color of the line, it can be a name or hexa   |
 | `axis`    | `"false"` | Draw the horizontal and vertical coordinate lines |
+
+### \<angle>
+
+### \<text>
+
+| attribute | default    | description                                          |
+| --------- | ---------- | ---------------------------------------------------- |
+| `text`    | 🚫         | The content that goes inside the label               |
+| `x`       | 🚫         | The horizontal coordinate where to draw the label    |
+| `y`       | 🚫         | The vertical coordinate where to draw the label      |
+| `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
+| `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
+| `width`   | auto       | The width of the label, leave it empty               |
 
 ### \<label>
 
@@ -118,17 +136,6 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 | `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
 | `width`   | auto       | The width of the label, leave it empty               |
 | `height`  | auto       | The height of the label, leave it empty              |
-
-### \<text>
-
-| attribute | default    | description                                          |
-| --------- | ---------- | ---------------------------------------------------- |
-| `text`    | 🚫         | The content that goes inside the label               |
-| `x`       | 🚫         | The horizontal coordinate where to draw the label    |
-| `y`       | 🚫         | The vertical coordinate where to draw the label      |
-| `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
-| `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
-| `width`   | auto       | The width of the label, leave it empty               |
 
 ## Examples
 

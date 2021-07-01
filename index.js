@@ -22,25 +22,25 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
   const { xScale, yScale, colors } = opts;
   if (!color) color = colors.dark;
   let units = "";
-  for (let i = from; i < to; i += size) {
+  for (let i = from; i <= to; i += size) {
     if (axis === "x") {
-      const x = from + i;
+      const x = from + i - opts.x[0];
       units += drawLine(
         { from: [x, 0], to: [x, -5 / yScale], width: 1.5, color },
         opts
       );
       units += drawLabel(
-        { text: i, x, y: -12 / yScale, color, size: "tiny" },
+        { text: `${i}`, x, y: -12 / yScale, color, size: "tiny" },
         opts
       );
     } else {
-      const y = from + i;
+      const y = from + i - opts.y[0];
       units += drawLine(
         { from: [0, y], to: [-5 / xScale, y], width: 1.5, color },
         opts
       );
       units += drawLabel(
-        { text: i, x: -12 / yScale, y, color, size: "tiny" },
+        { text: `${i}`, x: -12 / yScale, y, color, size: "tiny" },
         opts
       );
     }
@@ -148,8 +148,8 @@ const drawPoint = ({ x, y, label, color, axis }, opts) => {
 
   if (!color) color = colors.black;
 
-  const cx = x * xScale;
-  const cy = height - y * yScale;
+  const cx = (x - opts.x[0]) * xScale;
+  const cy = height - (y - opts.y[0]) * yScale;
 
   return `
     <circle cx=${cx} cy=${cy} r="4" fill="${color}" />
@@ -186,6 +186,86 @@ const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
       stroke-dasharray="${dashed}"
     />
     ${drawLabel({ text: label, color, x: labelX, y: labelY }, opts)}
+  `;
+};
+
+const drawCircle = ({ x = 0, y = 0, radius, label, color, width }, opts) => {
+  const { height, xScale, yScale, colors } = opts;
+
+  if (!color) color = colors.black;
+  if (!width) width = 2;
+
+  const cx = (x - opts.x[0]) * xScale;
+  const cy = height - (y - opts.y[0]) * yScale;
+
+  return `
+    <ellipse
+      cx="${cx}"
+      cy="${cy}"
+      rx="${radius * xScale}"
+      ry="${radius * yScale}"
+      fill="none"
+      stroke="${color}"
+      stroke-width="${width}"
+      path-length="1px"
+      />
+      ${label ? drawLabel({ text: label, x, y, color }, opts) : ""}
+  `;
+};
+
+function toEuclidian(x, y, radius, rads) {
+  return [x + radius * Math.cos(rads), y + radius * Math.sin(rads)];
+}
+
+function drawArc(x, y, r, from, to) {
+  // Convert to radians in the right coordinates for the euclidian plane
+  const fromRads = (-from * Math.PI) / 180;
+  const toRads = (-to * Math.PI) / 180;
+  const large = to <= 180 ? "0" : "1";
+
+  const [xStart, yStart] = toEuclidian(x, y, r, fromRads);
+  const [xEnd, yEnd] = toEuclidian(x, y, r, toRads);
+
+  return `M ${xStart} ${yStart} A ${r} ${r} 0 ${large} 0 ${xEnd} ${yEnd}`;
+}
+
+const drawAngle = (
+  { x = 0, y = 0, from, to, radius, label, color, size, dashed },
+  opts
+) => {
+  const { height, xScale, yScale, colors } = opts;
+
+  if (!from) from = 0;
+  if (from > to) [to, from] = [from, to];
+  if (!radius) radius = opts.x[1] / 2;
+  if (!color) color = colors.black;
+  if (!size) size = "small";
+  if (dashed) dashed = "5,3";
+
+  const labelAngle = ((from + to) * Math.PI) / 360;
+
+  // Adjust to and from to take into account the scales
+  const toTan = Math.tan((to * Math.PI) / 180);
+  to = (Math.atan2(toTan * yScale, xScale) * 180) / Math.PI;
+  const fromTan = Math.tan((from * Math.PI) / 180);
+  from = (Math.atan2(fromTan * yScale, xScale) * 180) / Math.PI;
+
+  const x1 = xScale * (x - opts.x[0]);
+  const y1 = height - yScale * (y - opts.y[0]);
+
+  // TODO: fix label positioning for whenever xScale !== yScale
+  const xL = x + radius * Math.cos(labelAngle);
+  const yL = y + radius * Math.sin(labelAngle);
+
+  return `
+    <path
+      fill="none"
+      stroke="${color}"
+      stroke-width="1"
+      stroke-dasharray="${dashed}"
+      d="${drawArc(x1, y1, radius * xScale, from, to)}"
+    />
+    ${drawLabel({ text: label, x: xL, y: yL, size, color }, opts)}
   `;
 };
 
@@ -301,6 +381,8 @@ export default function graph(html) {
 
   const elements = [
     { type: "grid", color: colors.gray, fill: colors.light, size: grid },
+    { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
+    { type: "units", size: grid, from: y[0], to: y[1], axis: "y" },
     { type: "vector", color: colors.dark, to: [x[1], 0] },
     { type: "vector", color: colors.dark, to: [0, y[1]] },
     {
@@ -308,17 +390,15 @@ export default function graph(html) {
       text: labels?.[0],
       color: colors.dark,
       x: x[1],
-      y: -10 / yScale
+      y: 12 / yScale
     },
     {
       type: "text",
       text: labels?.[1],
       color: colors.dark,
-      x: -10 / xScale,
+      x: 12 / xScale,
       y: y[1]
-    },
-    { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
-    { type: "units", size: grid, from: y[0], to: y[1], axis: "y" }
+    }
   ];
   elements.push(
     ...[...doc.querySelector("vector-graph").children].map(item => {
@@ -345,6 +425,12 @@ export default function graph(html) {
     }
     if (type === "line") {
       svg.innerHTML += drawLine(attrs, options);
+    }
+    if (type === "circle") {
+      svg.innerHTML += drawCircle(attrs, options);
+    }
+    if (type === "angle") {
+      svg.innerHTML += drawAngle(attrs, options);
     }
     if (type === "point") {
       svg.innerHTML += drawPoint(attrs, options);
