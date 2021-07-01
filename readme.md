@@ -15,9 +15,9 @@ Generate beautiful euclidean graphs with HTML:
     </td>
   </tr>
     <tr>
-      <td align="center">Three of the building blocks</td>
-      <td align="center">Scaled and with coordinates</td>
-      <td align="center">Many options shown together</td>
+      <td align="center">Basic building blocks</td>
+      <td align="center">Geometry and angles</td>
+      <td align="center">Crank it up a notch</td>
     </tr>
 </table>
 
