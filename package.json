@@ -1,7 +1,7 @@
 {
   "name": "vector-graph",
   "version": "0.1.0",
-  "description": "",
+  "description": "Generate high-quality geometry and vector graphs with HTML",
   "main": "index.js",
   "scripts": {
     "build": "node examples/index.js",

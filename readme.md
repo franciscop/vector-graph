@@ -1,6 +1,6 @@
 # Vector Graph
 
-Generate beautiful euclidean graphs and geometry with HTML:
+Generate high-quality geometry and vector graphs with HTML:
 
 <table>
   <tr>
@@ -64,12 +64,6 @@ Now let's draw a graph anywhere within your HTML:
 Finally, please take a minute to understand the license of vector-graph. We are dual-licensed, GNU AGPL free license and a commercial license available:
 
 <button>\$9 BUY A LICENSE</button> <button>AGPL LICENSE</button>
-
-###
-
-### License
-
-This library is dual-licensed
 
 ## Documentation
 
@@ -222,3 +216,12 @@ const svg = graph(`
 console.log(svg);
 // <svg width="200" height="200" viewBox="...">...</svg>
 ```
+
+## License
+
+This library is dual-licensed:
+
+- GNU AGPL is the default license
+- Commercial license available for either:
+  - Sponsors of my [Open Source](https://github.com/sponsors/franciscop/), valid for as long as you are a sponsor
+  - Buy a lifetime license for \$19 [in here]().
