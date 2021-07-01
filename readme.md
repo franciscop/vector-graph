@@ -1,6 +1,6 @@
 # Vector Graph
 
-Generate beautiful euclidean graphs with HTML:
+Generate beautiful euclidean graphs and geometry with HTML:
 
 <table>
   <tr>
