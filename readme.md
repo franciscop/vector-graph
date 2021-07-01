@@ -26,7 +26,6 @@ Generate beautiful euclidean graphs with HTML:
   <point label="point" x="7" y="7"></point>
   <line label="line" from="0,0" to="4,8"></line>
   <vector label="vector" to="8,4"></vector>
-  <circle label="circle" x="5" y="5" radius="1"></circle>
 </vector-graph>
 
 <vector-graph width="200" height="200" x="3.9" y="3.9" units>
