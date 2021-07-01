@@ -22,7 +22,7 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
   const { xScale, yScale, colors } = opts;
   if (!color) color = colors.dark;
   let units = "";
-  for (let i = from; i <= to; i += size) {
+  for (let i = from; i < to; i += size) {
     if (axis === "x") {
       const x = from + i - opts.x[0];
       units += drawLine(

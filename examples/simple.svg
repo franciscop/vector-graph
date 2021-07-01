@@ -109,16 +109,6 @@
     </text>
   
   
-    <line x1="200" y1="200" x2="200" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="188" y="203.6" width="24" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="200" y="213" width="24" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      10
-    </text>
-  
-  
     <line x1="0" y1="200" x2="-5" y2="200" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
@@ -216,16 +206,6 @@
     
     <text x="-12" y="21" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       9
-    </text>
-  
-  
-    <line x1="0" y1="0" x2="-5" y2="0" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-23" y="-8.4" width="24" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11" y="1" width="24" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      10
     </text>
   
   
