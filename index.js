@@ -221,13 +221,25 @@ function drawArc(x, y, r, from, to) {
   // Convert to radians in the right coordinates for the euclidian plane
   const fromRads = (-from * Math.PI) / 180;
   const toRads = (-to * Math.PI) / 180;
-  const large = to <= 180 ? "0" : "1";
+  const large = to - from <= 180 ? "0" : "1";
 
   const [xStart, yStart] = toEuclidian(x, y, r, fromRads);
   const [xEnd, yEnd] = toEuclidian(x, y, r, toRads);
 
   return `M ${xStart} ${yStart} A ${r} ${r} 0 ${large} 0 ${xEnd} ${yEnd}`;
 }
+
+// function drawArc(x, y, r, from, to) {
+//   // Convert to radians in the right coordinates for the euclidian plane
+//   const fromRads = (from * Math.PI) / 180;
+//   const toRads = ((-to + from) * Math.PI) / 180;
+//   const large = to-from <= 180 ? "0" : "1";
+//
+//   const [xStart, yStart] = toEuclidian(x, y, r, 0);
+//   const [xEnd, yEnd] = toEuclidian(x, y, r, toRads);
+//
+//   return `M ${xStart} ${yStart} A ${r} ${r} ${fromRads} 0 0 ${xEnd} ${yEnd}`;
+// }
 
 const drawAngle = (
   { x = 0, y = 0, from, to, radius, label, color, size, dashed },
@@ -237,18 +249,36 @@ const drawAngle = (
 
   if (!from) from = 0;
   if (from > to) [to, from] = [from, to];
-  if (!radius) radius = opts.x[1] / 2;
+  from = (from + 360) % 360;
+  to = (to + 360) % 360;
+  if (!radius) radius = opts.x[1] / 3;
   if (!color) color = colors.black;
   if (!size) size = "small";
   if (dashed) dashed = "5,3";
 
   const labelAngle = ((from + to) * Math.PI) / 360;
 
+  const toLarge = to >= 180;
+  const fromLarge = from >= 180;
+
   // Adjust to and from to take into account the scales
   const toTan = Math.tan((to * Math.PI) / 180);
   to = (Math.atan2(toTan * yScale, xScale) * 180) / Math.PI;
   const fromTan = Math.tan((from * Math.PI) / 180);
   from = (Math.atan2(fromTan * yScale, xScale) * 180) / Math.PI;
+
+  from = (from + 360) % 360;
+  to = (to + 360) % 360;
+
+  if (toLarge && to < 180) to += 180;
+  if (fromLarge && from < 180) from += 180;
+  if (!toLarge && to > 180) to -= 180;
+  if (!fromLarge && from > 180) from -= 180;
+
+  from = (from + 360) % 360;
+  to = (to + 360) % 360;
+
+  // console.log(from, to);
 
   const x1 = xScale * (x - opts.x[0]);
   const y1 = height - yScale * (y - opts.y[0]);
@@ -341,14 +371,15 @@ const defaultOptions = {
   labels: ["x", "y"],
   grid: 1,
   dark: detectDarkmode(),
-  pad: 24
+  pad: 24,
+  axis: true
 };
 
 export default function graph(html) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
-  let { width, height, x, y, labels, units, grid, dark, pad } = {
+  let { width, height, x, y, labels, units, grid, dark, axis, pad } = {
     ...defaultOptions,
     ...parseOptions(doc.querySelector("vector-graph").attributes)
   };
@@ -383,18 +414,18 @@ export default function graph(html) {
     { type: "grid", color: colors.gray, fill: colors.light, size: grid },
     { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
     { type: "units", size: grid, from: y[0], to: y[1], axis: "y" },
-    { type: "vector", color: colors.dark, to: [x[1], 0] },
-    { type: "vector", color: colors.dark, to: [0, y[1]] },
+    axis ? { type: "vector", color: colors.dark, to: [x[1], 0] } : null,
+    axis ? { type: "vector", color: colors.dark, to: [0, y[1]] } : null,
     {
       type: "text",
-      text: labels?.[0],
+      text: axis && labels?.[0],
       color: colors.dark,
       x: x[1],
       y: 12 / yScale
     },
     {
       type: "text",
-      text: labels?.[1],
+      text: axis && labels?.[1],
       color: colors.dark,
       x: 12 / xScale,
       y: y[1]
@@ -411,7 +442,7 @@ export default function graph(html) {
   // RENDER EACH OF THE CHILDREN
   const options = { width, height, x, y, xScale, yScale, colors, pad };
 
-  elements.forEach(({ type, ...attrs }) => {
+  elements.filter(Boolean).forEach(({ type, ...attrs }) => {
     // Special classes
     if (units && type === "units") {
       svg.innerHTML += drawUnits(attrs, options);

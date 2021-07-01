@@ -10,19 +10,22 @@
   <body>
     <h1>📈 Vector Graph</h1>
 
-    <vector-graph width="200" height="200">
+    <vector-graph width="200" height="200" units>
+      <vector label="vector" to="8,4" axis></vector>
+      <line label="line" from="1,8" to="6,5"></line>
       <point label="point" x="7" y="7"></point>
-      <line label="line" from="0,0" to="4,8"></line>
-      <vector label="vector" to="8,4"></vector>
     </vector-graph>
 
-    <vector-graph width="200" height="200" x="3.9" y="3.9" units>
-      <vector label="v" to="3,3.2" axis></vector>
-      <angle label="α" from="90" to="46.8" radius="1.5"></angle>
-      <angle label="β" to="46.8" radius="1.3"></angle>
+    <vector-graph width="200" height="200" x="3" y="3" axis="false">
+      <line from="0,0" to="3,1"></line>
+      <line from="3,1" to="1,3"></line>
+      <line from="0,0" to="1,3"></line>
+      <angle label="α" x="0" y="0" from="71.6" to="18.4" dashed></angle>
+      <angle label="β" x="1" y="3" from="251.6" to="315" dashed></angle>
+      <angle label="γ" x="3" y="1" from="135" to="198.4" dashed></angle>
     </vector-graph>
 
-    <vector-graph width="200" height="200" x="4.9" y="4.9" units>
+    <vector-graph width="200" height="200" x="4.9" y="4.9">
       <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
       <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
       <vector label="c" from="0,0" to="4,2"></vector>

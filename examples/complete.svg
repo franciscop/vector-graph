@@ -9,121 +9,21 @@
     transform-origin: 0 100px;
   "></rect>
   
-    <line x1="0" y1="200" x2="0" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-8" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="0" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      0
-    </text>
-  
-  
-    <line x1="40.816326530612244" y1="200" x2="40.816326530612244" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="32.816326530612244" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="40.816326530612244" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      1
-    </text>
-  
-  
-    <line x1="81.63265306122449" y1="200" x2="81.63265306122449" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="73.63265306122449" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="81.63265306122449" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      2
-    </text>
-  
-  
-    <line x1="122.44897959183673" y1="200" x2="122.44897959183673" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="114.44897959183673" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="122.44897959183673" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      3
-    </text>
-  
-  
-    <line x1="163.26530612244898" y1="200" x2="163.26530612244898" y2="205" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="155.26530612244898" y="203.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="163.26530612244898" y="213" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      4
-    </text>
-  
-  
-    <line x1="0" y1="200" x2="-5" y2="200" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-20" y="191.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="201" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      0
-    </text>
-  
-  
-    <line x1="0" y1="159.18367346938777" x2="-5" y2="159.18367346938777" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-20" y="150.78367346938776" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="160.18367346938777" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      1
-    </text>
-  
-  
-    <line x1="0" y1="118.36734693877551" x2="-5" y2="118.36734693877551" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-20" y="109.9673469387755" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="119.36734693877551" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      2
-    </text>
-  
-  
-    <line x1="0" y1="77.55102040816327" x2="-5" y2="77.55102040816327" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-20" y="69.15102040816326" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="78.55102040816327" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      3
-    </text>
-  
-  
-    <line x1="0" y1="36.734693877551024" x2="-5" y2="36.734693877551024" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
-    
-  
-    <rect x="-20" y="28.334693877551025" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
-    
-    <text x="-11.999999999999998" y="37.734693877551024" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      4
-    </text>
-  
-  
     <defs>
-      <marker id="h-6" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-3" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-6)"></line>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-3)"></line>
     
     
   
     <defs>
-      <marker id="h-7" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-4" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-7)"></line>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-4)"></line>
     
     
   
@@ -136,11 +36,11 @@
     </text>
   
     <defs>
-      <marker id="h-8" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-5" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="blue"></polygon>
       </marker>
     </defs>
-    <line x1="122.44897959183673" y1="36.734693877551024" x2="154.32103421244983" y2="100.4788031187772" stroke="blue" stroke-width="2" marker-end="url(#h-8)"></line>
+    <line x1="122.44897959183673" y1="36.734693877551024" x2="154.32103421244983" y2="100.4788031187772" stroke="blue" stroke-width="2" marker-end="url(#h-5)"></line>
     
     <rect x="132.85714285714286" y="67.05102040816327" width="20" height="21" fill="#fff" stroke="blue" stroke-width="1.75" rx="5"></rect>
     
@@ -172,11 +72,11 @@
   
   
     <defs>
-      <marker id="h-9" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-6" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="red"></polygon>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="110.44897959183676" y2="52.734693877551024" stroke="red" stroke-width="2" marker-end="url(#h-9)"></line>
+    <line x1="0" y1="200" x2="110.44897959183676" y2="52.734693877551024" stroke="red" stroke-width="2" marker-end="url(#h-6)"></line>
     
     <rect x="51.224489795918366" y="107.86734693877551" width="20" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
     
@@ -208,11 +108,11 @@
   
   
     <defs>
-      <marker id="h-10" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-7" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="145.37676230245066" y2="127.31161884877467" stroke="#000" stroke-width="2" marker-end="url(#h-10)"></line>
+    <line x1="0" y1="200" x2="145.37676230245066" y2="127.31161884877467" stroke="#000" stroke-width="2" marker-end="url(#h-7)"></line>
     
     <rect x="71.63265306122449" y="148.68367346938777" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
