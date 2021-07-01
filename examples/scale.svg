@@ -11,12 +11,33 @@
   
     <line x1="0" y1="200" x2="200" y2="133.33333333333331" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="90" y="156.16666666666666" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="100" y="167.66666666666666" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      a
+    </text>
+  
+  
   
     <line x1="200" y1="133.33333333333331" x2="66.66666666666667" y2="0" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="123.33333333333334" y="56.16666666666666" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="133.33333333333334" y="67.66666666666666" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      b
+    </text>
+  
+  
   
     <line x1="0" y1="200" x2="66.66666666666667" y2="0" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="23.333333333333336" y="89.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="33.333333333333336" y="101" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      c
+    </text>
+  
+  
   
     <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 63.25840077629978 178.95673087019318 A 66.66666666666667 66.66666666666667 0 0 0 21.04326912980681 136.74159922370023"></path>
     

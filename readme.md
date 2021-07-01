@@ -29,9 +29,9 @@ Generate beautiful euclidean graphs with HTML:
 </vector-graph>
 
 <vector-graph width="200" height="200" x="3" y="3" axis="false">
-  <line from="0,0" to="3,1"></line>
-  <line from="3,1" to="1,3"></line>
-  <line from="0,0" to="1,3"></line>
+  <line label="a" from="0,0" to="3,1"></line>
+  <line label="b" from="3,1" to="1,3"></line>
+  <line label="c" from="0,0" to="1,3"></line>
   <angle label="α" x="0" y="0" from="71.6" to="18.4" dashed></angle>
   <angle label="β" x="1" y="3" from="251.6" to="315" dashed></angle>
   <angle label="γ" x="3" y="1" from="135" to="198.4" dashed></angle>
