@@ -141,6 +141,43 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 
 ## Examples
 
+![Simple Complex numbers](./examples/imaginary.svg)
+
+```html
+<vector-graph width="200" height="200">
+  <vector to="6,6"></vector>
+  <point label="a+bi" x="6" y="6" color="red"></point>
+</vector-graph>
+```
+
+### Full XY Plane
+
+![Electromagnetism](./examples/electromagnetism.svg)
+
+```html
+<vector-graph width="400" height="400" x="-5,5" y="-5,5">
+  <point x="0" y="0"></point>
+
+  <text text="Electric Field" x="-2.7" y="2.4" color="red"></text>
+  <label text="Right Hand Rule" x="2.5" y="-4"></label>
+
+  <vector color="red" from="-0.5,-1" to="0.5,-1"></vector>
+  <vector color="red" from="0.5,1" to="-0.5,1"></vector>
+  <vector color="red" from="1,-0.5" to="1,0.5"></vector>
+  <vector color="red" from="-1,0.5" to="-1,-0.5"></vector>
+
+  <vector color="red" from="-1,-2" to="1,-2"></vector>
+  <vector color="red" from="1,2" to="-1,2"></vector>
+  <vector color="red" from="2,-1" to="2,1"></vector>
+  <vector color="red" from="-2,1" to="-2,-1"></vector>
+
+  <vector color="red" from="-1.5,-3" to="1.5,-3"></vector>
+  <vector color="red" from="1.5,3" to="-1.5,3"></vector>
+  <vector color="red" from="3,-1.5" to="3,1.5"></vector>
+  <vector color="red" from="-3,1.5" to="-3,-1.5"></vector>
+</vector-graph>
+```
+
 ## Environments
 
 ### Javascript

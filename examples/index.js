@@ -37,7 +37,7 @@ render.complete(`
   </vector-graph>
 `);
 
-render.full(`
+render.electromagnetism(`
   <vector-graph width="400" height="400" x="-5,5" y="-5,5">
     <point x="0" y="0"></point>
 
@@ -73,5 +73,12 @@ render.darkcolor(`
     <vector label="b" color="#88f" from="3,4" to="4,2" axis></vector>
     <vector label="a" color="#f88" from="0,0" to="3,4" axis></vector>
     <vector label="c" from="0,0" to="4,2"></vector>
+  </vector-graph>
+`);
+
+render.imaginary(`
+  <vector-graph width="200" height="200">
+    <vector to="6,6"></vector>
+    <point label="a+bi" x="6" y="6" color="red"></point>
   </vector-graph>
 `);
