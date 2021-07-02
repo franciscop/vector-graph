@@ -103,45 +103,45 @@ Draws a small circle in the graph that represents a point in space:
 </vector-graph>
 ```
 
-| attribute | default   | description                                       |
-| --------- | --------- | ------------------------------------------------- |
-| `x`       | "0"       | The horizontal coordinate where to draw the point |
-| `y`       | "0"       | The vertical coordinate where to draw the point   |
-| `label`   | none      | The text to draw on top of the point              |
-| `color`   | `"black"` | The color of the point, it can be a name or hexa  |
-| `axis`    | `"false"` | Draw the horizontal and vertical coordinate lines |
+| attribute | default | description                                       |
+| --------- | ------- | ------------------------------------------------- |
+| `x`       | `0`     | The horizontal coordinate where to draw the point |
+| `y`       | `0`     | The vertical coordinate where to draw the point   |
+| `label`   | _none_  | The text to draw on top of the point              |
+| `color`   | `black` | The color of the point, it can be a name or hexa  |
+| `axis`    | `false` | Draw the horizontal and vertical coordinate lines |
 
 ### \<line>
 
-| attribute | default   | description                                      |
-| --------- | --------- | ------------------------------------------------ |
-| `to`      | none      | The point where the line/segment ends            |
-| `from`    | `"0,0"`   | The point where the line/segment starts          |
-| `label`   | none      | Text to draw on the middle of the line           |
-| `color`   | `"black"` | The color of the line, it can be a name or hexa  |
-| `width`   | `"1.75"`  | The stroke width of the line to draw             |
-| `dashed`  | `"false"` | Show as dashes (true) or as a solid line (false) |
+| attribute | default | description                                      |
+| --------- | ------- | ------------------------------------------------ |
+| `to`      | _none_  | The point where the line/segment ends            |
+| `from`    | `0,0`   | The point where the line/segment starts          |
+| `label`   | _none_  | Text to draw on the middle of the line           |
+| `color`   | `black` | The color of the line, it can be a name or hexa  |
+| `width`   | `1.75`  | The stroke width of the line to draw             |
+| `dashed`  | `false` | Show as dashes (true) or as a solid line (false) |
 
 ### \<circle>
 
-| attribute | default   | description                                      |
-| --------- | --------- | ------------------------------------------------ |
-| `x`       | none      | The horizontal coordinate of the circle's center |
-| `y`       | none      | The vertical coordinate of the circle's center   |
-| `radius`  | "1"       | The circle's radius, in coordinates size         |
-| `label`   | none      | Text to draw on the middle of the line           |
-| `color`   | `"black"` | The color of the line, it can be a name or hexa  |
-| `width`   | `"1.75"`  | The stroke width of the line to draw             |
+| attribute | default | description                                      |
+| --------- | ------- | ------------------------------------------------ |
+| `x`       | `0`     | The horizontal coordinate of the circle's center |
+| `y`       | `0`     | The vertical coordinate of the circle's center   |
+| `radius`  | `1`     | The circle's radius, in coordinates size         |
+| `label`   | _none_  | Text to draw on the middle of the line           |
+| `color`   | `black` | The color of the line, it can be a name or hexa  |
+| `width`   | `1.75`  | The stroke width of the line to draw             |
 
 ### \<vector>
 
-| attribute | default   | description                                       |
-| --------- | --------- | ------------------------------------------------- |
-| `to`      | none      | The point where the vector ends with an arrow     |
-| `from`    | `"0,0"`   | The point where the vector starts                 |
-| `label`   | none      | Text to draw on the middle of the line            |
-| `color`   | `"black"` | The color of the line, it can be a name or hexa   |
-| `axis`    | `"false"` | Draw the horizontal and vertical coordinate lines |
+| attribute | default | description                                       |
+| --------- | ------- | ------------------------------------------------- |
+| `to`      | _none_  | The point where the vector ends with an arrow     |
+| `from`    | `0,0`   | The point where the vector starts                 |
+| `label`   | _none_  | Text to draw on the middle of the line            |
+| `color`   | `black` | The color of the line, it can be a name or hexa   |
+| `axis`    | `false` | Draw the horizontal and vertical coordinate lines |
 
 ### \<angle>
 
@@ -159,40 +159,40 @@ Draws an arc representing the angle between two existing lines (the lines must b
 </vector-graph>
 ```
 
-| attribute | default   | description                                      |
-| --------- | --------- | ------------------------------------------------ |
-| `x`       | none      | The horizontal coordinate of the angle's center  |
-| `y`       | none      | The vertical coordinate of the angle's center    |
-| `from`    | "0"       | The angle (in degrees) to start drawing the arc  |
-| `to`      | none      | The angle (in degrees) to finish drawing the arc |
-| `radius`  | "1"       | The angle's arc radius, in coordinates size      |
-| `label`   | none      | Text to draw on the middle of the line           |
-| `color`   | `"black"` | The color of the line, it can be a name or hexa  |
-| `size`    | "normal"  | The label's size                                 |
-| `dashed`  | `"true"`  | Draw dashes instead of a solid line              |
+| attribute | default  | description                                      |
+| --------- | -------- | ------------------------------------------------ |
+| `x`       | `0`      | The horizontal coordinate of the angle's center  |
+| `y`       | `0`      | The vertical coordinate of the angle's center    |
+| `from`    | `0`      | The angle (in degrees) to start drawing the arc  |
+| `to`      | _none_   | The angle (in degrees) to finish drawing the arc |
+| `radius`  | `1`      | The angle's arc radius, in coordinates size      |
+| `label`   | _none_   | Text to draw on the middle of the line           |
+| `color`   | `black`  | The color of the line, it can be a name or hexa  |
+| `size`    | `normal` | The label's size                                 |
+| `dashed`  | `true`   | Draw dashes instead of a solid line              |
 
 ### \<text>
 
-| attribute | default    | description                                          |
-| --------- | ---------- | ---------------------------------------------------- |
-| `text`    | none       | The content that goes inside the label               |
-| `x`       | none       | The horizontal coordinate where to draw the label    |
-| `y`       | none       | The vertical coordinate where to draw the label      |
-| `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
-| `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
-| `width`   | auto       | The width of the label, leave it empty               |
+| attribute | default  | description                                          |
+| --------- | -------- | ---------------------------------------------------- |
+| `text`    | _none_   | The content that goes inside the label               |
+| `x`       | _none_   | The horizontal coordinate where to draw the label    |
+| `y`       | _none_   | The vertical coordinate where to draw the label      |
+| `color`   | `black`  | Color of text and border, it can be a name or hexa   |
+| `size`    | `normal` | Define how big it is: "tiny, small, normal or large" |
+| `width`   | _auto_   | The width of the label, leave it empty               |
 
 ### \<label>
 
-| attribute | default    | description                                          |
-| --------- | ---------- | ---------------------------------------------------- |
-| `text`    | none       | The content that goes inside the label               |
-| `x`       | none       | The horizontal coordinate where to draw the label    |
-| `y`       | none       | The vertical coordinate where to draw the label      |
-| `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
-| `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
-| `width`   | auto       | The width of the label, leave it empty               |
-| `height`  | auto       | The height of the label, leave it empty              |
+| attribute | default  | description                                          |
+| --------- | -------- | ---------------------------------------------------- |
+| `text`    | _none_   | The content that goes inside the label               |
+| `x`       | _none_   | The horizontal coordinate where to draw the label    |
+| `y`       | _none_   | The vertical coordinate where to draw the label      |
+| `color`   | `black`  | Color of text and border, it can be a name or hexa   |
+| `size`    | `normal` | Define how big it is: "tiny, small, normal or large" |
+| `width`   | _auto_   | The width of the label, tip: leave it empty          |
+| `height`  | _auto_   | The height of the label, tip: leave it empty         |
 
 ## Examples
 
@@ -237,13 +237,13 @@ Draws an arc representing the angle between two existing lines (the lines must b
 
 ### Javascript
 
-```
-npm i vector-graph
-```
+Follow the [Getting Started](#getting-started) guide and it'll all work great. You can include the script at the beginning or at the end of your HTML, it doesn't matter.
 
 ### React
 
 ### Vue
+
+### Wordpress
 
 ### Node.js
 
@@ -272,11 +272,27 @@ console.log(svg);
 // <svg width="200" height="200" viewBox="...">...</svg>
 ```
 
-## License
+## About & License
+
+I love Katex and I've written several tutorials in the past about mathematics, but I've felt that we are lacking on a way of describing mathematic vectors and equations easily on the web.
+
+There is one project that does a similar thing, but it's way too large (680kb of JS!) and overly complex in my opinion. Instead, I just wanted a way of easily define a simple graph with plain HTML, something like this:
+
+![About example](./examples/about.svg)
+
+```html
+<vector-graph id="about">
+  <vector to="6,8"></vector>
+</vector-graph>
+```
+
+So after some experimenting and seeing it was possible, I decided to create this library. I'm using SVG since it is scalable and its API is not terrible to work with. It's also not awesome to work with, hence a non-trivial part of the library internals are dedicated to work around some SVG issues.
+
+Now, I've spent _a lot_ of hours creating this and I'm releasing it for everyone to use for free. My ask is that if you want to use my work, you either also release your work for others to use, or compensate me so I can keep building amazing things!
 
 This library is dual-licensed:
 
-- GNU AGPL is the default license
-- Commercial license available for either:
-  - Sponsors of my [Open Source](https://github.com/sponsors/franciscop/), valid for as long as you are a sponsor. NOTE: not yet available.
-  - Buy a lifetime license for \$19 [in here](https://www.paypal.me/franciscopresencia/19).
+- **GNU Affero GPL** is the default license. This might be too strict and relaxed to _GPL_ or _LGPL_ on the release date, we'll see. I pick this for now since it's better to start strict and then relax the license than the other way around.
+- **Commercial license** available for either:
+  - (NOTE: not yet available) **Sponsors** of my [Open Source](https://github.com/sponsors/franciscop/) can use any of my software in proprietary projects. This is valid for as long as you are a sponsor.
+  - **Buy a lifetime license** of this project for \$19 [in here](https://www.paypal.me/franciscopresencia/19).
