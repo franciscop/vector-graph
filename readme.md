@@ -23,9 +23,9 @@ Generate high-quality geometry and vector graphs with HTML:
 
 ```html
 <vector-graph id="basics" units>
-  <vector label="vector" to="8,4" axis></vector>
   <line label="line" from="1,8" to="6,5"></line>
   <point label="point" x="7" y="7"></point>
+  <vector label="vector" to="8,4" axis></vector>
 </vector-graph>
 
 <vector-graph id="triangle" x="3" y="3" axis="false">
