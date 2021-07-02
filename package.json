@@ -12,6 +12,7 @@
   "author": "",
   "license": "AGPL",
   "devDependencies": {
+    "extract-code-md": "^0.0.5",
     "files": "^2.1.1",
     "jsdom": "^16.6.0"
   }

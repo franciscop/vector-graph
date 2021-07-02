@@ -5,10 +5,10 @@ Generate high-quality geometry and vector graphs with HTML:
 <table>
   <tr>
     <td>
-      <img width="300px" src="./examples/simple.svg" />
+      <img width="300px" src="./examples/basics.svg" />
     </td>
     <td>
-      <img width="300px" src="./examples/scale.svg" />
+      <img width="300px" src="./examples/triangle.svg" />
     </td>
     <td>
       <img width="300px" src="./examples/complete.svg" />
@@ -22,22 +22,22 @@ Generate high-quality geometry and vector graphs with HTML:
 </table>
 
 ```html
-<vector-graph width="200" height="200" units>
+<vector-graph width="200" height="200" units id="basics">
   <vector label="vector" to="8,4" axis></vector>
   <line label="line" from="1,8" to="6,5"></line>
   <point label="point" x="7" y="7"></point>
 </vector-graph>
 
-<vector-graph width="200" height="200" x="3" y="3" axis="false">
+<vector-graph width="200" height="200" x="3" y="3" axis="false" id="triangle">
   <line label="a" from="0,0" to="1,3"></line>
   <line label="b" from="3,1" to="1,3"></line>
   <line label="c" from="0,0" to="3,1"></line>
-  <angle label="α" x="0" y="0" from="71.6" to="18.4" dashed></angle>
-  <angle label="β" x="1" y="3" from="251.6" to="315" dashed></angle>
-  <angle label="γ" x="3" y="1" from="135" to="198.4" dashed></angle>
+  <angle label="α" x="0" y="0" from="71.6" to="18.4"></angle>
+  <angle label="β" x="1" y="3" from="251.6" to="315"></angle>
+  <angle label="γ" x="3" y="1" from="135" to="198.4"></angle>
 </vector-graph>
 
-<vector-graph width="200" height="200" x="4.9" y="4.9">
+<vector-graph width="200" height="200" x="4.9" y="4.9" id="complete">
   <vector label="b" color="blue" from="3,4" to="4,2" axis></vector>
   <vector label="a" color="red" from="0,0" to="3,4" axis></vector>
   <vector label="c" from="0,0" to="4,2"></vector>
@@ -54,14 +54,16 @@ To use this library as usual you'll need three things. First, import it from a C
 
 Now let's draw a graph anywhere within your HTML:
 
+![Plain Graph](./examples/plain.svg)
+
 ```html
-<vector-graph width="200" height="200" grid>
+<vector-graph width="200" height="200" grid id="plain">
   <vector label="u" to="8,4"></vector>
   <vector label="v" to="4,8"></vector>
 </vector-graph>
 ```
 
-Finally, please take a minute to understand the license of vector-graph. We are dual-licensed, GNU AGPL free license and a commercial license available:
+Finally, please take a minute to understand the license of vector-graph. We are [dual-licensed](#license), GNU AGPL free license and a commercial license available:
 
 <button>\$9 BUY A LICENSE</button> <button>AGPL LICENSE</button>
 
@@ -144,7 +146,7 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 ![Simple Complex numbers](./examples/imaginary.svg)
 
 ```html
-<vector-graph width="200" height="200">
+<vector-graph width="200" height="200" id="imaginary">
   <vector to="6,6"></vector>
   <point label="a+bi" x="6" y="6" color="red"></point>
 </vector-graph>
@@ -155,7 +157,7 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 ![Electromagnetism](./examples/electromagnetism.svg)
 
 ```html
-<vector-graph width="400" height="400" x="-5,5" y="-5,5">
+<vector-graph width="400" height="400" x="-5,5" y="-5,5" id="electromagnetism">
   <point x="0" y="0"></point>
 
   <text text="Electric Field" x="-2.7" y="2.4" color="red"></text>
@@ -224,4 +226,4 @@ This library is dual-licensed:
 - GNU AGPL is the default license
 - Commercial license available for either:
   - Sponsors of my [Open Source](https://github.com/sponsors/franciscop/), valid for as long as you are a sponsor
-  - Buy a lifetime license for \$19 [in here]().
+  - Buy a lifetime license for \$19 [in here](https://www.paypal.me/franciscopresencia/19).

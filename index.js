@@ -254,7 +254,7 @@ const drawAngle = (
   if (!radius) radius = opts.x[1] / 3;
   if (!color) color = colors.black;
   if (!size) size = "small";
-  if (dashed) dashed = "5,3";
+  if (dashed || typeof dashed === "undefined") dashed = "5,3";
 
   const labelAngle = ((from + to) * Math.PI) / 360;
 
