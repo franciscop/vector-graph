@@ -368,11 +368,10 @@ const defaultOptions = {
   height: 200,
   x: [0, 10],
   y: [0, 10],
-  labels: ["x", "y"],
   grid: 1,
   dark: detectDarkmode(),
   pad: 24,
-  axis: true
+  axis: ["x", "y"]
 };
 
 export default function graph(html) {
@@ -385,6 +384,7 @@ export default function graph(html) {
   };
   if (typeof x === "number") x = [0, x];
   if (typeof y === "number") y = [0, y];
+  if (typeof axis === "string") axis = axis.split(",");
   if (grid === true) grid = 1;
 
   // Define the axis scales, which is useful all across the board
@@ -410,27 +410,30 @@ export default function graph(html) {
   svg.style.background = colors.light;
   svg.style.borderRadius = "8px";
 
-  const elements = [
-    { type: "grid", color: colors.gray, fill: colors.light, size: grid },
-    { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
-    { type: "units", size: grid, from: y[0], to: y[1], axis: "y" },
-    axis ? { type: "vector", color: colors.dark, to: [x[1], 0] } : null,
-    axis ? { type: "vector", color: colors.dark, to: [0, y[1]] } : null,
-    {
-      type: "text",
-      text: axis && labels?.[0],
-      color: colors.dark,
-      x: x[1],
-      y: 12 / yScale
-    },
-    {
-      type: "text",
-      text: axis && labels?.[1],
-      color: colors.dark,
-      x: 12 / xScale,
-      y: y[1]
-    }
-  ];
+  const elements = [];
+  if (grid) {
+    elements.push({
+      type: "grid",
+      color: colors.gray,
+      fill: colors.light,
+      size: grid
+    });
+  }
+  if (units) {
+    elements.push(
+      { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
+      { type: "units", size: grid, from: y[0], to: y[1], axis: "y" }
+    );
+  }
+  if (axis) {
+    const color = colors.dark;
+    elements.push(
+      { type: "vector", color, to: [x[1], 0] },
+      { type: "vector", color, to: [0, y[1]] },
+      { type: "text", text: axis[0], color, x: x[1], y: 12 / yScale },
+      { type: "text", text: axis[1], color, x: 12 / xScale, y: y[1] }
+    );
+  }
   elements.push(
     ...[...doc.querySelector("vector-graph").children].map(item => {
       const type = item.nodeName.toLowerCase();
@@ -444,7 +447,7 @@ export default function graph(html) {
 
   elements.filter(Boolean).forEach(({ type, ...attrs }) => {
     // Special classes
-    if (units && type === "units") {
+    if (type === "units") {
       svg.innerHTML += drawUnits(attrs, options);
     }
     if (type === "grid") {

@@ -44,6 +44,8 @@ Generate high-quality geometry and vector graphs with HTML:
 </vector-graph>
 ```
 
+> Note: none of the `id`s are necessary, but we add them because it's nice
+
 ## Getting started
 
 To use this library as usual you'll need three things. First, import it from a CDN; put this line anywhere in your HTML:
