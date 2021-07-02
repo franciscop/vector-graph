@@ -364,8 +364,8 @@ const drawVector = ({ from, to, label, axis, color }, opts) => {
 };
 
 const defaultOptions = {
-  width: 600,
-  height: 400,
+  width: 200,
+  height: 200,
   x: [0, 10],
   y: [0, 10],
   labels: ["x", "y"],
