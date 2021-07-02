@@ -1,5 +1,7 @@
 # Vector Graph
 
+> ⚠️ WORK IN PROGRESS! This library is experimental right now, see [the version on npm](https://www.npmjs.com/vector-graph) and [follow me for updates](https://twitter.com/fpresencia).
+
 Generate high-quality geometry and vector graphs with HTML:
 
 <table>
