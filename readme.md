@@ -77,15 +77,15 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 
 | attribute | default      | description                                            |
 | --------- | ------------ | ------------------------------------------------------ |
-| `width`   | `"200"`      | The width of the containing SVG element (pixels)       |
-| `height`  | `"200"`      | The height of the containing SVG element (pixels)      |
-| `x`       | `"0,10"`     | The x-coordinates of the graph to fit into the SVG     |
-| `y`       | `"0,10"`     | The y-coordinates of the graph to fit into the SVG     |
-| `labels`  | `['x', 'y']` | [BUG] Text to display alongside both axis (x,y)        |
-| `units`   | `"false"`    | Show the numbers on each of the axis                   |
-| `grid`    | `"1"`        | The size of the grid, or `false` to hide it            |
+| `width`   | `200`        | The width of the containing SVG element (pixels)       |
+| `height`  | `200`        | The height of the containing SVG element (pixels)      |
+| `x`       | `0,10`       | The x-coordinates of the graph to fit into the SVG     |
+| `y`       | `0,10`       | The y-coordinates of the graph to fit into the SVG     |
+| `units`   | `false`      | Show the numbers on each of the axis                   |
+| `grid`    | `1`          | The size of the grid, or `false` to hide it            |
+| `axis`    | `x,y`        | The X and Y axis labels, or `false` to hide the axis   |
 | `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undef) |
-| `pad`     | `"24"`       | The space around the content to avoid SVG clipping     |
+| `pad`     | `24`         | The space around the content to avoid SVG clipping     |
 
 ### \<point>
 

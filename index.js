@@ -371,7 +371,7 @@ const defaultOptions = {
   grid: 1,
   dark: detectDarkmode(),
   pad: 24,
-  axis: ["x", "y"]
+  axis: "x,y"
 };
 
 export default function graph(html) {
