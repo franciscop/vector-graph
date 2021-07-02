@@ -272,7 +272,7 @@ console.log(svg);
 // <svg width="200" height="200" viewBox="...">...</svg>
 ```
 
-## About & License
+## About Vector Graph
 
 I love Katex and I've written several tutorials in the past about mathematics, but I've felt that we are lacking on a way of describing mathematic vectors and equations easily on the web.
 
@@ -289,6 +289,8 @@ There is one project that does a similar thing, but it's way too large (680kb of
 So after some experimenting and seeing it was possible, I decided to create this library. I'm using SVG since it is scalable and its API is not terrible to work with. It's also not awesome to work with, hence a non-trivial part of the library internals are dedicated to work around some SVG issues.
 
 Now, I've spent _a lot_ of hours creating this and I'm releasing it for everyone to use for free. My ask is that if you want to use my work, you either also release your work for others to use, or compensate me so I can keep building amazing things!
+
+## License
 
 This library is dual-licensed:
 
