@@ -1,0 +1,80 @@
+<svg width="200" height="200" viewBox="-24 -14.399999999999999 238.4 238.4" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
+    <defs>
+      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 0 0 L 0 20 20 20 20 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#grid-1-#ccc-#fff-200-200-20-20)" style="
+    transform: scaleY(-1);
+    transform-origin: 0 100px;
+  "></rect>
+  
+    <defs>
+      <marker id="h-14" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-14)"></line>
+    
+    
+  
+    <defs>
+      <marker id="h-15" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-15)"></line>
+    
+    
+  
+    <text x="200" y="189" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+    <text x="12" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 60 200 A 60 60 0 0 0 3.67394039744206e-15 140"></path>
+    
+  
+    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 80 200 A 80 80 0 0 0 56.568542494923804 143.4314575050762"></path>
+    
+    <rect x="65.91036260090294" y="160.9853254107928" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    
+    <text x="73.91036260090294" y="170.3853254107928" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      a
+    </text>
+  
+  
+  
+    <path fill="none" stroke="red" stroke-width="1" stroke-dasharray="5,3" d="M 70.71067811865476 129.28932188134524 A 100 100 0 0 0 6.123233995736766e-15 100"></path>
+    
+    <rect x="30.268343236508983" y="99.21204674887132" width="16" height="16.8" fill="#fff" stroke="red" stroke-width="1" rx="5"></rect>
+    
+    <text x="38.26834323650898" y="108.61204674887132" width="16" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      b
+    </text>
+  
+  
+  
+    <path fill="none" stroke="blue" stroke-width="1" stroke-dasharray="false" d="M 100 200 A 100 100 0 0 0 70.71067811865476 129.28932188134524"></path>
+    
+    <rect x="84.38795325112868" y="153.331656763491" width="16" height="16.8" fill="#fff" stroke="blue" stroke-width="1" rx="5"></rect>
+    
+    <text x="92.38795325112868" y="162.731656763491" width="16" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      c
+    </text>
+  
+  
+  
+    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 180 200 A 40 40 0 0 0 100 200"></path>
+    
+    <rect x="132" y="151.6" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    
+    <text x="140" y="161" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+      d
+    </text>
+  
+  
+  </svg>

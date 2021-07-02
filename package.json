@@ -10,13 +10,15 @@
   "type": "module",
   "scripts": {
     "build": "node examples/index.js",
-    "start": "npx http-server . -p 8080 -o /examples"
+    "start": "npx http-server . -p 8080 -o /examples",
+    "watch": "nodemon -e md --exec \"npm run build\""
   },
   "keywords": [],
   "devDependencies": {
     "extract-code-md": "^0.0.5",
     "files": "^2.1.1",
     "http-server": "^0.12.3",
-    "jsdom": "^16.6.0"
+    "jsdom": "^16.6.0",
+    "nodemon": "^2.0.9"
   }
 }

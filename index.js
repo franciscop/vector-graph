@@ -143,7 +143,7 @@ const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
   `;
 };
 
-const drawPoint = ({ x, y, label, color, axis }, opts) => {
+const drawPoint = ({ x = 0, y = 0, label, color, axis }, opts) => {
   const { height, xScale, yScale, colors } = opts;
 
   if (!color) color = colors.black;

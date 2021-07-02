@@ -30,15 +30,20 @@ const extractId = code => {
 };
 
 read("./readme.md").then(file => {
-  const snippets = extract(file, { languages: ["html"] })
+  const examples = extract(file, { languages: ["html"] })
     .map(s => s.code)
     .reduce((all, code) => [...all, ...extractIndividual(code)], [])
     .map(code => code.trim())
     .filter(Boolean)
     .map(extractId)
     .filter(Boolean)
-    .map(({ id, code }) => render[id](code));
-  console.log(`Generated ${snippets.length} images`);
+    .map(({ id, code }) => {
+      render[id](code);
+      return id;
+    });
+  console.log(`Generated ${examples.length} images`);
+
+  write("./examples/list.json", JSON.stringify(examples));
 });
 
 // render.simple(`

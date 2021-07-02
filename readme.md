@@ -1,6 +1,6 @@
 # Vector Graph
 
-> ⚠️ WORK IN PROGRESS! This library is experimental right now, see [the version on npm](https://www.npmjs.com/vector-graph) and [follow me for updates](https://twitter.com/fpresencia).
+> ⚠️ This library is unstable and being built right now, it'll be released [version 1.0.0 in npm](https://www.npmjs.com/vector-graph). [Follow me for updates!](https://twitter.com/fpresencia).
 
 Generate high-quality geometry and vector graphs with HTML:
 
@@ -75,25 +75,39 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 
 ### \<vector-graph>
 
-| attribute | default      | description                                                |
-| --------- | ------------ | ---------------------------------------------------------- |
-| `width`   | `"600"`      | The width of the containing SVG element (pixels)           |
-| `height`  | `"400"`      | The height of the containing SVG element (pixels)          |
-| `x`       | `"0,10"`     | The x-coordinates of the graph to fit into the SVG         |
-| `y`       | `"0,10"`     | The y-coordinates of the graph to fit into the SVG         |
-| `labels`  | `['x', 'y']` | [BUG] Text to display alongside both axis (x,y)            |
-| `units`   | `"false"`    | Show the numbers on each of the axis                       |
-| `grid`    | `"1"`        | The size of the grid, or `false` to hide it                |
-| `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undefined) |
-| `pad`     | `"24"`       | The space around the content to avoid SVG clipping         |
+| attribute | default      | description                                            |
+| --------- | ------------ | ------------------------------------------------------ |
+| `width`   | `"200"`      | The width of the containing SVG element (pixels)       |
+| `height`  | `"200"`      | The height of the containing SVG element (pixels)      |
+| `x`       | `"0,10"`     | The x-coordinates of the graph to fit into the SVG     |
+| `y`       | `"0,10"`     | The y-coordinates of the graph to fit into the SVG     |
+| `labels`  | `['x', 'y']` | [BUG] Text to display alongside both axis (x,y)        |
+| `units`   | `"false"`    | Show the numbers on each of the axis                   |
+| `grid`    | `"1"`        | The size of the grid, or `false` to hide it            |
+| `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undef) |
+| `pad`     | `"24"`       | The space around the content to avoid SVG clipping     |
 
 ### \<point>
 
+Draws a small circle in the graph that represents a point in space:
+
+![Angle example](./examples/point.svg?20)
+
+```html
+<vector-graph id="point">
+  <point label="a"></point>
+  <point x="2" y="1"></point>
+  <point x="4" y="2" label="c" color="blue"></point>
+  <point x="6" y="5" label="d" axis></point>
+  <point x="8" y="8" label="e" color="red" axis></point>
+</vector-graph>
+```
+
 | attribute | default   | description                                       |
 | --------- | --------- | ------------------------------------------------- |
-| `x`       | 🚫        | The horizontal coordinate where to draw the point |
-| `y`       | 🚫        | The vertical coordinate where to draw the point   |
-| `label`   | 🚫        | The text to draw on top of the point              |
+| `x`       | "0"       | The horizontal coordinate where to draw the point |
+| `y`       | "0"       | The vertical coordinate where to draw the point   |
+| `label`   | none      | The text to draw on top of the point              |
 | `color`   | `"black"` | The color of the point, it can be a name or hexa  |
 | `axis`    | `"false"` | Draw the horizontal and vertical coordinate lines |
 
@@ -101,34 +115,69 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 
 | attribute | default   | description                                      |
 | --------- | --------- | ------------------------------------------------ |
-| `to`      | 🚫        | The point where the line/segment ends            |
+| `to`      | none      | The point where the line/segment ends            |
 | `from`    | `"0,0"`   | The point where the line/segment starts          |
-| `label`   | 🚫        | Text to draw on the middle of the line           |
+| `label`   | none      | Text to draw on the middle of the line           |
 | `color`   | `"black"` | The color of the line, it can be a name or hexa  |
 | `width`   | `"1.75"`  | The stroke width of the line to draw             |
 | `dashed`  | `"false"` | Show as dashes (true) or as a solid line (false) |
 
 ### \<circle>
 
+| attribute | default   | description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `x`       | none      | The horizontal coordinate of the circle's center |
+| `y`       | none      | The vertical coordinate of the circle's center   |
+| `radius`  | "1"       | The circle's radius, in coordinates size         |
+| `label`   | none      | Text to draw on the middle of the line           |
+| `color`   | `"black"` | The color of the line, it can be a name or hexa  |
+| `width`   | `"1.75"`  | The stroke width of the line to draw             |
+
 ### \<vector>
 
 | attribute | default   | description                                       |
 | --------- | --------- | ------------------------------------------------- |
-| `to`      | 🚫        | The point where the vector ends with an arrow     |
+| `to`      | none      | The point where the vector ends with an arrow     |
 | `from`    | `"0,0"`   | The point where the vector starts                 |
-| `label`   | 🚫        | Text to draw on the middle of the line            |
+| `label`   | none      | Text to draw on the middle of the line            |
 | `color`   | `"black"` | The color of the line, it can be a name or hexa   |
 | `axis`    | `"false"` | Draw the horizontal and vertical coordinate lines |
 
 ### \<angle>
 
+Draws an arc representing the angle between two existing lines (the lines must be drawn separately).
+
+![Angle example](./examples/angle.svg)
+
+```html
+<vector-graph id="angle">
+  <angle to="90" radius="3"></angle>
+  <angle label="a" to="45" radius="4"></angle>
+  <angle label="b" from="45" to="90" radius="5" color="red"></angle>
+  <angle label="c" to="45" radius="5" color="blue" dashed="false"></angle>
+  <angle label="d" x="7" radius="2" from="0" to="180"></angle>
+</vector-graph>
+```
+
+| attribute | default   | description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `x`       | none      | The horizontal coordinate of the angle's center  |
+| `y`       | none      | The vertical coordinate of the angle's center    |
+| `from`    | "0"       | The angle (in degrees) to start drawing the arc  |
+| `to`      | none      | The angle (in degrees) to finish drawing the arc |
+| `radius`  | "1"       | The angle's arc radius, in coordinates size      |
+| `label`   | none      | Text to draw on the middle of the line           |
+| `color`   | `"black"` | The color of the line, it can be a name or hexa  |
+| `size`    | "normal"  | The label's size                                 |
+| `dashed`  | `"true"`  | Draw dashes instead of a solid line              |
+
 ### \<text>
 
 | attribute | default    | description                                          |
 | --------- | ---------- | ---------------------------------------------------- |
-| `text`    | 🚫         | The content that goes inside the label               |
-| `x`       | 🚫         | The horizontal coordinate where to draw the label    |
-| `y`       | 🚫         | The vertical coordinate where to draw the label      |
+| `text`    | none       | The content that goes inside the label               |
+| `x`       | none       | The horizontal coordinate where to draw the label    |
+| `y`       | none       | The vertical coordinate where to draw the label      |
 | `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
 | `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
 | `width`   | auto       | The width of the label, leave it empty               |
@@ -137,9 +186,9 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 
 | attribute | default    | description                                          |
 | --------- | ---------- | ---------------------------------------------------- |
-| `text`    | 🚫         | The content that goes inside the label               |
-| `x`       | 🚫         | The horizontal coordinate where to draw the label    |
-| `y`       | 🚫         | The vertical coordinate where to draw the label      |
+| `text`    | none       | The content that goes inside the label               |
+| `x`       | none       | The horizontal coordinate where to draw the label    |
+| `y`       | none       | The vertical coordinate where to draw the label      |
 | `color`   | `"black"`  | Color of text and border, it can be a name or hexa   |
 | `size`    | `"normal"` | Define how big it is: "tiny, small, normal or large" |
 | `width`   | auto       | The width of the label, leave it empty               |
@@ -229,5 +278,5 @@ This library is dual-licensed:
 
 - GNU AGPL is the default license
 - Commercial license available for either:
-  - Sponsors of my [Open Source](https://github.com/sponsors/franciscop/), valid for as long as you are a sponsor
+  - Sponsors of my [Open Source](https://github.com/sponsors/franciscop/), valid for as long as you are a sponsor. NOTE: not yet available.
   - Buy a lifetime license for \$19 [in here](https://www.paypal.me/franciscopresencia/19).
