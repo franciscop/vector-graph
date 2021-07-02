@@ -2,18 +2,21 @@
   "name": "vector-graph",
   "version": "0.1.0",
   "description": "Generate high-quality geometry and vector graphs with HTML",
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "AGPL",
+  "homepage": "https://vector-graph.com/",
+  "repository": "https://github.com/franciscop/vector-graph.git",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "node examples/index.js",
-    "start": "http-server . -p 8080 -o /examples"
+    "start": "npx http-server . -p 8080 -o /examples"
   },
-  "type": "module",
   "keywords": [],
-  "author": "",
-  "license": "AGPL",
   "devDependencies": {
     "extract-code-md": "^0.0.5",
     "files": "^2.1.1",
+    "http-server": "^0.12.3",
     "jsdom": "^16.6.0"
   }
 }
