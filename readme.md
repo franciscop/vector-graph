@@ -1,6 +1,6 @@
 # Vector Graph
 
-> ⚠️ This library is unstable and being built right now, it'll be released [version 1.0.0 in npm](https://www.npmjs.com/vector-graph). [Follow me for updates!](https://twitter.com/fpresencia).
+> ⚠️ This library is experimental [until 1.0.0 in npm](https://www.npmjs.com/vector-graph). For updates [follow me](https://twitter.com/fpresencia)!
 
 Generate high-quality geometry and vector graphs with HTML:
 
