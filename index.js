@@ -154,7 +154,7 @@ const drawPoint = ({ x = 0, y = 0, label, color, axis }, opts) => {
   return `
     <circle cx=${cx} cy=${cy} r="4" fill="${color}" />
     ${drawLabel({ text: label, color, x, y: y + 20 / yScale }, opts)}
-    ${axis ? drawCoordinates({ x, y, color }, opts) : ""}
+    ${axis ? drawCoordinates({ x, y, axis, color }, opts) : ""}
   `;
 };
 
@@ -300,16 +300,20 @@ const drawAngle = (
 };
 
 // Draws a set of two lines going from the point "to" to the origin axis
-const drawCoordinates = ({ x, y, color }, opts) => {
+const drawCoordinates = ({ x, y, axis, color }, opts) => {
   const { xScale, yScale } = opts;
+
+  if (!axis || axis === true) axis = [x, y];
+  if (typeof axis === "string") axis = axis.split(",");
+
   const width = 1;
   const dashed = true;
   const size = "small";
   return [
     drawLine({ from: [x, 0], to: [x, y], width, dashed, color }, opts),
     drawLine({ from: [0, y], to: [x, y], width, dashed, color }, opts),
-    drawLabel({ text: x, x, y: -12 / yScale, color, size }, opts),
-    drawLabel({ text: y, x: -12 / xScale, y, color, size }, opts)
+    drawLabel({ text: axis[0], x, y: -12 / yScale, color, size }, opts),
+    drawLabel({ text: axis[1], x: -12 / xScale, y, color, size }, opts)
   ].join("");
 };
 
@@ -359,7 +363,7 @@ const drawVector = ({ from, to, label, axis, color }, opts) => {
       marker-end="url(#h-${id})"
     />
     ${drawLabel({ text: label, color, x: labelX, y: labelY }, opts)}
-    ${axis ? drawCoordinates({ x: to[0], y: to[1], color }, opts) : ""}
+    ${axis ? drawCoordinates({ x: to[0], y: to[1], axis, color }, opts) : ""}
   `;
 };
 

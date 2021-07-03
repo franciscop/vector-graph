@@ -200,7 +200,7 @@ Draws an arc representing the angle between two existing lines (the lines must b
 
 ```html
 <vector-graph id="imaginary">
-  <vector to="6,6"></vector>
+  <vector to="6,6" axis="a,b"></vector>
   <point label="a+bi" x="6" y="6" color="red"></point>
 </vector-graph>
 ```
