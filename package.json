@@ -1,6 +1,6 @@
 {
   "name": "vector-graph",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generate high-quality geometry and vector graphs with HTML",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "license": "AGPL",
