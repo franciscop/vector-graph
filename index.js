@@ -50,14 +50,18 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
 };
 
 const drawGrid = ({ size, color, fill }, opts) => {
-  const { width, height, xScale, yScale } = opts;
+  const { width, height, x, y, xScale, yScale } = opts;
 
   // Generate a unique ID for the style of this pattern, because
   // otherwise two different SVGs might conflict
   const id = `grid-${size}-${color}-${fill}-${width}-${height}-${xScale}-${yScale}`;
 
-  const x = size * xScale;
-  const y = size * yScale;
+  const w = size * xScale;
+  const h = size * yScale;
+
+  const x0 = -x[0] * xScale;
+  const y0 = -y[0] * xScale;
+
   const flipV = `
     transform: scaleY(-1);
     transform-origin: 0 ${height / 2}px;
@@ -67,9 +71,9 @@ const drawGrid = ({ size, color, fill }, opts) => {
 
   return `
     <defs>
-      <pattern id="${id}" width="${x}" height="${y}" patternUnits="userSpaceOnUse">
+      <pattern id="${id}" width="${w}" height="${h}" patternUnits="userSpaceOnUse" patternTransform="translate(${x0}, ${y0})">
         <path
-          d="${`M 0 0 L 0 ${y} ${x} ${y} ${x} 0 0 0`}"
+          d="${`M 0 0 L 0 ${w} ${h} ${w} ${h} 0 0 0`}"
           fill="${fill}"
           stroke="${color}"
           stroke-width="0.5"

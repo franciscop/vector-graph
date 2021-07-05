@@ -1,0 +1,48 @@
+<svg width="200" height="200" viewBox="-24 -14.399999999999999 238.4 238.4" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
+    <defs>
+      <pattern id="grid-1-#ccc-#fff-200-200-60.60606060606061-60.60606060606061" width="60.60606060606061" height="60.60606060606061" patternUnits="userSpaceOnUse" patternTransform="translate(18.181818181818183, 18.181818181818183)">
+        <path d="M 0 0 L 0 60.60606060606061 60.60606060606061 60.60606060606061 60.60606060606061 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#grid-1-#ccc-#fff-200-200-60.60606060606061-60.60606060606061)" style="
+    transform: scaleY(-1);
+    transform-origin: 0 100px;
+  "></rect>
+  
+    <defs>
+      <marker id="h-14" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="18.181818181818183" y1="181.8181818181818" x2="180" y2="181.8181818181818" stroke="#aaa" stroke-width="2" marker-end="url(#h-14)"></line>
+    
+    
+  
+    <defs>
+      <marker id="h-15" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="18.181818181818183" y1="181.8181818181818" x2="18.181818181818194" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-15)"></line>
+    
+    
+  
+    <text x="200" y="170.8181818181818" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+    <text x="30.181818181818183" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+    <circle cx="18.181818181818183" cy="181.8181818181818" r="4" fill="#000"></circle>
+    
+    <rect x="-1.8181818181818166" y="151.3181818181818" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="18.181818181818183" y="162.8181818181818" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      0,0
+    </text>
+  
+  
+    
+  </svg>

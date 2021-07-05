@@ -11,7 +11,7 @@
   "scripts": {
     "build": "node examples/index.js",
     "start": "npx http-server . -p 8080 -o /examples",
-    "watch": "nodemon -e md --exec \"npm run build\""
+    "watch": "nodemon -e md,js --exec \"npm run build\""
   },
   "keywords": [],
   "devDependencies": {

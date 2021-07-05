@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="-24 -14.399999999999999 238.4 238.4" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
+    <defs>
+      <marker id="h-16" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-16)"></line>
+    
+    
+  
+    <defs>
+      <marker id="h-17" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-17)"></line>
+    
+    
+  
+    <text x="200" y="189" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+    <text x="12" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+    <circle cx="0" cy="200" r="4" fill="#000"></circle>
+    
+    <rect x="-20" y="169.5" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="0" y="181" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      0,0
+    </text>
+  
+  
+    
+  </svg>

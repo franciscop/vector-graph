@@ -87,6 +87,41 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 | `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undef) |
 | `pad`     | `24`         | The space around the content to avoid SVG clipping     |
 
+Control the grid size and position:
+
+<table>
+  <tr>
+    <td>
+      <img width="300px" src="./examples/default-grid.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/shifted-grid.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/nogrid.svg" />
+    </td>
+  </tr>
+    <tr>
+      <td align="center">Default grid 10x10</td>
+      <td align="center">Shifted and scaled</td>
+      <td align="center">No grid at all</td>
+    </tr>
+</table>
+
+```html
+<vector-graph id="default-grid">
+  <point label="0,0" x="0" y="0"></point>
+</vector-graph>
+
+<vector-graph id="shifted-grid" x="-0.3,3" y="-0.3,3">
+  <point label="0,0" x="0" y="0"></point>
+</vector-graph>
+
+<vector-graph id="nogrid" grid="false">
+  <point label="0,0" x="0" y="0"></point>
+</vector-graph>
+```
+
 ### \<point>
 
 Draws a small circle in the graph that represents a point in space:
