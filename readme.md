@@ -117,7 +117,7 @@ Control the grid size and position with `x`, `y` and `grid`:
   <point label="0,0" x="0" y="0"></point>
 </vector-graph>
 
-<vector-graph id="center-grid" x="-2.8,2.8" y="-2.8,2.8" grid="0.5" units>
+<vector-graph id="center-grid" x="-2.8,2.8" y="-2.8,2.8" units>
   <point label="0,0" x="0" y="0"></point>
 </vector-graph>
 ```
