@@ -22,25 +22,33 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
   const { xScale, yScale, colors } = opts;
   if (!color) color = colors.dark;
   let units = "";
+  from = size * Math.ceil(from / size);
+  let fixed = 0;
+  if (size < 1) fixed = 1;
+  if (size < 0.1) fixed = 2;
+  if (size < 0.01) fixed = 3;
+
   for (let i = from; i < to; i += size) {
     if (axis === "x") {
-      const x = from + i - opts.x[0];
+      const x = i;
+      const text = i.toFixed(fixed);
       units += drawLine(
         { from: [x, 0], to: [x, -5 / yScale], width: 1.5, color },
         opts
       );
       units += drawLabel(
-        { text: `${i}`, x, y: -12 / yScale, color, size: "tiny" },
+        { text, x, y: -14 / yScale, color, size: "tiny" },
         opts
       );
     } else {
-      const y = from + i - opts.y[0];
+      const y = i;
+      const text = i.toFixed(fixed);
       units += drawLine(
         { from: [0, y], to: [-5 / xScale, y], width: 1.5, color },
         opts
       );
       units += drawLabel(
-        { text: `${i}`, x: -12 / yScale, y, color, size: "tiny" },
+        { text, x: -12 / yScale, y, color, size: "tiny", width: 20 },
         opts
       );
     }
@@ -233,18 +241,6 @@ function drawArc(x, y, r, from, to) {
   return `M ${xStart} ${yStart} A ${r} ${r} 0 ${large} 0 ${xEnd} ${yEnd}`;
 }
 
-// function drawArc(x, y, r, from, to) {
-//   // Convert to radians in the right coordinates for the euclidian plane
-//   const fromRads = (from * Math.PI) / 180;
-//   const toRads = ((-to + from) * Math.PI) / 180;
-//   const large = to-from <= 180 ? "0" : "1";
-//
-//   const [xStart, yStart] = toEuclidian(x, y, r, 0);
-//   const [xEnd, yEnd] = toEuclidian(x, y, r, toRads);
-//
-//   return `M ${xStart} ${yStart} A ${r} ${r} ${fromRads} 0 0 ${xEnd} ${yEnd}`;
-// }
-
 const drawAngle = (
   { x = 0, y = 0, from, to, radius, label, color, size, dashed },
   opts
@@ -378,7 +374,7 @@ const defaultOptions = {
   y: [0, 10],
   grid: 1,
   dark: detectDarkmode(),
-  pad: 24,
+  pad: 30,
   axis: "x,y"
 };
 
@@ -427,12 +423,6 @@ export default function graph(html) {
       size: grid
     });
   }
-  if (units) {
-    elements.push(
-      { type: "units", size: grid, from: x[0], to: x[1], axis: "x" },
-      { type: "units", size: grid, from: y[0], to: y[1], axis: "y" }
-    );
-  }
   if (axis) {
     const color = colors.dark;
     elements.push(
@@ -440,6 +430,12 @@ export default function graph(html) {
       { type: "vector", color, to: [0, y[1]] },
       { type: "text", text: axis[0], color, x: x[1], y: 12 / yScale },
       { type: "text", text: axis[1], color, x: 12 / xScale, y: y[1] }
+    );
+  }
+  if (units) {
+    elements.push(
+      { type: "units", size: grid || 1, from: x[0], to: x[1], axis: "x" },
+      { type: "units", size: grid || 1, from: y[0], to: y[1], axis: "y" }
     );
   }
   elements.push(

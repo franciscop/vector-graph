@@ -87,7 +87,7 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 | `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undef) |
 | `pad`     | `24`         | The space around the content to avoid SVG clipping     |
 
-Control the grid size and position:
+Control the grid size and position with `x`, `y` and `grid`:
 
 <table>
   <tr>
@@ -109,15 +109,50 @@ Control the grid size and position:
 </table>
 
 ```html
-<vector-graph id="default-grid">
+<vector-graph id="default-grid" units>
   <point label="0,0" x="0" y="0"></point>
 </vector-graph>
 
-<vector-graph id="shifted-grid" x="-0.3,3" y="-0.3,3">
+<vector-graph id="shifted-grid" x="-0.3,3" y="-0.3,3" units>
   <point label="0,0" x="0" y="0"></point>
 </vector-graph>
 
-<vector-graph id="nogrid" grid="false">
+<vector-graph id="center-grid" x="-2.8,2.8" y="-2.8,2.8" grid="0.5" units>
+  <point label="0,0" x="0" y="0"></point>
+</vector-graph>
+```
+
+You can also hide the different parts of the grid; let's change the size, remove the `units` and disable the `axis` and `grid`:
+
+<table>
+  <tr>
+    <td>
+      <img width="300px" src="./examples/small-grid.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/no-grid.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/no-axis.svg" />
+    </td>
+  </tr>
+    <tr>
+      <td align="center">1x1 grid of 0.2 steps</td>
+      <td align="center">Hide the grid</td>
+      <td align="center">Hide grid and axis</td>
+    </tr>
+</table>
+
+```html
+<vector-graph id="small-grid" x="0,1" y="0,1" grid="0.2" units>
+  <point label="0,0" x="0" y="0"></point>
+</vector-graph>
+
+<vector-graph id="no-grid" grid="false">
+  <point label="0,0" x="0" y="0"></point>
+</vector-graph>
+
+<vector-graph id="no-axis" grid="false" axis="false">
   <point label="0,0" x="0" y="0"></point>
 </vector-graph>
 ```
