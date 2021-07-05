@@ -33,9 +33,9 @@
   
     <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 153.2995937160944 126.65824309971553 A 54.97474167490214 54.97474167490214 0 0 0 85.02525832509787 180"></path>
     
-    <rect x="98.16787276450933" y="128.2686096583113" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="98.1541694347828" y="128.2793123834255" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
-    <text x="106.16787276450933" y="137.6686096583113" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="106.1541694347828" y="137.6793123834255" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       b
     </text>
   
@@ -43,9 +43,9 @@
   
     <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 126.65824309971552 33.299593716094364 A 54.97474167490214 54.97474167490214 0 0 0 166.7004062839056 73.34175690028447"></path>
     
-    <rect x="133.12698736769804" y="50.47301263230205" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="133.12698736769798" y="50.473012632301995" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
-    <text x="141.12698736769804" y="59.87301263230205" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="141.12698736769798" y="59.87301263230199" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       c
     </text>
   
@@ -53,9 +53,9 @@
   
     <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 19.999999999999993 100 A 40 40 0 0 0 58.81182905103986 50.323124176013295"></path>
     
-    <rect x="43.52821752064437" y="76.21648837610542" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="43.52043014426888" y="76.22645901302633" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
-    <text x="51.52821752064437" y="85.61648837610542" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="51.52043014426888" y="85.62645901302633" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       d
     </text>
   

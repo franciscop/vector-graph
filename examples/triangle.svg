@@ -19,7 +19,7 @@
   
   
   
-    <line x1="200" y1="133.33333333333331" x2="66.66666666666667" y2="0" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
+    <line x1="66.66666666666667" y1="0" x2="200" y2="133.33333333333331" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
     <rect x="123.33333333333334" y="56.16666666666666" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
@@ -29,7 +29,7 @@
   
   
   
-    <line x1="0" y1="200" x2="200" y2="133.33333333333331" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
+    <line x1="200" y1="133.33333333333331" x2="0" y2="200" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
     <rect x="90" y="156.16666666666666" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
@@ -39,31 +39,31 @@
   
   
   
-    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 63.40376775301024 179.39886704167017 A 66.66666666666667 66.66666666666667 0 0 0 20.60113295832983 136.59623224698976"></path>
+    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 66.83343944528286 178.28449915723834 A 70.27283689263066 70.27283689263066 0 0 0 21.71550084276165 133.16656055471714"></path>
     
-    <rect x="39.14045207910318" y="144.45954792089682" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="41.69039949999534" y="141.90960050000467" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
-    <text x="47.14045207910318" y="153.85954792089683" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="49.69039949999534" y="151.30960050000468" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       α
     </text>
   
   
   
-    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 46.06553370833683 63.40376775301024 A 66.66666666666667 66.66666666666667 0 0 0 113.80711874576983 47.140452079103184"></path>
+    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 47.243732246719055 59.77764550790732 A 62.8539361054709 62.8539361054709 0 0 0 111.11111111111111 44.444444444444464"></path>
     
-    <rect x="74.00331581254028" y="56.47859151847255" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="73.33962665058412" y="52.71727684755738" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
-    <text x="82.00331581254028" y="65.87859151847255" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="81.33962665058412" y="62.11727684755738" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       β
     </text>
   
   
   
-    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 152.85954792089683 86.19288125423014 A 66.66666666666667 66.66666666666667 0 0 0 136.59623224698976 153.93446629166317"></path>
+    <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 150.30960050000468 83.64293383333798 A 70.27283689263066 70.27283689263066 0 0 0 133.16656055471714 155.048834176095"></path>
     
-    <rect x="127.12140848152745" y="109.59668418745967" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="123.66880718459382" y="108.52846535574645" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
-    <text x="135.12140848152745" y="118.99668418745968" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
+    <text x="131.66880718459382" y="117.92846535574645" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       γ
     </text>
   

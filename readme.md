@@ -31,12 +31,7 @@ Generate high-quality geometry and vector graphs with HTML:
 </vector-graph>
 
 <vector-graph id="triangle" x="3" y="3" axis="false">
-  <line label="a" from="0,0" to="1,3"></line>
-  <line label="b" from="3,1" to="1,3"></line>
-  <line label="c" from="0,0" to="3,1"></line>
-  <angle label="α" x="0" y="0" from="71.6" to="18.4"></angle>
-  <angle label="β" x="1" y="3" from="251.6" to="315"></angle>
-  <angle label="γ" x="3" y="1" from="135" to="198.4"></angle>
+  <polygon points="0,0;1,3;3,1" sides="a,b,c" angles="α,β,γ"></polygon>
 </vector-graph>
 
 <vector-graph id="complete" x="4.9" y="4.9">

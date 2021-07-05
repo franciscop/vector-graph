@@ -179,16 +179,18 @@ const drawPoint = ({ x = 0, y = 0, label, color, axis }, opts) => {
   `;
 };
 
-const drawPolygon = ({ points, color, angles }, opts) => {
+const drawPolygon = ({ points, color, angles, sides }, opts) => {
   const all = [];
 
   color = color || opts.colors.black;
+  if (typeof sides === "string") sides = sides.split(",");
 
   // We need to do it N times
   for (let i = 0; i < points.length; i++) {
     const from = points[i];
     const to = points[(i + 1) % points.length];
-    all.push(drawLine({ from, to, color }, opts));
+    const label = sides ? sides[i] : null;
+    all.push(drawLine({ from, to, label, color }, opts));
   }
 
   if (angles) {
@@ -205,9 +207,12 @@ const drawPolygon = ({ points, color, angles }, opts) => {
       const nextVec = [next[0] - from[0], next[1] - from[1]];
       const prevVec = [from[0] - prev[0], from[1] - prev[1]];
 
-      const prevAngle =
-        180 + (Math.atan2(prevVec[1], prevVec[0]) * 180) / Math.PI;
-      const nextAngle = (Math.atan2(nextVec[1], nextVec[0]) * 180) / Math.PI;
+      const prevAngle = Math.round(
+        180 + (Math.atan2(prevVec[1], prevVec[0]) * 180) / Math.PI
+      );
+      const nextAngle = Math.round(
+        (360 + (Math.atan2(nextVec[1], nextVec[0]) * 180) / Math.PI) % 360
+      );
 
       const radius = size / 3;
       all.push(
@@ -318,6 +323,8 @@ const drawAngle = (
 
   let labelAngle = ((from + to) * Math.PI) / 360;
   if (Math.abs(to - from) > 180) labelAngle += Math.PI;
+
+  if (Math.abs(to - from) > 180) [to, from] = [from, to];
 
   const toLarge = to >= 180;
   const fromLarge = from >= 180;
