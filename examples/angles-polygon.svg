@@ -11,22 +11,50 @@
   
     <line x1="20" y1="180" x2="140" y2="180" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="70" y="169.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="80" y="181" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      a
+    </text>
+  
+  
   
     <line x1="140" y1="180" x2="180" y2="20" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="150" y="89.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="160" y="101" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      b
+    </text>
+  
+  
   
     <line x1="180" y1="20" x2="20" y2="60" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="90" y="29.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="100" y="41" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      c
+    </text>
+  
+  
   
     <line x1="20" y1="60" x2="20" y2="180" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+    <rect x="10" y="109.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="20" y="121" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      d
+    </text>
+  
+  
   
     <path fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,3" d="M 60 180 A 40 40 0 0 0 20.000000000000004 140"></path>
     
     <rect x="40.2842712474619" y="143.3157287525381" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
     <text x="48.2842712474619" y="152.7157287525381" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      a
+      α
     </text>
   
   
@@ -36,7 +64,7 @@
     <rect x="98.1541694347828" y="128.2793123834255" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
     <text x="106.1541694347828" y="137.6793123834255" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      b
+      β
     </text>
   
   
@@ -46,7 +74,7 @@
     <rect x="133.12698736769798" y="50.473012632301995" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
     <text x="141.12698736769798" y="59.87301263230199" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      c
+      γ
     </text>
   
   
@@ -56,7 +84,7 @@
     <rect x="43.52043014426888" y="76.22645901302633" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
     
     <text x="51.52043014426888" y="85.62645901302633" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      d
+      δ
     </text>
   
   

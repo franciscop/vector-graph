@@ -231,7 +231,7 @@ Draws a small circle in the graph that represents a point in space:
     <tr>
       <td align="center">Simple polygon</td>
       <td align="center">Different shapes</td>
-      <td align="center">With angles</td>
+      <td align="center">With angles and sides</td>
     </tr>
 </table>
 
@@ -245,7 +245,7 @@ Draws a small circle in the graph that represents a point in space:
 </vector-graph>
 
 <vector-graph id="angles-polygon" axis="false">
-  <polygon points="1,1;7,1;9,9;1,7" angles="a,b,c,d"></polygon>
+  <polygon points="1,1;7,1;9,9;1,7" sides="a,b,c,d" angles="α,β,γ,δ"></polygon>
 </vector-graph>
 ```
 
