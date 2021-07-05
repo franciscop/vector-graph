@@ -6,6 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="/favicon.png" />
     <title>Vector Graph</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        width: 1000px;
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+      }
+
+      .all {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .example {
+        margin: 0 0 30px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <h1>📈 Vector Graph</h1>
@@ -19,7 +44,12 @@
         .then(res => res.json())
         .then(examples => {
           examples.forEach(example => {
-            all.innerHTML += `<img src="/examples/${example}.svg" />`;
+            all.innerHTML += `
+              <div class="example">
+                <h2>${example}</h2>
+                <img src="/examples/${example}.svg" />
+              </div>
+            `;
           });
         });
     </script>
