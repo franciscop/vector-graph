@@ -35,43 +35,15 @@
       y
     </text>
   
-    <defs>
-      <marker id="h-30" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
-        <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
-      </marker>
-    </defs>
-    <line x1="0" y1="200" x2="105.85786437626906" y2="94.14213562373095" stroke="#000" stroke-width="2" marker-end="url(#h-30)"></line>
-    
-    
-    <line x1="120" y1="200" x2="120" y2="80" stroke="#000" stroke-width="1" stroke-dasharray="5,3"></line>
+    <line x1="0" y1="200" x2="120" y2="200" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
   
-    <line x1="0" y1="80" x2="120" y2="80" stroke="#000" stroke-width="1" stroke-dasharray="5,3"></line>
+    <line x1="120" y1="200" x2="80" y2="120" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
   
-    <rect x="112" y="203.6" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <line x1="80" y1="120" x2="0" y2="80" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
-    <text x="120" y="213" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      a
-    </text>
   
-  
-    <rect x="-20" y="71.6" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
-    
-    <text x="-12" y="81" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
-      b
-    </text>
-  
-  
-  
-    <circle cx="120" cy="80" r="4" fill="red"></circle>
-    
-    <rect x="95" y="49.5" width="50" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
-    
-    <text x="120" y="61" width="50" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
-      a+bi
-    </text>
-  
-  
+    <line x1="0" y1="80" x2="0" y2="200" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
   </svg>

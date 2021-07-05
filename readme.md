@@ -213,6 +213,47 @@ Draws a small circle in the graph that represents a point in space:
 | `color`   | `black` | The color of the line, it can be a name or hexa   |
 | `axis`    | `false` | Draw the horizontal and vertical coordinate lines |
 
+### \<polygon>
+
+| attribute | default | description                                     |
+| --------- | ------- | ----------------------------------------------- |
+| `points`  | _none_  | All of the points of the domain                 |
+| `color`   | `black` | The color of the line, it can be a name or hexa |
+| `angles`  | `false` | Draw the angles in the internal vertices        |
+
+<table>
+  <tr>
+    <td>
+      <img width="300px" src="./examples/regular-polygon.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/complex-polygons.svg" />
+    </td>
+    <td>
+      <img width="300px" src="./examples/angles-polygon.svg" />
+    </td>
+  </tr>
+    <tr>
+      <td align="center">Simple polygon</td>
+      <td align="center">Different shapes</td>
+      <td align="center">With angles</td>
+    </tr>
+</table>
+
+```html
+<vector-graph id="regular-polygon">
+  <polygon points="2,2;6,2;6,6;2,6"></polygon>
+</vector-graph>
+
+<vector-graph id="complex-polygons" axis="false" x="6" y="6">
+  <polygon points="1,1;6,0;2,2;4,4;0,6" color="red"></polygon>
+</vector-graph>
+
+<vector-graph id="angles-polygon" axis="false">
+  <polygon points="1,1;7,1;9,9;1,7" angles="a,b,c,d"></polygon>
+</vector-graph>
+```
+
 ### \<angle>
 
 Draws an arc representing the angle between two existing lines (the lines must be drawn separately).

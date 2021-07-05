@@ -10,20 +10,20 @@
   "></rect>
   
     <defs>
-      <marker id="h-45" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-24" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-45)"></line>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-24)"></line>
     
     
   
     <defs>
-      <marker id="h-46" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+      <marker id="h-25" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
         <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
       </marker>
     </defs>
-    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-46)"></line>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-25)"></line>
     
     
   
@@ -35,12 +35,15 @@
       y
     </text>
   
-    <defs>
-      <marker id="h-47" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
-        <polygon points="0 0, 10 2.5, 0 5" fill="#000"></polygon>
-      </marker>
-    </defs>
-    <line x1="0" y1="200" x2="108.00000000000001" y2="56" stroke="#000" stroke-width="2" marker-end="url(#h-47)"></line>
+    <line x1="40" y1="160" x2="120" y2="160" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
+  
+    <line x1="120" y1="160" x2="120" y2="80" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
+    
+  
+    <line x1="120" y1="80" x2="40" y2="80" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
+    
+  
+    <line x1="40" y1="80" x2="40" y2="160" stroke="#000" stroke-width="1.75" stroke-dasharray="undefined"></line>
     
   </svg>

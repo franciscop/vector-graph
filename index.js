@@ -6,9 +6,18 @@ const detectDarkmode = () =>
 const parseOptions = attrs =>
   [...attrs].reduce((props, { name, nodeValue }) => {
     let value = nodeValue;
+    // Simple number
     if (/^[\-0-9\.]+$/.test(value)) value = +value;
-    if (/^[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value))
+    // Simple vector of (x,y)
+    if (/^[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value)) {
       value = value.split(",").map(one => +one);
+    }
+    // Vector array of [(x,y),(x,y),...]
+    if (
+      /^([\-0-9\.]+\,\s*[\-0-9\.]+\;)+[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value)
+    ) {
+      value = value.split(";").map(value => value.split(",").map(one => +one));
+    }
     if (value === "") value = true;
     if (value === "true") value = true;
     if (value === "false") value = false;
@@ -170,6 +179,57 @@ const drawPoint = ({ x = 0, y = 0, label, color, axis }, opts) => {
   `;
 };
 
+const drawPolygon = ({ points, color, angles }, opts) => {
+  const all = [];
+
+  color = color || opts.colors.black;
+
+  // We need to do it N times
+  for (let i = 0; i < points.length; i++) {
+    const from = points[i];
+    const to = points[(i + 1) % points.length];
+    all.push(drawLine({ from, to, color }, opts));
+  }
+
+  if (angles) {
+    if (typeof angles === "string") {
+      angles = angles.split(",");
+    }
+    for (let i = 0; i < points.length; i++) {
+      const from = points[i];
+      const next = points[(i + 1) % points.length];
+      const prev = points[(points.length + i - 1) % points.length];
+      const size = Math.sqrt(
+        (from[0] - next[0]) ** 2 + (from[1] - next[1]) ** 2
+      );
+      const nextVec = [next[0] - from[0], next[1] - from[1]];
+      const prevVec = [from[0] - prev[0], from[1] - prev[1]];
+
+      const prevAngle =
+        180 + (Math.atan2(prevVec[1], prevVec[0]) * 180) / Math.PI;
+      const nextAngle = (Math.atan2(nextVec[1], nextVec[0]) * 180) / Math.PI;
+
+      const radius = size / 3;
+      all.push(
+        drawAngle(
+          {
+            x: from[0],
+            y: from[1],
+            label: angles[i],
+            from: prevAngle,
+            to: nextAngle,
+            color,
+            radius
+          },
+          opts
+        )
+      );
+    }
+  }
+
+  return all.join("");
+};
+
 const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
   const { height, x, y, xScale, yScale, colors } = opts;
 
@@ -256,7 +316,8 @@ const drawAngle = (
   if (!size) size = "small";
   if (dashed || typeof dashed === "undefined") dashed = "5,3";
 
-  const labelAngle = ((from + to) * Math.PI) / 360;
+  let labelAngle = ((from + to) * Math.PI) / 360;
+  if (Math.abs(to - from) > 180) labelAngle += Math.PI;
 
   const toLarge = to >= 180;
   const fromLarge = from >= 180;
@@ -275,15 +336,14 @@ const drawAngle = (
   if (!toLarge && to > 180) to -= 180;
   if (!fromLarge && from > 180) from -= 180;
 
-  from = (from + 360) % 360;
-  to = (to + 360) % 360;
-
-  // console.log(from, to);
+  from = Math.round((from + 360) % 360);
+  to = Math.round((to + 360) % 360);
 
   const x1 = xScale * (x - opts.x[0]);
   const y1 = height - yScale * (y - opts.y[0]);
 
   // TODO: fix label positioning for whenever xScale !== yScale
+
   const xL = x + radius * Math.cos(labelAngle);
   const yL = y + radius * Math.sin(labelAngle);
 
@@ -466,6 +526,9 @@ export default function graph(html) {
     }
     if (type === "circle") {
       svg.innerHTML += drawCircle(attrs, options);
+    }
+    if (type === "polygon") {
+      svg.innerHTML += drawPolygon(attrs, options);
     }
     if (type === "angle") {
       svg.innerHTML += drawAngle(attrs, options);
