@@ -70,17 +70,17 @@ Finally, please take a minute to understand the license of vector-graph. We are 
 
 ### \<vector-graph>
 
-| attribute | default      | description                                            |
-| --------- | ------------ | ------------------------------------------------------ |
-| `width`   | `200`        | The width of the containing SVG element (pixels)       |
-| `height`  | `200`        | The height of the containing SVG element (pixels)      |
-| `x`       | `0,10`       | The x-coordinates of the graph to fit into the SVG     |
-| `y`       | `0,10`       | The y-coordinates of the graph to fit into the SVG     |
-| `units`   | `false`      | Show the numbers on each of the axis                   |
-| `grid`    | `1`          | The size of the grid, or `false` to hide it            |
-| `axis`    | `x,y`        | The X and Y axis labels, or `false` to hide the axis   |
-| `dark`    | _mediaquery_ | Dark theme (true), light theme (false) or auto (undef) |
-| `pad`     | `24`         | The space around the content to avoid SVG clipping     |
+| attribute | default | description                                            |
+| --------- | ------- | ------------------------------------------------------ |
+| `width`   | `200`   | The width of the containing SVG element (pixels)       |
+| `height`  | `200`   | The height of the containing SVG element (pixels)      |
+| `x`       | `0,10`  | The x-coordinates of the graph to fit into the SVG     |
+| `y`       | `0,10`  | The y-coordinates of the graph to fit into the SVG     |
+| `units`   | `false` | Show the numbers on each of the axis                   |
+| `grid`    | `1`     | The size of the grid, or `false` to hide it            |
+| `axis`    | `x,y`   | The X and Y axis labels, or `false` to hide the axis   |
+| `dark`    | _auto_  | Dark theme (true), light theme (false) or auto (undef) |
+| `pad`     | `30`    | The space around the content to avoid SVG clipping     |
 
 Control the grid size and position with `x`, `y` and `grid`:
 
@@ -400,7 +400,5 @@ Now, I've spent _a lot_ of hours creating this and I'm releasing it for everyone
 
 This library is dual-licensed:
 
-- **GNU Affero GPL** is the default license. This might be too strict and relaxed to _GPL_ or _LGPL_ on the release date, we'll see. I pick this for now since it's better to start strict and then relax the license than the other way around.
-- **Commercial license** available for either:
-  - (NOTE: not yet available) **Sponsors** of my [Open Source](https://github.com/sponsors/franciscop/) can use any of my software in proprietary projects. This is valid for as long as you are a sponsor.
-  - **Buy a lifetime license** of this project for \$19 [in here](https://www.paypal.me/franciscopresencia/19).
+- **GNU Affero GPL** (AGPL) is the default license. This might be too strict and relaxed to _GPL_ or _LGPL_ on the release date, we'll see. I pick this for now since it's better to start strict and then relax the license than the other way around.
+- **Commercial License** for \$19 [buy in here](https://vector-graph.lemonsqueezy.com/checkout/buy/2db23884-26e2-4c97-833f-4dd266e48bfb?name=0&discount=0), which allows you to use in any proprietary codebase without following the AGPL. Ideal for business, education, etc.
