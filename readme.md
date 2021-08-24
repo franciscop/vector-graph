@@ -401,4 +401,4 @@ Now, I've spent _a lot_ of hours creating this and I'm releasing it for everyone
 This library is dual-licensed:
 
 - **GNU Affero GPL** (AGPL) is the default license. This might be too strict and relaxed to _GPL_ or _LGPL_ on the release date, we'll see. I pick this for now since it's better to start strict and then relax the license than the other way around.
-- **Commercial License** for \$19 [buy in here](https://vector-graph.lemonsqueezy.com/checkout/buy/2db23884-26e2-4c97-833f-4dd266e48bfb?name=0&discount=0), which allows you to use in any proprietary codebase without following the AGPL. Ideal for business, education, etc.
+- **Commercial License** for \$19 [buy in here](https://franciscop.lemonsqueezy.com/checkout/buy/2db23884-26e2-4c97-833f-4dd266e48bfb?name=0&discount=0), which allows you to use in any proprietary codebase without following the AGPL. Ideal for business, education, etc.
