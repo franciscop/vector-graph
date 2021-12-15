@@ -1,0 +1,48 @@
+<svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
+    <defs>
+      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="translate(0, 0)">
+        <path d="M 0 0 L 0 20 20 20 20 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#grid-1-#ccc-#fff-200-200-20-20)" style="
+    transform: scaleY(-1);
+    transform-origin: 0 100px;
+  "></rect>
+  
+    <defs>
+      <marker id="h-12" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="180" y2="200" stroke="#aaa" stroke-width="2" marker-end="url(#h-12)"></line>
+    
+    
+  
+    <defs>
+      <marker id="h-13" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="0" y1="200" x2="1.1021821192326179e-14" y2="20" stroke="#aaa" stroke-width="2" marker-end="url(#h-13)"></line>
+    
+    
+  
+    <text x="200" y="189" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+    <text x="12" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+    <circle cx="40" cy="160" r="4" fill="#000"></circle>
+    
+    <rect x="20" y="129.5" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="40" y="141" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      2,2
+    </text>
+  
+  
+    
+  </svg>

@@ -1,0 +1,87 @@
+<svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
+    <defs>
+      <pattern id="grid-1-#ccc-#fff-200-200-28.571428571428573-28.571428571428573" width="28.571428571428573" height="28.571428571428573" patternUnits="userSpaceOnUse" patternTransform="translate(28.571428571428573, 28.571428571428573)">
+        <path d="M 0 0 L 0 28.571428571428573 28.571428571428573 28.571428571428573 28.571428571428573 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#grid-1-#ccc-#fff-200-200-28.571428571428573-28.571428571428573)" style="
+    transform: scaleY(-1);
+    transform-origin: 0 100px;
+  "></rect>
+  
+    <defs>
+      <marker id="h-28" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="28.571428571428573" y1="171.42857142857142" x2="180.00000000000003" y2="171.42857142857142" stroke="#aaa" stroke-width="2" marker-end="url(#h-28)"></line>
+    
+    
+  
+    <defs>
+      <marker id="h-29" markerWidth="10" markerHeight="5" refY="2.5" orient="auto">
+        <polygon points="0 0, 10 2.5, 0 5" fill="#aaa"></polygon>
+      </marker>
+    </defs>
+    <line x1="28.571428571428573" y1="171.42857142857142" x2="28.571428571428584" y2="19.99999999999997" stroke="#aaa" stroke-width="2" marker-end="url(#h-29)"></line>
+    
+    
+  
+    <text x="200" y="160.42857142857144" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      x
+    </text>
+  
+    <text x="40.57142857142857" y="1" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      y
+    </text>
+  
+    <ellipse cx="28.571428571428573" cy="171.42857142857142" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="2" path-length="1px"></ellipse>
+      
+    <rect x="18.571428571428573" y="160.92857142857142" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="28.571428571428573" y="172.42857142857142" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      a
+    </text>
+  
+  
+  
+    <ellipse cx="85.71428571428572" cy="114.28571428571428" rx="42.85714285714286" ry="42.85714285714286" fill="none" stroke="#000" stroke-width="2" path-length="1px"></ellipse>
+      
+    <rect x="75.71428571428572" y="103.78571428571428" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="85.71428571428572" y="115.28571428571428" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      b
+    </text>
+  
+  
+  
+    <ellipse cx="85.71428571428572" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="red" stroke-width="2" path-length="1px"></ellipse>
+      
+    <rect x="75.71428571428572" y="18.071428571428555" width="20" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="85.71428571428572" y="29.571428571428555" width="20" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      c
+    </text>
+  
+  
+  
+    <ellipse cx="171.42857142857144" cy="114.28571428571428" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="1" path-length="1px"></ellipse>
+      
+    <rect x="161.42857142857144" y="103.78571428571428" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="171.42857142857144" y="115.28571428571428" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      d
+    </text>
+  
+  
+  
+    <ellipse cx="171.42857142857144" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="blue" stroke-width="3" path-length="1px"></ellipse>
+      
+    <rect x="161.42857142857144" y="18.071428571428555" width="20" height="21" fill="#fff" stroke="blue" stroke-width="1.75" rx="5"></rect>
+    
+    <text x="171.42857142857144" y="29.571428571428555" width="20" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
+      e
+    </text>
+  
+  
+  </svg>

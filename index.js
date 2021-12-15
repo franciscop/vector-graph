@@ -269,6 +269,7 @@ const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
 const drawCircle = ({ x = 0, y = 0, radius, label, color, width }, opts) => {
   const { height, xScale, yScale, colors } = opts;
 
+  if (!radius) radius = 1;
   if (!color) color = colors.black;
   if (!width) width = 2;
 
@@ -434,6 +435,21 @@ const drawVector = ({ from, to, label, axis, color }, opts) => {
   `;
 };
 
+const drawPlot = ({ fn, color, width, dashed }, opts) => {
+  const points = [];
+  const xUnit = opts.x[1] / opts.width;
+  for (let x = opts.x[0]; x < opts.width; x += xUnit) {
+    const y = eval(fn.replaceAll("x", x));
+    points.push([x, y]);
+  }
+  console.log(width);
+  return points
+    .slice(0, -1)
+    .map((p, i) =>
+      drawLine({ from: p, to: points[i + 1], color, width, dashed }, opts)
+    );
+};
+
 const defaultOptions = {
   width: 200,
   height: 200,
@@ -445,7 +461,7 @@ const defaultOptions = {
   axis: "x,y"
 };
 
-export default function graph(html) {
+function graph(html) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
@@ -549,6 +565,9 @@ export default function graph(html) {
     if (type === "text") {
       svg.innerHTML += drawText(attrs, options);
     }
+    if (type === "plot") {
+      svg.innerHTML += drawPlot(attrs, options);
+    }
   });
 
   return svg.outerHTML;
@@ -570,3 +589,5 @@ if (typeof HTMLElement !== "undefined") {
   // Attach the <PlaneGraph> class to all elements called <vector-graph>
   customElements.define("vector-graph", PlaneGraph);
 }
+
+export default graph;

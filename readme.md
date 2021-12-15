@@ -64,11 +64,27 @@ Now let's draw a graph anywhere within your HTML:
 
 Finally, please take a minute to understand the license of vector-graph. We are [dual-licensed](#license), GNU AGPL free license and a commercial license available:
 
-<button>\$9 BUY A LICENSE</button> <button>AGPL LICENSE</button>
+<a href="https://franciscop.lemonsqueezy.com/checkout/buy/2db23884-26e2-4c97-833f-4dd266e48bfb?name=0&discount=0"><button>\$9 BUY A LICENSE</button></a> <a href="https://github.com/franciscop/vector-graph/blob/master/LICENSE"><button>AGPL LICENSE</button></a>
 
 ## Documentation
 
+The way you build images is with a parent `<vector-graph>` that draws the image and few top-level configuration (like the axis, grid, etc) and then add elements inside.
+
+Unless specified otherwise all units should be local units. So for example, the default plane axis sizes are defined as x=[0,10] and y=[0,10]. This means that if you want to put a point in 2,2, then you'd use those coordinates, never pixel values:
+
+![Basic of units](./examples/basic-units.svg?1)
+
+```html
+<vector-graph id="basic-units">
+  <point x="2" y="2" label="2,2"></point>
+</vector-graph>
+```
+
+The same applies to positioning of all other elements. There are some exceptions, like the `width` and `height` of `<vector-graph>`, or the `width` for the `<line width="3">` which is also in pixels.
+
 ### \<vector-graph>
+
+Create a vector graph image. It controls the display of grids, axis, numbers, etc.
 
 | attribute | default | description                                            |
 | --------- | ------- | ------------------------------------------------------ |
@@ -90,7 +106,7 @@ Control the grid size and position with `x`, `y` and `grid`:
       <img width="300px" src="./examples/default-grid.svg" />
     </td>
     <td>
-      <img width="300px" src="./examples/shifted-grid.svg" />
+      <img width="300px" src="./examples/shifted-grid.svg?1" />
     </td>
     <td>
       <img width="300px" src="./examples/nogrid.svg" />
@@ -156,7 +172,7 @@ You can also hide the different parts of the grid; let's change the size, remove
 
 Draws a small circle in the graph that represents a point in space:
 
-![Angle example](./examples/point.svg?20)
+![Point example](./examples/point.svg?20)
 
 ```html
 <vector-graph id="point">
@@ -178,6 +194,19 @@ Draws a small circle in the graph that represents a point in space:
 
 ### \<line>
 
+Draws a segment between two given points:
+
+![Line example](./examples/line.svg?17)
+
+```html
+<vector-graph id="line">
+  <line label="a" to="6,6"></line>
+  <line label="b" from="2,8" to="8,8"></line>
+  <line label="c" from="6,1" to="6,5" color="red" width="1"></line>
+  <line label="d" from="8,1" to="8,7" color="blue" width="3" dashed></line>
+</vector-graph>
+```
+
 | attribute | default | description                                      |
 | --------- | ------- | ------------------------------------------------ |
 | `to`      | _none_  | The point where the line/segment ends            |
@@ -188,6 +217,20 @@ Draws a small circle in the graph that represents a point in space:
 | `dashed`  | `false` | Show as dashes (true) or as a solid line (false) |
 
 ### \<circle>
+
+Draw a hollow circle around the specified center:
+
+![Circle example](./examples/circle.svg?26)
+
+```html
+<vector-graph id="circle" x="-1,6" y="-1,6">
+  <circle label="a"></circle>
+  <circle label="b" x="2" y="2" radius="1.5"></circle>
+  <circle label="c" x="2" y="5" color="red"></circle>
+  <circle label="d" x="5" y="2" width="1"></circle>
+  <circle label="e" x="5" y="5" color="blue" width="3"></circle>
+</vector-graph>
+```
 
 | attribute | default | description                                      |
 | --------- | ------- | ------------------------------------------------ |
@@ -209,12 +252,6 @@ Draws a small circle in the graph that represents a point in space:
 | `axis`    | `false` | Draw the horizontal and vertical coordinate lines |
 
 ### \<polygon>
-
-| attribute | default | description                                     |
-| --------- | ------- | ----------------------------------------------- |
-| `points`  | _none_  | All of the points of the domain                 |
-| `color`   | `black` | The color of the line, it can be a name or hexa |
-| `angles`  | `false` | Draw the angles in the internal vertices        |
 
 <table>
   <tr>
@@ -248,6 +285,12 @@ Draws a small circle in the graph that represents a point in space:
   <polygon points="1,1;7,1;9,9;1,7" sides="a,b,c,d" angles="α,β,γ,δ"></polygon>
 </vector-graph>
 ```
+
+| attribute | default | description                                     |
+| --------- | ------- | ----------------------------------------------- |
+| `points`  | _none_  | All of the points of the domain                 |
+| `color`   | `black` | The color of the line, it can be a name or hexa |
+| `angles`  | `false` | Draw the angles in the internal vertices        |
 
 ### \<angle>
 
@@ -300,6 +343,24 @@ Draws an arc representing the angle between two existing lines (the lines must b
 | `width`   | _auto_   | The width of the label, tip: leave it empty          |
 | `height`  | _auto_   | The height of the label, tip: leave it empty         |
 
+### \<plot>
+
+![Simple Complex numbers](./examples/custom-function.svg?46)
+
+| attribute | default | description                                     |
+| --------- | ------- | ----------------------------------------------- |
+| `fn`      | string  | The function to draw (in Javascript)            |
+| `color`   | `black` | Color of plotted line, it can be a name or hexa |
+| `width`   | _auto_  | The width of the line to draw                   |
+
+```html
+<vector-graph id="custom-function" x="-5,5" y="-2, 2">
+  <plot fn="Math.tan(x)" color="red" width="1"></plot>
+  <plot fn="Math.sin(x)" color="green"></plot>
+  <plot fn="Math.cos(x)" color="blue"></plot>
+</vector-graph>
+```
+
 ## Examples
 
 ![Simple Complex numbers](./examples/imaginary.svg)
@@ -308,6 +369,18 @@ Draws an arc representing the angle between two existing lines (the lines must b
 <vector-graph id="imaginary">
   <vector to="6,6" axis="a,b"></vector>
   <point label="a+bi" x="6" y="6" color="red"></point>
+</vector-graph>
+```
+
+### Custom function
+
+![Simple Complex numbers](./examples/custom-function.svg?46)
+
+```html
+<vector-graph id="custom-function" x="-5,5" y="-2, 2">
+  <plot fn="Math.tan(x)" color="red" width="1"></plot>
+  <plot fn="Math.sin(x)" color="green"></plot>
+  <plot fn="Math.cos(x)" color="blue"></plot>
 </vector-graph>
 ```
 
