@@ -1,6 +1,6 @@
 <svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-200-200-35.714285714285715-35.714285714285715" width="35.714285714285715" height="35.714285714285715" patternUnits="userSpaceOnUse" patternTransform="translate(100, 100)">
+      <pattern id="grid-1-#ccc-#fff-200-200-35.714285714285715-35.714285714285715" width="35.714285714285715" height="35.714285714285715" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 35.714285714285715 35.714285714285715 35.714285714285715 35.714285714285715 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -38,7 +38,7 @@
     <line x1="28.571428571428566" y1="100" x2="28.571428571428566" y2="105.00000000000001" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="16.571428571428566" y="105.6" width="24" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="16.571428571428566" y="105.6" width="24" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="28.571428571428566" y="115" width="24" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       -2
@@ -48,7 +48,7 @@
     <line x1="64.28571428571428" y1="100" x2="64.28571428571428" y2="105.00000000000001" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="52.28571428571428" y="105.6" width="24" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="52.28571428571428" y="105.6" width="24" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="64.28571428571428" y="115" width="24" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       -1
@@ -58,7 +58,7 @@
     <line x1="100" y1="100" x2="100" y2="105.00000000000001" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="92" y="105.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="92" y="105.6" width="16" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="100" y="115" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       0
@@ -68,7 +68,7 @@
     <line x1="135.71428571428572" y1="100" x2="135.71428571428572" y2="105.00000000000001" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="127.71428571428572" y="105.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="127.71428571428572" y="105.6" width="16" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="135.71428571428572" y="115" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       1
@@ -78,7 +78,7 @@
     <line x1="171.42857142857142" y1="100" x2="171.42857142857142" y2="105.00000000000001" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="163.42857142857142" y="105.6" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="163.42857142857142" y="105.6" width="16" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="171.42857142857142" y="115" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       2
@@ -88,7 +88,7 @@
     <line x1="100" y1="171.42857142857144" x2="94.99999999999999" y2="171.42857142857144" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="78" y="163.02857142857144" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="78" y="163.02857142857144" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="88" y="172.42857142857144" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       -2
@@ -98,7 +98,7 @@
     <line x1="100" y1="135.71428571428572" x2="94.99999999999999" y2="135.71428571428572" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="78" y="127.31428571428572" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="78" y="127.31428571428572" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="88" y="136.71428571428572" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       -1
@@ -108,7 +108,7 @@
     <line x1="100" y1="100" x2="94.99999999999999" y2="100" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="78" y="91.6" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="78" y="91.6" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="88" y="101" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       0
@@ -118,7 +118,7 @@
     <line x1="100" y1="64.28571428571428" x2="94.99999999999999" y2="64.28571428571428" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="78" y="55.88571428571428" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="78" y="55.88571428571428" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="88" y="65.28571428571428" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       1
@@ -128,7 +128,7 @@
     <line x1="100" y1="28.571428571428584" x2="94.99999999999999" y2="28.571428571428584" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="78" y="20.171428571428585" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="78" y="20.171428571428585" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="88" y="29.571428571428584" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       2
@@ -137,7 +137,7 @@
   
     <circle cx="100" cy="100" r="4" fill="#000"></circle>
     
-    <rect x="80" y="69.5" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="80" y="69.5" width="40" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="100" y="81" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       0,0

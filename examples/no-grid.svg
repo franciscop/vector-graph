@@ -27,7 +27,7 @@
   
     <circle cx="0" cy="200" r="4" fill="#000"></circle>
     
-    <rect x="-20" y="169.5" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="-20" y="169.5" width="40" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="0" y="181" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       0,0

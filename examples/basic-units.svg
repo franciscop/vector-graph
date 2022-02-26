@@ -1,6 +1,6 @@
 <svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="translate(0, 0)">
+      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 20 20 20 20 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -37,7 +37,7 @@
   
     <circle cx="40" cy="160" r="4" fill="#000"></circle>
     
-    <rect x="20" y="129.5" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="20" y="129.5" width="40" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="40" y="141" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       2,2

@@ -75,6 +75,7 @@ const drawGrid = ({ size, color, fill }, opts) => {
 
   const w = size * xScale;
   const h = size * yScale;
+  const big = w > h ? w : h;
 
   const x0 = -x[0] * xScale;
   const y0 = -y[0] * xScale;
@@ -88,9 +89,9 @@ const drawGrid = ({ size, color, fill }, opts) => {
 
   return `
     <defs>
-      <pattern id="${id}" width="${w}" height="${h}" patternUnits="userSpaceOnUse" patternTransform="translate(${x0}, ${y0})">
+      <pattern id="${id}" width="${w}" height="${h}" patternUnits="userSpaceOnUse">
         <path
-          d="${`M 0 0 L 0 ${w} ${h} ${w} ${h} 0 0 0`}"
+          d="${`M 0 0 L 0 ${big} ${big} ${big} ${big} 0 0 0`}"
           fill="${fill}"
           stroke="${color}"
           stroke-width="0.5"
@@ -155,7 +156,7 @@ const drawLabel = ({ text, x, y, size, width, height, color }, opts) => {
       y="${ym}"
       width="${width}"
       height="${height}"
-      fill="${colors.light}"
+      fill="#fffd"
       stroke="${color}"
       stroke-width="${strokeSizes[size]}"
       rx="5"
@@ -442,7 +443,6 @@ const drawPlot = ({ fn, color, width, dashed }, opts) => {
     const y = eval(fn.replaceAll("x", x));
     points.push([x, y]);
   }
-  console.log(width);
   return points
     .slice(0, -1)
     .map((p, i) =>

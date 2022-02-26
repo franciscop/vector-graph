@@ -1,6 +1,6 @@
 <svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-200-200-60.60606060606061-60.60606060606061" width="60.60606060606061" height="60.60606060606061" patternUnits="userSpaceOnUse" patternTransform="translate(18.181818181818183, 18.181818181818183)">
+      <pattern id="grid-1-#ccc-#fff-200-200-60.60606060606061-60.60606060606061" width="60.60606060606061" height="60.60606060606061" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 60.60606060606061 60.60606060606061 60.60606060606061 60.60606060606061 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -38,7 +38,7 @@
     <line x1="18.181818181818183" y1="181.8181818181818" x2="18.181818181818183" y2="186.8181818181818" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="10.181818181818183" y="187.4181818181818" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="10.181818181818183" y="187.4181818181818" width="16" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="18.181818181818183" y="196.8181818181818" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       0
@@ -48,7 +48,7 @@
     <line x1="78.7878787878788" y1="181.8181818181818" x2="78.7878787878788" y2="186.8181818181818" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="70.7878787878788" y="187.4181818181818" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="70.7878787878788" y="187.4181818181818" width="16" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="78.7878787878788" y="196.8181818181818" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       1
@@ -58,7 +58,7 @@
     <line x1="139.39393939393938" y1="181.8181818181818" x2="139.39393939393938" y2="186.8181818181818" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="131.39393939393938" y="187.4181818181818" width="16" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="131.39393939393938" y="187.4181818181818" width="16" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="139.39393939393938" y="196.8181818181818" width="16" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       2
@@ -68,7 +68,7 @@
     <line x1="18.181818181818183" y1="181.8181818181818" x2="13.181818181818182" y2="181.8181818181818" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-3.8181818181818175" y="173.4181818181818" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-3.8181818181818175" y="173.4181818181818" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="6.1818181818181825" y="182.8181818181818" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       0
@@ -78,7 +78,7 @@
     <line x1="18.181818181818183" y1="121.2121212121212" x2="13.181818181818182" y2="121.2121212121212" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-3.8181818181818175" y="112.8121212121212" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-3.8181818181818175" y="112.8121212121212" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="6.1818181818181825" y="122.2121212121212" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       1
@@ -88,7 +88,7 @@
     <line x1="18.181818181818183" y1="60.60606060606062" x2="13.181818181818182" y2="60.60606060606062" stroke="#aaa" stroke-width="1.5" stroke-dasharray="undefined"></line>
     
   
-    <rect x="-3.8181818181818175" y="52.206060606060625" width="20" height="16.8" fill="#fff" stroke="#aaa" stroke-width="0" rx="5"></rect>
+    <rect x="-3.8181818181818175" y="52.206060606060625" width="20" height="16.8" fill="#fffd" stroke="#aaa" stroke-width="0" rx="5"></rect>
     
     <text x="6.1818181818181825" y="61.60606060606062" width="20" fill="#aaa" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       2
@@ -97,7 +97,7 @@
   
     <circle cx="18.181818181818183" cy="181.8181818181818" r="4" fill="#000"></circle>
     
-    <rect x="-1.8181818181818166" y="151.3181818181818" width="40" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="-1.8181818181818166" y="151.3181818181818" width="40" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="18.181818181818183" y="162.8181818181818" width="40" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       0,0

@@ -354,7 +354,7 @@ Draws an arc representing the angle between two existing lines (the lines must b
 | `width`   | _auto_  | The width of the line to draw                   |
 
 ```html
-<vector-graph id="custom-function" x="-5,5" y="-2, 2">
+<vector-graph id="custom-function" x="-5,5" y="-2,2">
   <plot fn="Math.tan(x)" color="red" width="1"></plot>
   <plot fn="Math.sin(x)" color="green"></plot>
   <plot fn="Math.cos(x)" color="blue"></plot>

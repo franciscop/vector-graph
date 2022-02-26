@@ -1,6 +1,6 @@
 <svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-200-200-28.571428571428573-28.571428571428573" width="28.571428571428573" height="28.571428571428573" patternUnits="userSpaceOnUse" patternTransform="translate(28.571428571428573, 28.571428571428573)">
+      <pattern id="grid-1-#ccc-#fff-200-200-28.571428571428573-28.571428571428573" width="28.571428571428573" height="28.571428571428573" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 28.571428571428573 28.571428571428573 28.571428571428573 28.571428571428573 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -37,7 +37,7 @@
   
     <ellipse cx="28.571428571428573" cy="171.42857142857142" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="2" path-length="1px"></ellipse>
       
-    <rect x="18.571428571428573" y="160.92857142857142" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="18.571428571428573" y="160.92857142857142" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="28.571428571428573" y="172.42857142857142" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       a
@@ -47,7 +47,7 @@
   
     <ellipse cx="85.71428571428572" cy="114.28571428571428" rx="42.85714285714286" ry="42.85714285714286" fill="none" stroke="#000" stroke-width="2" path-length="1px"></ellipse>
       
-    <rect x="75.71428571428572" y="103.78571428571428" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="75.71428571428572" y="103.78571428571428" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="85.71428571428572" y="115.28571428571428" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       b
@@ -57,7 +57,7 @@
   
     <ellipse cx="85.71428571428572" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="red" stroke-width="2" path-length="1px"></ellipse>
       
-    <rect x="75.71428571428572" y="18.071428571428555" width="20" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
+    <rect x="75.71428571428572" y="18.071428571428555" width="20" height="21" fill="#fffd" stroke="red" stroke-width="1.75" rx="5"></rect>
     
     <text x="85.71428571428572" y="29.571428571428555" width="20" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       c
@@ -67,7 +67,7 @@
   
     <ellipse cx="171.42857142857144" cy="114.28571428571428" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="1" path-length="1px"></ellipse>
       
-    <rect x="161.42857142857144" y="103.78571428571428" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="161.42857142857144" y="103.78571428571428" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="171.42857142857144" y="115.28571428571428" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       d
@@ -77,7 +77,7 @@
   
     <ellipse cx="171.42857142857144" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="blue" stroke-width="3" path-length="1px"></ellipse>
       
-    <rect x="161.42857142857144" y="18.071428571428555" width="20" height="21" fill="#fff" stroke="blue" stroke-width="1.75" rx="5"></rect>
+    <rect x="161.42857142857144" y="18.071428571428555" width="20" height="21" fill="#fffd" stroke="blue" stroke-width="1.75" rx="5"></rect>
     
     <text x="171.42857142857144" y="29.571428571428555" width="20" fill="blue" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       e

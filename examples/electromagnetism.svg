@@ -1,6 +1,6 @@
 <svg width="400" height="400" viewBox="-30 -18 448 448" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-400-400-40-40" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="translate(200, 200)">
+      <pattern id="grid-1-#ccc-#fff-400-400-40-40" width="40" height="40" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 40 40 40 40 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -43,7 +43,7 @@
       Electric Field
     </text>
   
-    <rect x="220" y="349.5" width="160" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="220" y="349.5" width="160" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="300" y="361" width="160" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       Right Hand Rule

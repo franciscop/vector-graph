@@ -1,6 +1,6 @@
 <svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="translate(0, 0)">
+      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 20 20 20 20 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -49,14 +49,14 @@
     <line x1="0" y1="80" x2="120" y2="80" stroke="#000" stroke-width="1" stroke-dasharray="5,3"></line>
     
   
-    <rect x="112" y="203.6" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="112" y="203.6" width="16" height="16.8" fill="#fffd" stroke="#000" stroke-width="1" rx="5"></rect>
     
     <text x="120" y="213" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       a
     </text>
   
   
-    <rect x="-20" y="71.6" width="16" height="16.8" fill="#fff" stroke="#000" stroke-width="1" rx="5"></rect>
+    <rect x="-20" y="71.6" width="16" height="16.8" fill="#fffd" stroke="#000" stroke-width="1" rx="5"></rect>
     
     <text x="-12" y="81" width="16" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 12px sans-serif">
       b
@@ -66,7 +66,7 @@
   
     <circle cx="120" cy="80" r="4" fill="red"></circle>
     
-    <rect x="95" y="49.5" width="50" height="21" fill="#fff" stroke="red" stroke-width="1.75" rx="5"></rect>
+    <rect x="95" y="49.5" width="50" height="21" fill="#fffd" stroke="red" stroke-width="1.75" rx="5"></rect>
     
     <text x="120" y="61" width="50" fill="red" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       a+bi

@@ -1,6 +1,6 @@
 <svg width="200" height="200" viewBox="-30 -18 248 248" xmlns="http://www.w3.org/2000/svg" style="background: rgb(255, 255, 255); border-radius: 8px;">
     <defs>
-      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="translate(0, 0)">
+      <pattern id="grid-1-#ccc-#fff-200-200-20-20" width="20" height="20" patternUnits="userSpaceOnUse">
         <path d="M 0 0 L 0 20 20 20 20 0 0 0" fill="#fff" stroke="#ccc" stroke-width="0.5"></path>
       </pattern>
     </defs>
@@ -42,7 +42,7 @@
     </defs>
     <line x1="0" y1="200" x2="142.11145618000168" y2="128.94427190999915" stroke="#000" stroke-width="2" marker-end="url(#h-10)"></line>
     
-    <rect x="70" y="149.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="70" y="149.5" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="80" y="161" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       u
@@ -58,7 +58,7 @@
     </defs>
     <line x1="0" y1="200" x2="71.05572809000085" y2="57.88854381999832" stroke="#000" stroke-width="2" marker-end="url(#h-11)"></line>
     
-    <rect x="30" y="109.5" width="20" height="21" fill="#fff" stroke="#000" stroke-width="1.75" rx="5"></rect>
+    <rect x="30" y="109.5" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
     <text x="40" y="121" width="20" fill="#000" style="dominant-baseline: middle; text-anchor: middle; font: normal 16px sans-serif">
       v
