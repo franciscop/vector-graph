@@ -1,4 +1,4 @@
-# Vector Graph
+# Vector Graph [![gzip size](https://img.badgesize.io/franciscop/vector-graph/master/index.js.svg?compression=gzip)](https://github.com/franciscop/vector-graph/blob/master/index.js)
 
 > ⚠️ This library is experimental [until 1.0.0 in npm](https://www.npmjs.com/vector-graph). For updates [follow me](https://twitter.com/fpresencia)!
 
@@ -64,7 +64,7 @@ Now let's draw a graph anywhere within your HTML:
 
 Finally, please take a minute to understand the license of vector-graph. We are [dual-licensed](#license), GNU AGPL free license and a commercial license available:
 
-<a href="https://franciscop.lemonsqueezy.com/checkout/buy/2db23884-26e2-4c97-833f-4dd266e48bfb?name=0&discount=0"><button>\$9 BUY A LICENSE</button></a> <a href="https://github.com/franciscop/vector-graph/blob/master/LICENSE"><button>AGPL LICENSE</button></a>
+<a href="https://franciscop.lemonsqueezy.com/checkout/buy/2db23884-26e2-4c97-833f-4dd266e48bfb?name=0&discount=0"><button>\$19 BUY A LICENSE</button></a> · <a href="https://github.com/franciscop/vector-graph/blob/master/LICENSE"><button>AGPL LICENSE</button></a>
 
 ## Documentation
 
