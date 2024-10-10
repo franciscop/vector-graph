@@ -580,7 +580,7 @@ function graph(html) {
 }
 
 // Initialize the module. This attaches the whole graph() function to the
-// custom element `<vector-graph>`, so that in the browser the constructore()
+// custom element `<vector-graph>`, so that in the browser the constructor()
 // will be called. This allows for <script> to be anywhere in the page; if it's
 // before the <vector-graph> component, it's defined and called later
 if (typeof HTMLElement !== "undefined") {
