@@ -3,27 +3,29 @@ const detectDarkmode = () =>
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-const parseOptions = attrs =>
+const parseOptions = (attrs) =>
   [...attrs].reduce((props, { name, nodeValue }) => {
     let value = nodeValue;
     // Simple number
     if (/^[\-0-9\.]+$/.test(value)) value = +value;
     // Simple vector of (x,y)
     if (/^[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value)) {
-      value = value.split(",").map(one => +one);
+      value = value.split(",").map((one) => +one);
     }
     // Vector array of [(x,y),(x,y),...]
     if (
       /^([\-0-9\.]+\,\s*[\-0-9\.]+\;)+[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value)
     ) {
-      value = value.split(";").map(value => value.split(",").map(one => +one));
+      value = value
+        .split(";")
+        .map((value) => value.split(",").map((one) => +one));
     }
     if (value === "") value = true;
     if (value === "true") value = true;
     if (value === "false") value = false;
     return {
       ...props,
-      [name]: value
+      [name]: value,
     };
   }, {});
 
@@ -43,22 +45,22 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
       const text = i.toFixed(fixed);
       units += drawLine(
         { from: [x, 0], to: [x, -5 / yScale], width: 1.5, color },
-        opts
+        opts,
       );
       units += drawLabel(
         { text, x, y: -14 / yScale, color, size: "tiny" },
-        opts
+        opts,
       );
     } else {
       const y = i;
       const text = i.toFixed(fixed);
       units += drawLine(
         { from: [0, y], to: [-5 / xScale, y], width: 1.5, color },
-        opts
+        opts,
       );
       units += drawLabel(
         { text, x: -12 / yScale, y, color, size: "tiny", width: 20 },
-        opts
+        opts,
       );
     }
   }
@@ -203,16 +205,16 @@ const drawPolygon = ({ points, color, angles, sides }, opts) => {
       const next = points[(i + 1) % points.length];
       const prev = points[(points.length + i - 1) % points.length];
       const size = Math.sqrt(
-        (from[0] - next[0]) ** 2 + (from[1] - next[1]) ** 2
+        (from[0] - next[0]) ** 2 + (from[1] - next[1]) ** 2,
       );
       const nextVec = [next[0] - from[0], next[1] - from[1]];
       const prevVec = [from[0] - prev[0], from[1] - prev[1]];
 
       const prevAngle = Math.round(
-        180 + (Math.atan2(prevVec[1], prevVec[0]) * 180) / Math.PI
+        180 + (Math.atan2(prevVec[1], prevVec[0]) * 180) / Math.PI,
       );
       const nextAngle = Math.round(
-        (360 + (Math.atan2(nextVec[1], nextVec[0]) * 180) / Math.PI) % 360
+        (360 + (Math.atan2(nextVec[1], nextVec[0]) * 180) / Math.PI) % 360,
       );
 
       const radius = size / 3;
@@ -225,10 +227,10 @@ const drawPolygon = ({ points, color, angles, sides }, opts) => {
             from: prevAngle,
             to: nextAngle,
             color,
-            radius
+            radius,
           },
-          opts
-        )
+          opts,
+        ),
       );
     }
   }
@@ -310,7 +312,7 @@ function drawArc(x, y, r, from, to) {
 
 const drawAngle = (
   { x = 0, y = 0, from, to, radius, label, color, size, dashed },
-  opts
+  opts,
 ) => {
   const { height, xScale, yScale, colors } = opts;
 
@@ -382,7 +384,7 @@ const drawCoordinates = ({ x, y, axis, color }, opts) => {
     drawLine({ from: [x, 0], to: [x, y], width, dashed, color }, opts),
     drawLine({ from: [0, y], to: [x, y], width, dashed, color }, opts),
     drawLabel({ text: axis[0], x, y: -12 / yScale, color, size }, opts),
-    drawLabel({ text: axis[1], x: -12 / xScale, y, color, size }, opts)
+    drawLabel({ text: axis[1], x: -12 / xScale, y, color, size }, opts),
   ].join("");
 };
 
@@ -440,13 +442,17 @@ const drawPlot = ({ fn, color, width, dashed }, opts) => {
   const points = [];
   const xUnit = opts.x[1] / opts.width;
   for (let x = opts.x[0]; x < opts.width; x += xUnit) {
-    const y = eval(fn.replaceAll("x", x));
-    points.push([x, y]);
+    try {
+      const y = eval(fn.replaceAll("x", x));
+      points.push([x, y]);
+    } catch (error) {
+      console.error(error);
+    }
   }
   return points
     .slice(0, -1)
     .map((p, i) =>
-      drawLine({ from: p, to: points[i + 1], color, width, dashed }, opts)
+      drawLine({ from: p, to: points[i + 1], color, width, dashed }, opts),
     );
 };
 
@@ -458,7 +464,7 @@ const defaultOptions = {
   grid: 1,
   dark: detectDarkmode(),
   pad: 30,
-  axis: "x,y"
+  axis: "x,y",
 };
 
 function graph(html) {
@@ -467,7 +473,7 @@ function graph(html) {
 
   let { width, height, x, y, labels, units, grid, dark, axis, pad } = {
     ...defaultOptions,
-    ...parseOptions(doc.querySelector("vector-graph").attributes)
+    ...parseOptions(doc.querySelector("vector-graph").attributes),
   };
   if (typeof x === "number") x = [0, x];
   if (typeof y === "number") y = [0, y];
@@ -482,7 +488,7 @@ function graph(html) {
     light: dark ? "#000" : "#fff",
     gray: dark ? "#666" : "#ccc",
     dark: dark ? "#aaa" : "#aaa",
-    black: dark ? "#fff" : "#000"
+    black: dark ? "#fff" : "#000",
   };
 
   // Draw the SVG
@@ -491,7 +497,7 @@ function graph(html) {
   svg.setAttribute("height", height);
   svg.setAttribute(
     "viewBox",
-    `${-pad} ${-pad * 0.6} ${width + 1.6 * pad} ${height + 1.6 * pad}`
+    `${-pad} ${-pad * 0.6} ${width + 1.6 * pad} ${height + 1.6 * pad}`,
   );
   svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
   svg.style.background = colors.light;
@@ -503,7 +509,7 @@ function graph(html) {
       type: "grid",
       color: colors.gray,
       fill: colors.light,
-      size: grid
+      size: grid,
     });
   }
   if (axis) {
@@ -512,21 +518,21 @@ function graph(html) {
       { type: "vector", color, to: [x[1], 0] },
       { type: "vector", color, to: [0, y[1]] },
       { type: "text", text: axis[0], color, x: x[1], y: 12 / yScale },
-      { type: "text", text: axis[1], color, x: 12 / xScale, y: y[1] }
+      { type: "text", text: axis[1], color, x: 12 / xScale, y: y[1] },
     );
   }
   if (units) {
     elements.push(
       { type: "units", size: grid || 1, from: x[0], to: x[1], axis: "x" },
-      { type: "units", size: grid || 1, from: y[0], to: y[1], axis: "y" }
+      { type: "units", size: grid || 1, from: y[0], to: y[1], axis: "y" },
     );
   }
   elements.push(
-    ...[...doc.querySelector("vector-graph").children].map(item => {
+    ...[...doc.querySelector("vector-graph").children].map((item) => {
       const type = item.nodeName.toLowerCase();
       const attrs = parseOptions(item.attributes);
       return { type, ...attrs };
-    })
+    }),
   );
 
   // RENDER EACH OF THE CHILDREN
