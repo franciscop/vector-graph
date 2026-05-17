@@ -1,4 +1,4 @@
-# Vector Graph [![gzip size](https://img.badgesize.io/franciscop/vector-graph/master/index.js.svg?compression=gzip)](https://github.com/franciscop/vector-graph/blob/master/index.js)
+# Vector Graph [![vector-graph](https://img.shields.io/npm/v/vector-graph?label=vector-graph&color=greenlime)](https://www.npmjs.com/package/vector-graph) [![gzip size](https://img.badgesize.io/franciscop/vector-graph/master/index.js.svg?label=gzip&logo=&compression=gzip)](https://github.com/franciscop/vector-graph/blob/master/index.js) [![dependencies](https://img.shields.io/badge/dependencies-0-limegreen.svg)](https://github.com/franciscop/vector-graph/blob/master/package.json)
 
 > ⚠️ This library is experimental [until 1.0.0 in npm](https://www.npmjs.com/vector-graph). For updates [follow me](https://twitter.com/fpresencia)!
 
