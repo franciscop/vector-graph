@@ -123,7 +123,7 @@ You can also hide the different parts of the grid; let's change the size, remove
 </vector-graph>
 ```
 
-### <point>
+### \<point>
 
 Draws a small circle in the graph that represents a point in space:
 
