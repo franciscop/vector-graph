@@ -4,9 +4,8 @@
 
 Generate high-quality geometry and vector graphs with HTML:
 
-| | | |
-|-|-|-|
-| <img src="./examples/basics.svg" width="300px"> | <img src="./examples/triangle.svg" width="300px"> | <img src="./examples/complete.svg" width="300px"> |
+| ![Basic building blocks](./examples/basics.svg) | ![Geometry and angles](./examples/triangle.svg) | ![Crank it up a notch](./examples/complete.svg) |
+| --- | --- | --- |
 | Basic building blocks | Geometry and angles | Crank it up a notch |
 
 ```html
