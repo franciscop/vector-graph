@@ -4,24 +4,10 @@
 
 Generate high-quality geometry and vector graphs with HTML:
 
-<table>
-  <tr>
-    <td>
-      <img width="300px" src="./examples/basics.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/triangle.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/complete.svg" />
-    </td>
-  </tr>
-    <tr>
-      <td align="center">Basic building blocks</td>
-      <td align="center">Geometry and angles</td>
-      <td align="center">Crank it up a notch</td>
-    </tr>
-</table>
+| | | |
+|-|-|-|
+| <img src="./examples/basics.svg" width="300px"> | <img src="./examples/triangle.svg" width="300px"> | <img src="./examples/complete.svg" width="300px"> |
+| Basic building blocks | Geometry and angles | Crank it up a notch |
 
 ```html
 <vector-graph id="basics" units>
