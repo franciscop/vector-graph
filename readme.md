@@ -4,24 +4,9 @@
 
 Generate high-quality geometry and vector graphs with HTML:
 
-<table>
-  <tr>
-    <td>
-      <img width="300px" src="./examples/basics.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/triangle.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/complete.svg" />
-    </td>
-  </tr>
-    <tr>
-      <td align="center">Basic building blocks</td>
-      <td align="center">Geometry and angles</td>
-      <td align="center">Crank it up a notch</td>
-    </tr>
-</table>
+| Basic building blocks | Geometry and angles | Crank it up a notch |
+|:--:|:--:|:--:|
+| ![Basic building blocks](./examples/basics.svg) | ![Geometry and angles](./examples/triangle.svg) | ![Crank it up a notch](./examples/complete.svg) |
 
 ```html
 <vector-graph id="basics" units>
@@ -100,24 +85,9 @@ Create a vector graph image. It controls the display of grids, axis, numbers, et
 
 Control the grid size and position with `x`, `y` and `grid`:
 
-<table>
-  <tr>
-    <td>
-      <img width="300px" src="./examples/default-grid.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/shifted-grid.svg?1" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/nogrid.svg" />
-    </td>
-  </tr>
-    <tr>
-      <td align="center">Default grid 10x10</td>
-      <td align="center">Shifted and scaled</td>
-      <td align="center">No grid at all</td>
-    </tr>
-</table>
+| Default grid 10x10 | Shifted and scaled | No grid at all |
+|:--:|:--:|:--:|
+| ![Default grid 10x10](./examples/default-grid.svg) | ![Shifted and scaled](./examples/shifted-grid.svg?1) | ![No grid at all](./examples/nogrid.svg) |
 
 ```html
 <vector-graph id="default-grid" units>
@@ -135,24 +105,9 @@ Control the grid size and position with `x`, `y` and `grid`:
 
 You can also hide the different parts of the grid; let's change the size, remove the `units` and disable the `axis` and `grid`:
 
-<table>
-  <tr>
-    <td>
-      <img width="300px" src="./examples/small-grid.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/no-grid.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/no-axis.svg" />
-    </td>
-  </tr>
-    <tr>
-      <td align="center">1x1 grid of 0.2 steps</td>
-      <td align="center">Hide the grid</td>
-      <td align="center">Hide grid and axis</td>
-    </tr>
-</table>
+| 1x1 grid of 0.2 steps | Hide the grid | Hide grid and axis |
+|:--:|:--:|:--:|
+| ![1x1 grid of 0.2 steps](./examples/small-grid.svg) | ![Hide the grid](./examples/no-grid.svg) | ![Hide grid and axis](./examples/no-axis.svg) |
 
 ```html
 <vector-graph id="small-grid" x="0,1" y="0,1" grid="0.2" units>
@@ -256,24 +211,9 @@ Draw a hollow circle around the specified center:
 
 ### \<polygon>
 
-<table>
-  <tr>
-    <td>
-      <img width="300px" src="./examples/regular-polygon.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/complex-polygons.svg" />
-    </td>
-    <td>
-      <img width="300px" src="./examples/angles-polygon.svg" />
-    </td>
-  </tr>
-    <tr>
-      <td align="center">Simple polygon</td>
-      <td align="center">Different shapes</td>
-      <td align="center">With angles and sides</td>
-    </tr>
-</table>
+| Simple polygon | Different shapes | With angles and sides |
+|:--:|:--:|:--:|
+| ![Simple polygon](./examples/regular-polygon.svg) | ![Different shapes](./examples/complex-polygons.svg) | ![With angles and sides](./examples/angles-polygon.svg) |
 
 ```html
 <vector-graph id="regular-polygon">
