@@ -4,8 +4,7 @@ const detectDarkmode = () =>
   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 const parseOptions = (attrs) =>
-  [...attrs].reduce((props, { name, nodeValue }) => {
-    let value = nodeValue;
+  [...attrs].reduce((props, { name, value }) => {
     // Simple number
     if (/^[\-0-9\.]+$/.test(value)) value = +value;
     // Simple vector of (x,y)
@@ -59,7 +58,7 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
         opts,
       );
       units += drawLabel(
-        { text, x: -12 / yScale, y, color, size: "tiny", width: 20 },
+        { text, x: -12 / xScale, y, color, size: "tiny", width: 20 },
         opts,
       );
     }
@@ -80,7 +79,7 @@ const drawGrid = ({ size, color, fill }, opts) => {
   const big = w > h ? w : h;
 
   const x0 = -x[0] * xScale;
-  const y0 = -y[0] * xScale;
+  const y0 = -y[0] * yScale;
 
   const flipV = `
     transform: scaleY(-1);
@@ -182,18 +181,28 @@ const drawPoint = ({ x = 0, y = 0, label, color, axis }, opts) => {
   `;
 };
 
-const drawPolygon = ({ points, color, angles, sides }, opts) => {
+const drawPolygon = ({ points, color, angles, sides, width, dashed, fill }, opts) => {
   const all = [];
 
   color = color || opts.colors.black;
   if (typeof sides === "string") sides = sides.split(",");
 
-  // We need to do it N times
+  if (fill) {
+    const svgPoints = points
+      .map(([px, py]) => {
+        const sx = (px - opts.x[0]) * opts.xScale;
+        const sy = opts.height - (py - opts.y[0]) * opts.yScale;
+        return `${sx},${sy}`;
+      })
+      .join(" ");
+    all.push(`<polygon points="${svgPoints}" fill="${fill}" stroke="none" />`);
+  }
+
   for (let i = 0; i < points.length; i++) {
     const from = points[i];
     const to = points[(i + 1) % points.length];
     const label = sides ? sides[i] : null;
-    all.push(drawLine({ from, to, label, color }, opts));
+    all.push(drawLine({ from, to, label, color, width, dashed }, opts));
   }
 
   if (angles) {
@@ -224,8 +233,8 @@ const drawPolygon = ({ points, color, angles, sides }, opts) => {
             x: from[0],
             y: from[1],
             label: angles[i],
-            from: prevAngle,
-            to: nextAngle,
+            start: prevAngle,
+            end: nextAngle,
             color,
             radius,
           },
@@ -269,12 +278,13 @@ const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
   `;
 };
 
-const drawCircle = ({ x = 0, y = 0, radius, label, color, width }, opts) => {
+const drawCircle = ({ x = 0, y = 0, radius, label, color, width, dashed, fill }, opts) => {
   const { height, xScale, yScale, colors } = opts;
 
   if (!radius) radius = 1;
   if (!color) color = colors.black;
   if (!width) width = 2;
+  if (dashed) dashed = "5,3";
 
   const cx = (x - opts.x[0]) * xScale;
   const cy = height - (y - opts.y[0]) * yScale;
@@ -285,10 +295,10 @@ const drawCircle = ({ x = 0, y = 0, radius, label, color, width }, opts) => {
       cy="${cy}"
       rx="${radius * xScale}"
       ry="${radius * yScale}"
-      fill="none"
+      fill="${fill || "none"}"
       stroke="${color}"
       stroke-width="${width}"
-      path-length="1px"
+      stroke-dasharray="${dashed || ""}"
       />
       ${label ? drawLabel({ text: label, x, y, color }, opts) : ""}
   `;
@@ -311,12 +321,13 @@ function drawArc(x, y, r, from, to) {
 }
 
 const drawAngle = (
-  { x = 0, y = 0, from, to, radius, label, color, size, dashed },
+  { x = 0, y = 0, start, end, radius, label, color, size, dashed },
   opts,
 ) => {
   const { height, xScale, yScale, colors } = opts;
 
-  if (!from) from = 0;
+  let from = start ?? 0;
+  let to = end;
   if (from > to) [to, from] = [from, to];
   from = (from + 360) % 360;
   to = (to + 360) % 360;
@@ -388,12 +399,13 @@ const drawCoordinates = ({ x, y, axis, color }, opts) => {
   ].join("");
 };
 
-const drawVector = ({ from, to, label, axis, color }, opts) => {
+const drawVector = ({ from, to, label, axis, color, width }, opts) => {
   const { height, x, y, xScale, yScale, colors } = opts;
 
   const id = globalId++;
   if (!from) from = [0, 0];
   if (!color) color = colors.black;
+  if (!width) width = 2;
 
   const x1 = xScale * (from[0] - x[0]);
   const y1 = height - yScale * (from[1] - y[0]);
@@ -430,7 +442,7 @@ const drawVector = ({ from, to, label, axis, color }, opts) => {
       x2="${x2}"
       y2="${y2}"
       stroke="${color}"
-      stroke-width="2"
+      stroke-width="${width}"
       marker-end="url(#h-${id})"
     />
     ${drawLabel({ text: label, color, x: labelX, y: labelY }, opts)}
@@ -440,10 +452,11 @@ const drawVector = ({ from, to, label, axis, color }, opts) => {
 
 const drawPlot = ({ fn, color, width, dashed }, opts) => {
   const points = [];
-  const xUnit = opts.x[1] / opts.width;
-  for (let x = opts.x[0]; x < opts.width; x += xUnit) {
+  const xUnit = (opts.x[1] - opts.x[0]) / opts.width;
+  const fnEval = new Function("x", `return ${fn}`);
+  for (let x = opts.x[0]; x < opts.x[1]; x += xUnit) {
     try {
-      const y = eval(fn.replaceAll("x", x));
+      const y = fnEval(x);
       points.push([x, y]);
     } catch (error) {
       console.error(error);
@@ -453,7 +466,8 @@ const drawPlot = ({ fn, color, width, dashed }, opts) => {
     .slice(0, -1)
     .map((p, i) =>
       drawLine({ from: p, to: points[i + 1], color, width, dashed }, opts),
-    );
+    )
+    .join("");
 };
 
 const defaultOptions = {

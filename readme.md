@@ -94,7 +94,7 @@ Create a vector graph image. It controls the display of grids, axis, numbers, et
 | `y`       | `0,10`  | The y-coordinates of the graph to fit into the SVG     |
 | `units`   | `false` | Show the numbers on each of the axis                   |
 | `grid`    | `1`     | The size of the grid, or `false` to hide it            |
-| `axis`    | `x,y`   | The X and Y axis labels, or `false` to hide the axis   |
+| `axis`    | `x,y`   | Labels for the X and Y axis arrows (e.g. `"time,speed"`), or `false` to hide both arrows |
 | `dark`    | _auto_  | Dark theme (true), light theme (false) or auto (undef) |
 | `pad`     | `30`    | The space around the content to avoid SVG clipping     |
 
@@ -190,7 +190,7 @@ Draws a small circle in the graph that represents a point in space:
 | `y`       | `0`     | The vertical coordinate where to draw the point   |
 | `label`   | _none_  | The text to draw on top of the point              |
 | `color`   | `black` | The color of the point, it can be a name or hexa  |
-| `axis`    | `false` | Draw the horizontal and vertical coordinate lines |
+| `axis`    | `false` | Draw dashed projection lines to the axes, labeled with the point's coordinates; pass `"a,b"` to use custom labels instead |
 
 ### \<line>
 
@@ -237,9 +237,11 @@ Draw a hollow circle around the specified center:
 | `x`       | `0`     | The horizontal coordinate of the circle's center |
 | `y`       | `0`     | The vertical coordinate of the circle's center   |
 | `radius`  | `1`     | The circle's radius, in coordinates size         |
-| `label`   | _none_  | Text to draw on the middle of the line           |
-| `color`   | `black` | The color of the line, it can be a name or hexa  |
-| `width`   | `1.75`  | The stroke width of the line to draw             |
+| `label`   | _none_  | Text to draw at the center of the circle         |
+| `color`   | `black` | The color of the stroke                          |
+| `width`   | `2`     | The stroke width of the circle                   |
+| `dashed`  | `false` | Show as dashes (true) or as a solid line (false) |
+| `fill`    | _none_  | Fill color for the circle interior               |
 
 ### \<vector>
 
@@ -247,9 +249,10 @@ Draw a hollow circle around the specified center:
 | --------- | ------- | ------------------------------------------------- |
 | `to`      | _none_  | The point where the vector ends with an arrow     |
 | `from`    | `0,0`   | The point where the vector starts                 |
-| `label`   | _none_  | Text to draw on the middle of the line            |
-| `color`   | `black` | The color of the line, it can be a name or hexa   |
-| `axis`    | `false` | Draw the horizontal and vertical coordinate lines |
+| `label`   | _none_  | Text to draw on the middle of the vector          |
+| `color`   | `black` | The color of the vector                           |
+| `width`   | `2`     | The stroke width of the vector line               |
+| `axis`    | `false` | Draw dashed projection lines from the tip to the axes, labeled with the tip's coordinates; pass `"a,b"` for custom labels |
 
 ### \<polygon>
 
@@ -286,11 +289,15 @@ Draw a hollow circle around the specified center:
 </vector-graph>
 ```
 
-| attribute | default | description                                     |
-| --------- | ------- | ----------------------------------------------- |
-| `points`  | _none_  | All of the points of the domain                 |
-| `color`   | `black` | The color of the line, it can be a name or hexa |
-| `angles`  | `false` | Draw the angles in the internal vertices        |
+| attribute | default | description                                                        |
+| --------- | ------- | ------------------------------------------------------------------ |
+| `points`  | _none_  | The vertices, as semicolon-separated `x,y` pairs: `"1,1;4,1;2,3"` |
+| `color`   | `black` | The color of the sides                                             |
+| `sides`   | _none_  | Labels for each side, e.g. `"a,b,c"`                              |
+| `angles`  | _none_  | Labels for the internal angle arcs at each vertex, e.g. `"α,β,γ"` |
+| `width`   | `1.75`  | The stroke width of each side                                      |
+| `dashed`  | `false` | Draw the sides as dashes                                           |
+| `fill`    | _none_  | Fill color for the polygon interior, e.g. `"rgba(100,200,100,0.3)"` |
 
 ### \<angle>
 
@@ -300,11 +307,11 @@ Draws an arc representing the angle between two existing lines (the lines must b
 
 ```html
 <vector-graph id="angle">
-  <angle to="90" radius="3"></angle>
-  <angle label="a" to="45" radius="4"></angle>
-  <angle label="b" from="45" to="90" radius="5" color="red"></angle>
-  <angle label="c" to="45" radius="5" color="blue" dashed="false"></angle>
-  <angle label="d" x="7" radius="2" from="0" to="180"></angle>
+  <angle end="90" radius="3"></angle>
+  <angle label="a" end="45" radius="4"></angle>
+  <angle label="b" start="45" end="90" radius="5" color="red"></angle>
+  <angle label="c" end="45" radius="5" color="blue" dashed="false"></angle>
+  <angle label="d" x="7" radius="2" start="0" end="180"></angle>
 </vector-graph>
 ```
 
@@ -312,13 +319,13 @@ Draws an arc representing the angle between two existing lines (the lines must b
 | --------- | -------- | ------------------------------------------------ |
 | `x`       | `0`      | The horizontal coordinate of the angle's center  |
 | `y`       | `0`      | The vertical coordinate of the angle's center    |
-| `from`    | `0`      | The angle (in degrees) to start drawing the arc  |
-| `to`      | _none_   | The angle (in degrees) to finish drawing the arc |
-| `radius`  | `1`      | The angle's arc radius, in coordinates size      |
-| `label`   | _none_   | Text to draw on the middle of the line           |
-| `color`   | `black`  | The color of the line, it can be a name or hexa  |
+| `start`   | `0`      | The angle (in degrees) where the arc begins      |
+| `end`     | _none_   | The angle (in degrees) where the arc ends        |
+| `radius`  | `1`      | The arc radius, in coordinate units              |
+| `label`   | _none_   | Text to draw near the arc's midpoint             |
+| `color`   | `black`  | The color of the arc                             |
 | `size`    | `normal` | The label's size                                 |
-| `dashed`  | `true`   | Draw dashes instead of a solid line              |
+| `dashed`  | `true`   | Draw dashes instead of a solid line (default for angles) |
 
 ### \<text>
 

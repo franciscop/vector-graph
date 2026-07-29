@@ -9,6 +9,7 @@
   "license": "AGPL",
   "keywords": [],
   "scripts": {
+    "test": "bun test",
     "build": "node examples/index.js",
     "start": "npx http-server . -p 8080 -o /examples",
     "watch": "nodemon -e md,js --exec \"npm run build\""
@@ -18,6 +19,7 @@
   "devDependencies": {
     "extract-code-md": "^0.0.5",
     "files": "^2.1.1",
+    "happy-dom": "^20.9.0",
     "http-server": "^0.12.3",
     "jsdom": "^16.6.0",
     "nodemon": "^2.0.9"
