@@ -12,9 +12,7 @@ const parseOptions = (attrs) =>
       value = value.split(",").map((one) => +one);
     }
     // Vector array of [(x,y),(x,y),...]
-    if (
-      /^([-0-9.]+,\s*[-0-9.]+;)+[-0-9.]+,\s*[-0-9.]+$/.test(value)
-    ) {
+    if (/^([-0-9.]+,\s*[-0-9.]+;)+[-0-9.]+,\s*[-0-9.]+$/.test(value)) {
       value = value
         .split(";")
         .map((value) => value.split(",").map((one) => +one));
@@ -77,7 +75,6 @@ const drawGrid = ({ size, color, fill }, opts) => {
   const w = size * xScale;
   const h = size * yScale;
   const big = w > h ? w : h;
-
 
   const flipV = `
     transform: scaleY(-1);
@@ -179,7 +176,10 @@ const drawPoint = ({ x = 0, y = 0, label, color, axis }, opts) => {
   `;
 };
 
-const drawPolygon = ({ points, color, angles, sides, width, dashed, fill }, opts) => {
+const drawPolygon = (
+  { points, color, angles, sides, width, dashed, fill },
+  opts,
+) => {
   const all = [];
 
   color = color || opts.colors.black;
@@ -276,7 +276,10 @@ const drawLine = ({ to, from, label, color, width, dashed }, opts) => {
   `;
 };
 
-const drawCircle = ({ x = 0, y = 0, radius, label, color, width, dashed, fill }, opts) => {
+const drawCircle = (
+  { x = 0, y = 0, radius, label, color, width, dashed, fill },
+  opts,
+) => {
   const { height, xScale, yScale, colors } = opts;
 
   if (!radius) radius = 1;
