@@ -1,6 +1,6 @@
 {
   "name": "vector-graph",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Generate high-quality geometry and vector graphs with HTML",
   "homepage": "https://vector-graph.com/",
   "repository": "github:franciscop/vector-graph",
