@@ -6,13 +6,21 @@
   "repository": "github:franciscop/vector-graph",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "funding": "https://www.paypal.me/franciscopresencia/19",
-  "license": "AGPL",
-  "keywords": [],
+  "license": "AGPL-3.0-only",
+  "keywords": [
+    "graph",
+    "vector",
+    "svg",
+    "geometry",
+    "math",
+    "chart"
+  ],
   "scripts": {
     "test": "bun test",
     "build": "node examples/index.js",
     "start": "npx http-server . -p 8080 -o /examples",
-    "watch": "nodemon -e md,js --exec \"npm run build\""
+    "watch": "nodemon -e md,js --exec \"npm run build\"",
+    "lint": "oxlint index.js"
   },
   "main": "index.js",
   "type": "module",
@@ -22,6 +30,10 @@
     "happy-dom": "^20.9.0",
     "http-server": "^0.12.3",
     "jsdom": "^16.6.0",
-    "nodemon": "^2.0.9"
-  }
+    "nodemon": "^2.0.9",
+    "oxlint": "^1.89.0"
+  },
+  "files": [
+    "index.js"
+  ]
 }

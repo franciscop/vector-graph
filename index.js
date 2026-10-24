@@ -6,14 +6,14 @@ const detectDarkmode = () =>
 const parseOptions = (attrs) =>
   [...attrs].reduce((props, { name, value }) => {
     // Simple number
-    if (/^[\-0-9\.]+$/.test(value)) value = +value;
+    if (/^[-0-9.]+$/.test(value)) value = +value;
     // Simple vector of (x,y)
-    if (/^[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value)) {
+    if (/^[-0-9.]+,\s*[-0-9.]+$/.test(value)) {
       value = value.split(",").map((one) => +one);
     }
     // Vector array of [(x,y),(x,y),...]
     if (
-      /^([\-0-9\.]+\,\s*[\-0-9\.]+\;)+[\-0-9\.]+\,\s*[\-0-9\.]+$/.test(value)
+      /^([-0-9.]+,\s*[-0-9.]+;)+[-0-9.]+,\s*[-0-9.]+$/.test(value)
     ) {
       value = value
         .split(";")
@@ -68,7 +68,7 @@ const drawUnits = ({ from = 0, to, axis, color, size }, opts) => {
 };
 
 const drawGrid = ({ size, color, fill }, opts) => {
-  const { width, height, x, y, xScale, yScale } = opts;
+  const { width, height, xScale, yScale } = opts;
 
   // Generate a unique ID for the style of this pattern, because
   // otherwise two different SVGs might conflict
@@ -78,8 +78,6 @@ const drawGrid = ({ size, color, fill }, opts) => {
   const h = size * yScale;
   const big = w > h ? w : h;
 
-  const x0 = -x[0] * xScale;
-  const y0 = -y[0] * yScale;
 
   const flipV = `
     transform: scaleY(-1);
@@ -485,7 +483,7 @@ function graph(html) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
-  let { width, height, x, y, labels, units, grid, dark, axis, pad } = {
+  let { width, height, x, y, units, grid, dark, axis, pad } = {
     ...defaultOptions,
     ...parseOptions(doc.querySelector("vector-graph").attributes),
   };
