@@ -24,6 +24,9 @@
   },
   "main": "index.js",
   "type": "module",
+  "files": [
+    "index.js"
+  ],
   "devDependencies": {
     "extract-code-md": "^0.0.5",
     "files": "^2.1.1",
@@ -32,8 +35,5 @@
     "jsdom": "^16.6.0",
     "nodemon": "^2.0.9",
     "oxlint": "^1.89.0"
-  },
-  "files": [
-    "index.js"
-  ]
+  }
 }

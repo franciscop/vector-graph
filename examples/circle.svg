@@ -35,7 +35,7 @@
       y
     </text>
   
-    <ellipse cx="28.571428571428573" cy="171.42857142857142" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="2" path-length="1px"></ellipse>
+    <ellipse cx="28.571428571428573" cy="171.42857142857142" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="2" stroke-dasharray=""></ellipse>
       
     <rect x="18.571428571428573" y="160.92857142857142" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
@@ -45,7 +45,7 @@
   
   
   
-    <ellipse cx="85.71428571428572" cy="114.28571428571428" rx="42.85714285714286" ry="42.85714285714286" fill="none" stroke="#000" stroke-width="2" path-length="1px"></ellipse>
+    <ellipse cx="85.71428571428572" cy="114.28571428571428" rx="42.85714285714286" ry="42.85714285714286" fill="none" stroke="#000" stroke-width="2" stroke-dasharray=""></ellipse>
       
     <rect x="75.71428571428572" y="103.78571428571428" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
@@ -55,7 +55,7 @@
   
   
   
-    <ellipse cx="85.71428571428572" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="red" stroke-width="2" path-length="1px"></ellipse>
+    <ellipse cx="85.71428571428572" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="red" stroke-width="2" stroke-dasharray=""></ellipse>
       
     <rect x="75.71428571428572" y="18.071428571428555" width="20" height="21" fill="#fffd" stroke="red" stroke-width="1.75" rx="5"></rect>
     
@@ -65,7 +65,7 @@
   
   
   
-    <ellipse cx="171.42857142857144" cy="114.28571428571428" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="1" path-length="1px"></ellipse>
+    <ellipse cx="171.42857142857144" cy="114.28571428571428" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="#000" stroke-width="1" stroke-dasharray=""></ellipse>
       
     <rect x="161.42857142857144" y="103.78571428571428" width="20" height="21" fill="#fffd" stroke="#000" stroke-width="1.75" rx="5"></rect>
     
@@ -75,7 +75,7 @@
   
   
   
-    <ellipse cx="171.42857142857144" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="blue" stroke-width="3" path-length="1px"></ellipse>
+    <ellipse cx="171.42857142857144" cy="28.571428571428555" rx="28.571428571428573" ry="28.571428571428573" fill="none" stroke="blue" stroke-width="3" stroke-dasharray=""></ellipse>
       
     <rect x="161.42857142857144" y="18.071428571428555" width="20" height="21" fill="#fffd" stroke="blue" stroke-width="1.75" rx="5"></rect>
     
